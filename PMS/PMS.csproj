@@ -1,0 +1,247 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BC0F8EB5-688C-48A3-8806-3BB2FBB96F6E}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PMS</RootNamespace>
+    <AssemblyName>PMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CoDopaCR.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CoDopaCR.Designer.cs">
+      <DependentUpon>CoDopaCR.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Contacts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Contacts.Designer.cs">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Diamicron.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Diamicron.Designer.cs">
+      <DependentUpon>Diamicron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FileFreshDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FileFreshDetails.Designer.cs">
+      <DependentUpon>FileFreshDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forgotPass.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotPass.Designer.cs">
+      <DependentUpon>forgotPass.cs</DependentUpon>
+    </Compile>
+    <Compile Include="forgotPass2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="forgotPass2.Designer.cs">
+      <DependentUpon>forgotPass2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="lijenta.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="lijenta.Designer.cs">
+      <DependentUpon>lijenta.cs</DependentUpon>
+    </Compile>
+    <Compile Include="location.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="location.Designer.cs">
+      <DependentUpon>location.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Montene.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Montene.Designer.cs">
+      <DependentUpon>Montene.cs</DependentUpon>
+    </Compile>
+    <Compile Include="offer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="offer.Designer.cs">
+      <DependentUpon>offer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="optimox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="optimox.Designer.cs">
+      <DependentUpon>optimox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prescriptionMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prescriptionMedicine.Designer.cs">
+      <DependentUpon>prescriptionMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="prescriptionMedicine2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="prescriptionMedicine2.Designer.cs">
+      <DependentUpon>prescriptionMedicine2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="pronor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="pronor.Designer.cs">
+      <DependentUpon>pronor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="requestOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="requestOrder.Designer.cs">
+      <DependentUpon>requestOrder.cs</DependentUpon>
+    </Compile>
+    <Compile Include="signUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="signUp.Designer.cs">
+      <DependentUpon>signUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="userDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="userDashboard.Designer.cs">
+      <DependentUpon>userDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Zimax.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Zimax.Designer.cs">
+      <DependentUpon>Zimax.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CoDopaCR.resx">
+      <DependentUpon>CoDopaCR.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Contacts.resx">
+      <DependentUpon>Contacts.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Diamicron.resx">
+      <DependentUpon>Diamicron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FileFreshDetails.resx">
+      <DependentUpon>FileFreshDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgotPass.resx">
+      <DependentUpon>forgotPass.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="forgotPass2.resx">
+      <DependentUpon>forgotPass2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="lijenta.resx">
+      <DependentUpon>lijenta.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="location.resx">
+      <DependentUpon>location.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Montene.resx">
+      <DependentUpon>Montene.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="offer.resx">
+      <DependentUpon>offer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="optimox.resx">
+      <DependentUpon>optimox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prescriptionMedicine.resx">
+      <DependentUpon>prescriptionMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="prescriptionMedicine2.resx">
+      <DependentUpon>prescriptionMedicine2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="pronor.resx">
+      <DependentUpon>pronor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="requestOrder.resx">
+      <DependentUpon>requestOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="signUp.resx">
+      <DependentUpon>signUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="userDashboard.resx">
+      <DependentUpon>userDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Zimax.resx">
+      <DependentUpon>Zimax.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
