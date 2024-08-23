@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Diagnostics.Eventing.Reader;
 using System.Drawing;
 using System.Linq;
@@ -44,7 +45,7 @@ namespace PMS
         {
 
         }
-
+        string conStr = "Data Source=ZOBAER;Initial Catalog=PMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
         private void button3_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsername.Text) == true)
@@ -57,12 +58,44 @@ namespace PMS
                 txtPass.Focus();
                 errorProvider2.SetError(this.txtPass, "Please fill Password");
             }
+            if(txtUsername.Text!="" && txtPass.Text!="")
+            {
+                using (SqlConnection con = new SqlConnection(conStr))
+                {
+                    con.Open();
+                    SqlCommand cmd = new SqlCommand("SELECT firstname, lastname, email, contactno, dateofbirth, gender, address FROM SignUpTable WHERE username=@username AND pass=@pass", con);
+                    cmd.Parameters.AddWithValue("@username", txtUsername.Text);
+                    cmd.Parameters.AddWithValue("@pass", txtPass.Text);
+
+                    SqlDataReader dr = cmd.ExecuteReader();
+                    if (dr.Read())
+                    {
+                        string firstname = dr["firstname"].ToString();
+                        string lastname = dr["lastname"].ToString();
+                        string email = dr["email"].ToString();
+                        string contactno = dr["contactno"].ToString();
+                        string dateofbirth = dr["dateofbirth"].ToString();
+                        string gender = dr["gender"].ToString();
+                        string address = dr["address"].ToString();
+
+                        userDashboard dashboard = new userDashboard(firstname, lastname, email, contactno, dateofbirth, gender, address);
+                        this.Hide();
+                        dashboard.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Invalid Username or Password", "Failure",MessageBoxButtons.OK, MessageBoxIcon.Error);  
+                    }
+                }
+            }
             else
             {
-                errorProvider1.Clear();
-                errorProvider2.Clear();
-                MessageBox.Show("This app is under development");
+                MessageBox.Show("Please fill both fields", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+            
+
+         
             
         }
 
@@ -315,8 +348,7 @@ namespace PMS
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            userDashboard userDashboard = new userDashboard();
-            userDashboard.Show();
+            
         }
     }
 }

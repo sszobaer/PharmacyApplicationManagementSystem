@@ -12,6 +12,28 @@ namespace PMS
 {
     public partial class userDashboard : Form
     {
+        private string firstname;
+        private string lastname;
+        private string email;
+        private string contactno;
+        private string dateofbirth;
+        private string gender;
+        private string address;
+
+        public userDashboard(string firstname, string lastname, string email, string contactno, string dateofbirth, string gender, string adress)
+        {
+            InitializeComponent();
+            this.firstname = firstname;
+            this.lastname = lastname;
+            this.email = email;
+            this.contactno = contactno;
+            this.dateofbirth = dateofbirth;
+            this.gender = gender;
+            this.address = adress;
+        }
+
+
+
         public userDashboard()
         {
             InitializeComponent();
@@ -95,7 +117,16 @@ namespace PMS
 
         private void userDashboard_Load(object sender, EventArgs e)
         {
-
+            // Display all of the information according to database
+            lbluserFullName.Text = $"{firstname} { lastname}";
+            lblfullNameMain.Text = $"{firstname} {lastname}";
+            lblPhoneNo.Text = contactno;
+            lblphoneNumberMain.Text = contactno;
+            lblEmailAdd.Text = email;
+            lblemailMain.Text = email;
+            lblGender.Text = gender;
+            lblDoB.Text = dateofbirth;
+            lblAdress.Text = address;
         }
         //MenuBtn Color setting start
         private void label18_MouseEnter(object sender, EventArgs e)
@@ -164,6 +195,16 @@ namespace PMS
         }
 
         private void button4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }
