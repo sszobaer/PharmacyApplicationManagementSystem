@@ -25,11 +25,6 @@ namespace PMS
         {
             panel2.Visible = !panel2.Visible;
         }
-
-        private void label13_Click(object sender, EventArgs e)
-        {
-            
-        }
         
 
         private void label18_Click(object sender, EventArgs e)
@@ -39,11 +34,6 @@ namespace PMS
             this.Hide();
             frm.ShowDialog();
             this.Show();
-        }
-
-        private void Contacts_Load(object sender, EventArgs e)
-        {
-
         }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -61,20 +51,7 @@ namespace PMS
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label6_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label10_Click(object sender, EventArgs e)
-        {
-            
-        }
+        
 
         private void label8_Click(object sender, EventArgs e)
         {
@@ -109,10 +86,7 @@ namespace PMS
             pm.ShowDialog();
             this.Show();
         }
-        private void richTextBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
+       
 
         private void label17_Click(object sender, EventArgs e)
         {

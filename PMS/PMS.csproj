@@ -152,6 +152,7 @@
     <Compile Include="requestOrder.Designer.cs">
       <DependentUpon>requestOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="sessionManager.cs" />
     <Compile Include="signUp.cs">
       <SubType>Form</SubType>
     </Compile>

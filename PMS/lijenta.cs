@@ -17,6 +17,7 @@ namespace PMS
             InitializeComponent();
         }
 
+
         private void button3_Click(object sender, EventArgs e)
         {
             if (panel2.Visible)

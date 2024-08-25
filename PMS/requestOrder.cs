@@ -2,11 +2,14 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Xml.Linq;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace PMS
 {
@@ -29,10 +32,65 @@ namespace PMS
         {
             
         }
-
+        private void requestOrder_Load(object sender, EventArgs e)
+        {
+            dataGridView1.Columns.Add("Column1", "Product name");
+            dataGridView1.Columns.Add("Column2", "Strength");
+            dataGridView1.Columns.Add("Column3", "Quantity");
+        }
         private void button1_Click(object sender, EventArgs e)
         {
+            panel5.Visible = true;
+            // Get the text from the TextBoxes
+            string Text1 = textBox1.Text;
+            string Text2 = textBox2.Text;
+            string Text3 = textBox3.Text;
 
+            
+            if (!string.IsNullOrEmpty(Text1) && !string.IsNullOrEmpty(Text2) && !string.IsNullOrEmpty(Text3))
+            {
+                panel5.Visible = true;
+
+                dataGridView1.Rows.Add(Text1, Text2, Text3);
+
+                // Clear TextBoxes after adding
+                textBox1.Clear();
+                textBox2.Clear();
+                textBox3.Clear();
+
+                // Reset TextBox placeholders
+                textBox1.Text = "Napa Extra";
+                textBox1.ForeColor = Color.Silver;
+                textBox2.Text = "5 MG";
+                textBox2.ForeColor = Color.Silver;
+                textBox3.Text = "1";
+                textBox3.ForeColor = Color.Silver;
+                
+            }
+        }
+        private void button3_Click_1(object sender, EventArgs e)
+        {
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                try
+                {
+                    // Remove each selected row
+                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    {
+                        dataGridView1.Rows.Remove(row);
+                    }
+
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error while removing row: Please select which medicine you want to remove");
+                }
+            }
+           
+            if (dataGridView1.Rows.Count == 1)
+            {
+                panel5.Visible = false;
+            }
         }
 
         private void textBox8_TextChanged(object sender, EventArgs e)
@@ -45,26 +103,7 @@ namespace PMS
 
         }
 
-        private void button3_Click(object sender, EventArgs e)
-        {
-            OpenFileDialog openFileDialog = new OpenFileDialog();
-            openFileDialog.InitialDirectory = "c:\\";
-            openFileDialog.Filter = "All files (*.*)|*.*|Text files (*.txt)|*.txt|Image files (*.jpg;*.png)|*.jpg;*.png";
-            openFileDialog.FilterIndex = 1;
-            openFileDialog.RestoreDirectory = true;
-
-            //Show the dialog and get result
-            if (openFileDialog.ShowDialog() == DialogResult.OK)
-            {
-                string filepath = openFileDialog.FileName;
-                MessageBox.Show($"Selected file: {filepath}");
-            }
-        }
-
-        private void requestOrder_Load(object sender, EventArgs e)
-        {
-
-        }
+        
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -130,21 +169,6 @@ namespace PMS
             lc.ShowDialog();
             this.Show();
         }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
         
         //Fix the textboxes as empty and set color silver to black
         private void textBox1_Enter(object sender, EventArgs e)
@@ -175,30 +199,9 @@ namespace PMS
             }
         }
 
-        private void textBox5_Leave(object sender, EventArgs e)
-        {
 
-        }
 
-        private void textBox6_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox8_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox7_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox9_Leave(object sender, EventArgs e)
-        {
-
-        }
+        string conStr = "Data Source=ZOBAER;Initial Catalog=\"Pharmacy Management System\";User ID=sa;Password=admin;Encrypt=True;TrustServerCertificate=True";
 
         private void button4_Click(object sender, EventArgs e)
         {
@@ -246,41 +249,39 @@ namespace PMS
             }
             else
             {
-                errorProvider1.Clear();
-                errorProvider2.Clear();
-                errorProvider3.Clear();
-                errorProvider4.Clear();
-                errorProvider5.Clear();
-                errorProvider6.Clear();
-                errorProvider7.Clear();
+                using(SqlConnection con = new SqlConnection(conStr))
+                {
+                    con.Open();
 
-                textBox1.Clear();
-                textBox2.Clear();
-                textBox3.Clear();
-                textBox4.Clear();
-                textBox5.Clear();
-                textBox6.Clear();
-                textBox7.Clear();
-                textBox8.Clear();
-                textBox9.Clear();
+                    foreach(DataGridViewRow row in dataGridView1.Rows)
+                    {
+                        if(!row.IsNewRow)
+                        {
+                            string productname = row.Cells["column1"].Value.ToString();
+                            string strenght = row.Cells["column2"].Value.ToString();
+                            string quantity = row.Cells["column3"].Value.ToString();
 
-                MessageBox.Show("Request Sent");
+                            using (SqlCommand cmd = new SqlCommand("INSERT INTO RequestOrderTable (productname, strength, quantity, receivername, receiverphone, region,city,area,address,receiveremail)VALUES(@productname, @strength, @quantity, @receivername, @receiverphone, @region, @city, @area, @address, @receiveremail)", con))
+                            {
+                                cmd.Parameters.AddWithValue("@productname", productname);
+                                cmd.Parameters.AddWithValue("@strength", strenght);
+                                cmd.Parameters.AddWithValue("@quantity", quantity);
+                                cmd.Parameters.AddWithValue("@receivername", textBox4.Text);
+                                cmd.Parameters.AddWithValue("@receiverphone", textBox5.Text);
+                                cmd.Parameters.AddWithValue("@region", textBox6.Text);
+                                cmd.Parameters.AddWithValue("@city", textBox8.Text);
+                                cmd.Parameters.AddWithValue("@area", textBox7.Text);
+                                cmd.Parameters.AddWithValue("@address", textBox9.Text);
+                                cmd.Parameters.AddWithValue("@receiveremail", textBox10.Text);
+
+                                cmd.ExecuteNonQuery();
+
+                                MessageBox.Show("Order is placed successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                            }
+                        }
+                    }
+                }
             }
-
-        }
-
-        private void textBox1_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_Leave(object sender, EventArgs e)
-        {
 
         }
 
@@ -304,5 +305,26 @@ namespace PMS
                 previousForm.Show();
             }
         }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel6_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
     }
 }

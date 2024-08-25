@@ -94,14 +94,17 @@ namespace PMS
             pm.ShowDialog();
             this.Show();
         }
+      
 
         private void label17_Click(object sender, EventArgs e)
         {
-            requestOrder ro = new requestOrder();
-            Form1.stack.Push(this);
-            this.Hide();
-            ro.ShowDialog();
-            this.Show();
+
+                requestOrder ro = new requestOrder();
+                Form1.stack.Push(this);
+                this.Hide();
+                ro.ShowDialog();
+                this.Show();
+ 
         }
 
         private void label16_Click(object sender, EventArgs e)

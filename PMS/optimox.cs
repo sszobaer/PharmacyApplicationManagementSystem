@@ -17,11 +17,6 @@ namespace PMS
             InitializeComponent();
         }
 
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if (panel2.Visible)
@@ -46,11 +41,6 @@ namespace PMS
                 panel4.Visible = true;
                 panel2.Visible = false;
             }
-        }
-
-        private void optimox_Load(object sender, EventArgs e)
-        {
-
         }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -206,8 +196,6 @@ namespace PMS
         {
             label13.ForeColor = Color.Black;
         }
-
-        
 
         private void label26_Click_1(object sender, EventArgs e)
         {

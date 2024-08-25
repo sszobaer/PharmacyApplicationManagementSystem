@@ -71,11 +71,6 @@ namespace PMS
         {
             panel5.Visible=!panel5.Visible;
         }
-
-        private void location_Load(object sender, EventArgs e)
-        {
-
-        }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -189,7 +184,7 @@ namespace PMS
         {
             label13.ForeColor = Color.Black;
         }
-
+        //Pending work
         private void label14_Click(object sender, EventArgs e)
         {
 

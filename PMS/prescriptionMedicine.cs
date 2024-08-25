@@ -18,11 +18,6 @@ namespace PMS
         {
             InitializeComponent();
         }
-
-        private void prescriptionMedicine_Load(object sender, EventArgs e)
-        {
-         
-        }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -127,11 +122,6 @@ namespace PMS
             this.Hide();
             lj.ShowDialog();
             this.Show();
-        }
-
-        private void button17_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void label17_Click(object sender, EventArgs e)

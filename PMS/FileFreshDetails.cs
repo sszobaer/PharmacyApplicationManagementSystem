@@ -55,41 +55,6 @@ namespace PMS
             return base.ProcessCmdKey(ref msg, keyData);
         }
 
-        private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void tableLayoutPanel1_Paint_1(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label19_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button3_Click(object sender, EventArgs e)
         {
             if(panel2.Visible)
@@ -115,11 +80,6 @@ namespace PMS
                 panel4.Visible=true;
                 panel2.Visible = false;
             }
-            
-        }
-
-        private void panel2_Paint(object sender, PaintEventArgs e)
-        {
             
         }
 

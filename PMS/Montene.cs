@@ -43,11 +43,6 @@ namespace PMS
             pm.ShowDialog();
             this.Show();
         }
-
-        private void Montene_Load(object sender, EventArgs e)
-        {
-
-        }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {

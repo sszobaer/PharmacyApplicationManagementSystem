@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -31,21 +32,8 @@ namespace PMS
             this.Show();
         }
 
-        private void label2_Click(object sender, EventArgs e)
-        {
 
-        }
-
-        private void pictureBox2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-        string conStr = "Data Source=ZOBAER;Initial Catalog=PMS;Integrated Security=True;Encrypt=True;TrustServerCertificate=True";
+        string conStr = "Data Source=ZOBAER;Initial Catalog=\"Pharmacy Management System\";User ID=sa;Password=admin;TrustServerCertificate=True";
         private void button3_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtUsername.Text) == true)
@@ -77,10 +65,14 @@ namespace PMS
                     string gender = adminReader["gender"].ToString();
                     string address = adminReader["address"].ToString();
 
+                    //Login true
+                    sessionManager.IsLoggedIn = true;
+
                     adminDashboard adminDashboard = new adminDashboard(name, email, contactno, dateofbirth, gender, address);
+                    Form1.stack.Push(this);
                     this.Hide();
                     adminDashboard.ShowDialog();
-                    this.Close();
+                    this.Show();
                     return; // Return early if admin login is successful
                 }
                 adminReader.Close(); // Close reader before reusing connection
@@ -106,10 +98,14 @@ namespace PMS
                     string gender = userReader["gender"].ToString();
                     string address = userReader["address"].ToString();
 
+                    //Login true
+                    sessionManager.IsLoggedIn = true;
+
                     userDashboard userDashboard = new userDashboard(firstname, lastname, email, contactno, dateofbirth, gender, address);
+                    Form1.stack.Push(this);
                     this.Hide();
                     userDashboard.ShowDialog();
-                    this.Close();
+                    this.Show();
                 }
                 else
                 {
@@ -117,17 +113,6 @@ namespace PMS
                 }
             }
 
-        }
-
-        
-private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox3_Click(object sender, EventArgs e)
-        {
-            
         }
 
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -151,36 +136,6 @@ private void label3_Click(object sender, EventArgs e)
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void Form1_Load(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void textBox1_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox2_TextChanged_1(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label18_Click(object sender, EventArgs e)
-        {
-
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
             prescriptionMedicine pm = new prescriptionMedicine();
@@ -190,20 +145,13 @@ private void label3_Click(object sender, EventArgs e)
             this.Show();
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-           
-        }
 
         private void label1_Click_2(object sender, EventArgs e)
         {
             panel1.Visible = !panel1.Visible;
         }
 
-        private void label18_Click_1(object sender, EventArgs e)
-        {
 
-        }
 
         private void label13_Click(object sender, EventArgs e)
         {
@@ -215,7 +163,7 @@ private void label3_Click(object sender, EventArgs e)
         }
 
         private void label17_Click(object sender, EventArgs e)
-        {
+        { 
             requestOrder ro = new requestOrder();
             Form1.stack.Push(this);
             this.Hide();
@@ -266,15 +214,6 @@ private void label3_Click(object sender, EventArgs e)
             label18.ForeColor = Color.Black;
         }
 
-        private void txtUsername_Leave(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtPass_Leave(object sender, EventArgs e)
-        {
-
-        }
 
         private void label18_MouseEnter_1(object sender, EventArgs e)
         {
@@ -355,16 +294,6 @@ private void label3_Click(object sender, EventArgs e)
         private void panel1_MouseLeave(object sender, EventArgs e)
         {
             panel1.Visible = false;
-        }
-
-        private void panel1_MouseEnter(object sender, EventArgs e)
-        {
-
-        }
-
-        private void pictureBox4_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

@@ -16,11 +16,6 @@ namespace PMS
         {
             InitializeComponent();
         }
-
-        private void prescriptionMedicine2_Load(object sender, EventArgs e)
-        {
-
-        }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {

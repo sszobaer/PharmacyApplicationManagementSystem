@@ -65,11 +65,6 @@ namespace PMS
             cn.ShowDialog();
             this.Show();
         }
-
-        private void Zimax_Load(object sender, EventArgs e)
-        {
-
-        }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
