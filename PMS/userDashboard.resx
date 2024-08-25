@@ -127,29 +127,6 @@
         W6EW2c/Xj0v2Q/60LWo7zmpgBvuClVJKKaUUZdkDCMdROIDabkkAAAAASUVORK5CYII=
 </value>
   </data>
-  <data name="pictureBox4.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAADcAAAA3CAYAAACo29JGAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAABBNJREFUaEPtmT9IHEEUxq+QIOSPBoRYWKQQYpcEUggJGFAIJAHtksJCMKCQwsIi
-        pSQWEiwsLEJIIUFICgtLC4sUFhZXWKSwsLCwsLCwsLC4wvy+8C2cZm5ub3dPDewPPs55+/bNezOzs3+s
-        lJSUlJSUlJScY6i30jX3uDL662Xl49lkZRmt1Okb9gWOT6EHPuV6Q0EdJPuG5DdQDR2idQpZxD6LJtA0
-        msO+inbQGdrDZ47z7znU9YLkVNQeOnIxj3woCgX14PuO87bRKecuYev24auFRHpJSjN1TGKztDt9qGUo
-        8jlxqkgDNGrz1UACT0lES29DRdqcC+J0EHeGmDV+F2y+XOh4mARO+J23qVCYxSceuFUVbHP78YypsBmb
-        UkGSXf4zFfgPqED6WbKpvWj5ucOmM4bvLfxm8d9Cp0g7o7SPfZnZeWjXhrhADeSUTe2DjrR5bLjZEJJ5
-        hZ+WVVJQSLpdfKGA6LIj1lv8ThmMAZuKh0603R9r9mwKgt97J59WW5plnx4EH90XN90sFo0uwXWznbUp
-        CMdf4KcZCRUR00+HCKIBxUezN2xTcRBUs3ZEJw3vY8kAONmW1SxxBm4Jv+JnT0EJvuhmEA9AMPGUiiZO
-        /H758dtnU36YkW6C1ggafaTCR9dFKOm0qqkvhwuCT5U8WroFRSHYGEEP3WwIPr+dZGbR16DDBWH1LOC3
-        7mZ+CPgpTUB89pMks4riRhwuCMdf49d0oFNDsK/NrjeBXxEz98zhgnBcN/Uzlu8Nm/JBsB8Ejd4CBH5r
-        SZIZ1fSa846sQbhtUz4IpuIm3GwIPuN1iWbRlkNFkS993XUzHwRLVRyj2olv5uuOPsYcKop9C5u57wSb
-        czMK16Z21mDyTZRqByQPPamouJs25YOEPxNwxc2m4P+hLuk02mHWo8+WCRQ1iP+Jm/kh4LQScDMVFDjB
-        OcdOPia9jKYqTJCLHspbyiUKAZPtt8emVODfTZHznLvrQhKp6FXiRrf9EJy3RsxiX14Jukcyk262jDYb
-        zr+PWhqgejTD5HFCjOiNvmUYLX1r3HbzH+hQ31T08VVv3doxW5W+Ya5pADXjDnsOcpjE58DN4qDD5H1q
-        yKa/qI0995PJBen75bxm292o/+R9sriH5nq01umg6qbaup5CyRWlqgbVfU3RPmw0q7lRYDrQB9MZpGUa
-        Sqho7bI6tKHpo++4U2kPdKCbdJbPCHmk/op7zYlBgXqnCiXRLu22bTmGoMO8b91ppeus391eDnSob/ra
-        YEIJFSXN2OUWVg8Faher/5pclNYvdSk2wrvZ5oXkskqf6tu7K2aBIkdILmuRBxQ1cy1mKwZF9iH9j20d
-        Nfp/gZbyjq5bDYpP/f9gNvTQ3I16/XvHh0pKSkpKSkoyUan8AbPwzFf3XnZVAAAAAElFTkSuQmCC
-</value>
-  </data>
   <data name="pictureBox5.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAKQAAAAwCAYAAACfQtEUAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
@@ -265,4 +242,7 @@
         n603cnCukaO1TANyAO76jplezZSk5GzFmP8D8xSWzUBrZVUAAAAASUVORK5CYII=
 </value>
   </data>
+  <metadata name="toolTip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
 </root>

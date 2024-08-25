@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Configuration;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -34,7 +35,7 @@ namespace PMS
             }
             
         }
-        string conStr = "Data Source=ZOBAER;Initial Catalog=PMS;Integrated Security=True;TrustServerCertificate=True";
+        string conStr = "Data Source=ZOBAER;Initial Catalog=\"Pharmacy Management System\";User ID=sa;Password=admin;TrustServerCertificate=True";
         private void button3_Click(object sender, EventArgs e)
         {
             //First Name
@@ -133,7 +134,7 @@ namespace PMS
 
                 SqlConnection con = new SqlConnection(conStr);
                 con.Open();
-                SqlCommand cmd = new SqlCommand("INSERT INTO SignUpTable(firstname, lastname, username, email, contactno, pass, dateofbirth, gender, address)VALUES(@firstname, @lastname, @username, @email, @contactno, @pass, @dateofbirth, @gender, @address)", con);
+                SqlCommand cmd = new SqlCommand("INSERT INTO dbo.SignUpTable(firstname, lastname, username, email, contactno, pass, dateofbirth, gender, address)VALUES(@firstname, @lastname, @username, @email, @contactno, @pass, @dateofbirth, @gender, @address)", con);
                 cmd.Parameters.AddWithValue("@firstname", txtFname.Text);
                 cmd.Parameters.AddWithValue("@lastname", txtLname.Text);
                 cmd.Parameters.AddWithValue("@username", txtUsername.Text);
@@ -154,15 +155,6 @@ namespace PMS
         }
       
 
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox3_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label14_Click(object sender, EventArgs e)
         {
@@ -194,10 +186,6 @@ namespace PMS
             panel1.Visible = !panel1.Visible;
         }
 
-        private void signUp_Load(object sender, EventArgs e)
-        {
-            
-        }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -242,15 +230,6 @@ namespace PMS
             this.Show();
         }
 
-        private void label10_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtConNo_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
 
         private void label17_Click(object sender, EventArgs e)
         {
@@ -293,15 +272,6 @@ namespace PMS
             }
         }
 
-        private void txtCPass_TextChanged(object sender, EventArgs e)
-        {
-            
-        }
-
-        private void radioButton1_Leave(object sender, EventArgs e)
-        {
-
-        }
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
@@ -313,10 +283,6 @@ namespace PMS
             }
         }
 
-        private void txtLname_TextChanged(object sender, EventArgs e)
-        {
-
-        }
 
         private void label18_MouseEnter(object sender, EventArgs e)
         {
@@ -387,29 +353,6 @@ namespace PMS
         {
             label1.ForeColor = Color.Black;
         }
-
-        private void radioButton2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label5_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
-        {
-
-        }
-
-        private void label3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        
-
         private void label26_Click_1(object sender, EventArgs e)
         {
             if (Form1.stack.Count > 0)

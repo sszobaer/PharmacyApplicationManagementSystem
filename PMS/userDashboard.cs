@@ -191,13 +191,9 @@ namespace PMS
 
         private void button5_Click(object sender, EventArgs e)
         {
-
+            panel14.Visible=!panel14.Visible;
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
@@ -222,6 +218,15 @@ namespace PMS
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            sessionManager.IsLoggedIn = false;
+            Form1 frm = new Form1();
+            this.Hide();    
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }

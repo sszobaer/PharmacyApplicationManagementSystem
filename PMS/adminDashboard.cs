@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PMS
 {
@@ -48,6 +49,31 @@ namespace PMS
             lblGender.Text = gender;
             lblDoB.Text = dateofbirth;
             lblAdress.Text = address;
+        }
+        
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            panel14.Visible = !panel14.Visible;
+        }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+            if (Form1.stack.Count > 0)
+            {
+                Form previousForm = Form1.stack.Pop();
+                this.Hide();
+                previousForm.Show();
+            }
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            sessionManager.IsLoggedIn = false;
+            Form1 frm = new Form1();
+            this.Hide();
+            frm.ShowDialog();
+            this.Show();
         }
     }
 }
