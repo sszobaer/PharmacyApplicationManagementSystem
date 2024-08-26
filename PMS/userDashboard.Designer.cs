@@ -789,6 +789,7 @@
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "userDashboard";
             this.Text = "userDashboard";
+            this.Load += new System.EventHandler(this.userDashboard_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();

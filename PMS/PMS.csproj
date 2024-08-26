@@ -66,11 +66,23 @@
     <Compile Include="Contacts.Designer.cs">
       <DependentUpon>Contacts.cs</DependentUpon>
     </Compile>
+    <Compile Include="Department.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Department.Designer.cs">
+      <DependentUpon>Department.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diamicron.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Diamicron.Designer.cs">
       <DependentUpon>Diamicron.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Employee.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Employee.Designer.cs">
+      <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
     <Compile Include="FileFreshDetails.cs">
       <SubType>Form</SubType>
@@ -152,6 +164,12 @@
     <Compile Include="requestOrder.Designer.cs">
       <DependentUpon>requestOrder.cs</DependentUpon>
     </Compile>
+    <Compile Include="salary.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="salary.Designer.cs">
+      <DependentUpon>salary.cs</DependentUpon>
+    </Compile>
     <Compile Include="sessionManager.cs" />
     <Compile Include="signUp.cs">
       <SubType>Form</SubType>
@@ -180,8 +198,14 @@
     <EmbeddedResource Include="Contacts.resx">
       <DependentUpon>Contacts.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Department.resx">
+      <DependentUpon>Department.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Diamicron.resx">
       <DependentUpon>Diamicron.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Employee.resx">
+      <DependentUpon>Employee.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileFreshDetails.resx">
       <DependentUpon>FileFreshDetails.cs</DependentUpon>
@@ -230,6 +254,9 @@
     </Compile>
     <EmbeddedResource Include="requestOrder.resx">
       <DependentUpon>requestOrder.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="salary.resx">
+      <DependentUpon>salary.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="signUp.resx">
       <DependentUpon>signUp.cs</DependentUpon>

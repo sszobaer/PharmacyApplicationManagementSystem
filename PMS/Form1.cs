@@ -64,6 +64,7 @@ namespace PMS
                     string dateofbirth = adminReader["dateofbirth"].ToString();
                     string gender = adminReader["gender"].ToString();
                     string address = adminReader["address"].ToString();
+                    MessageBox.Show($"Welcome back {name}", "Debug", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     //Login true
                     sessionManager.IsLoggedIn = true;
@@ -97,8 +98,8 @@ namespace PMS
                     string dateofbirth = userReader["dateofbirth"].ToString();
                     string gender = userReader["gender"].ToString();
                     string address = userReader["address"].ToString();
+                    MessageBox.Show($"Welcome {firstname} {lastname}", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    //Login true
                     sessionManager.IsLoggedIn = true;
 
                     userDashboard userDashboard = new userDashboard(firstname, lastname, email, contactno, dateofbirth, gender, address);
@@ -106,6 +107,7 @@ namespace PMS
                     this.Hide();
                     userDashboard.ShowDialog();
                     this.Show();
+                    return;
                 }
                 else
                 {
@@ -114,7 +116,7 @@ namespace PMS
             }
 
         }
-
+        
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             signUp su = new signUp();

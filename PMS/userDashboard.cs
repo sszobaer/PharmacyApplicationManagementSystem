@@ -10,8 +10,14 @@ using System.Windows.Forms;
 
 namespace PMS
 {
+    
     public partial class userDashboard : Form
     {
+        public userDashboard()
+        {
+            InitializeComponent();
+        }
+
         private string firstname;
         private string lastname;
         private string email;
@@ -20,11 +26,11 @@ namespace PMS
         private string gender;
         private string address;
 
-        public userDashboard(string firstname, string lastname, string email, string contactno, string dateofbirth, string gender, string adress)
+        public userDashboard(string fname, string lname, string email, string contactno, string dateofbirth, string gender, string adress)
         {
             InitializeComponent();
-            this.firstname = firstname;
-            this.lastname = lastname;
+            this.firstname = fname;
+            this.lastname = lname;
             this.email = email;
             this.contactno = contactno;
             this.dateofbirth = dateofbirth;
@@ -32,12 +38,9 @@ namespace PMS
             this.address = adress;
         }
 
+        
 
-
-        public userDashboard()
-        {
-            InitializeComponent();
-        }
+        
 
         private void label6_Click(object sender, EventArgs e)
         {
@@ -115,19 +118,7 @@ namespace PMS
             }
         }
 
-        private void userDashboard_Load(object sender, EventArgs e)
-        {
-            // Display all of the information according to database
-            lbluserFullName.Text = $"{firstname} { lastname}";
-            lblfullNameMain.Text = $"{firstname} {lastname}";
-            lblPhoneNo.Text = contactno;
-            lblphoneNumberMain.Text = contactno;
-            lblEmailAdd.Text = email;
-            lblemailMain.Text = email;
-            lblGender.Text = gender;
-            lblDoB.Text = dateofbirth;
-            lblAdress.Text = address;
-        }
+       
         //MenuBtn Color setting start
         private void label18_MouseEnter(object sender, EventArgs e)
         {
@@ -227,6 +218,20 @@ namespace PMS
             this.Hide();    
             frm.ShowDialog();
             this.Show();
+        }
+
+        private void userDashboard_Load(object sender, EventArgs e)
+        {
+            // Display all of the information according to database
+            lbluserFullName.Text = $"{firstname} {lastname}";
+            lblfullNameMain.Text = $"{firstname} {lastname}";
+            lblPhoneNo.Text = contactno;
+            lblphoneNumberMain.Text = contactno;
+            lblEmailAdd.Text = email;
+            lblemailMain.Text = email;
+            lblGender.Text = gender;
+            lblDoB.Text = dateofbirth;
+            lblAdress.Text = address;
         }
     }
 }

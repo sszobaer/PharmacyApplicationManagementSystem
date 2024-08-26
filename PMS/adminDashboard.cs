@@ -2,8 +2,10 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Data.SqlClient;
 using System.Drawing;
 using System.Linq;
+using System.Messaging;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -73,6 +75,29 @@ namespace PMS
             Form1 frm = new Form1();
             this.Hide();
             frm.ShowDialog();
+            this.Show();
+        }
+        private void button3_Click(object sender, EventArgs e)
+        {
+            Employee employee = new Employee();
+            this.Hide();
+            employee.ShowDialog();
+            this.Show();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Department dpt = new Department();
+            this.Hide();
+            dpt.ShowDialog();
+            this.Show();
+        }
+
+        private void button7_Click(object sender, EventArgs e)
+        {
+            salary sal = new salary();
+            this.Hide();
+            sal.ShowDialog();
             this.Show();
         }
     }
