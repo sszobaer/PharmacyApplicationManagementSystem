@@ -44,33 +44,34 @@
             this.label2 = new System.Windows.Forms.Label();
             this.label26 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.button10 = new System.Windows.Forms.Button();
+            this.updateBtn = new System.Windows.Forms.Button();
             this.label3 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button6 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.addBtn = new System.Windows.Forms.Button();
+            this.txtEmpName = new System.Windows.Forms.TextBox();
+            this.genderCb = new System.Windows.Forms.ComboBox();
+            this.txtSal = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
-            this.comboBox2 = new System.Windows.Forms.ComboBox();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.deptCb = new System.Windows.Forms.ComboBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
             this.notifyIcon1 = new System.Windows.Forms.NotifyIcon(this.components);
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.empList = new System.Windows.Forms.DataGridView();
             this.label9 = new System.Windows.Forms.Label();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button11 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
+            this.dobDtp = new System.Windows.Forms.DateTimePicker();
+            this.jDateDtp = new System.Windows.Forms.DateTimePicker();
+            this.deleteBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empList)).BeginInit();
             this.panel6.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -260,39 +261,40 @@
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.jDateDtp);
+            this.panel4.Controls.Add(this.dobDtp);
+            this.panel4.Controls.Add(this.updateBtn);
             this.panel4.Controls.Add(this.label3);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.dateTimePicker2);
-            this.panel4.Controls.Add(this.comboBox1);
-            this.panel4.Controls.Add(this.textBox3);
-            this.panel4.Controls.Add(this.label8);
-            this.panel4.Controls.Add(this.comboBox2);
-            this.panel4.Controls.Add(this.dateTimePicker1);
-            this.panel4.Controls.Add(this.label7);
+            this.panel4.Controls.Add(this.addBtn);
+            this.panel4.Controls.Add(this.txtEmpName);
             this.panel4.Controls.Add(this.label5);
+            this.panel4.Controls.Add(this.txtSal);
+            this.panel4.Controls.Add(this.genderCb);
+            this.panel4.Controls.Add(this.label8);
+            this.panel4.Controls.Add(this.deptCb);
+            this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Location = new System.Drawing.Point(16, 215);
+            this.panel4.Location = new System.Drawing.Point(12, 191);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(401, 562);
+            this.panel4.Size = new System.Drawing.Size(405, 593);
             this.panel4.TabIndex = 28;
             // 
-            // button10
+            // updateBtn
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(196, 497);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(162, 55);
-            this.button10.TabIndex = 16;
-            this.button10.Text = "UPDATE";
-            this.button10.UseVisualStyleBackColor = false;
+            this.updateBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.ForeColor = System.Drawing.Color.Black;
+            this.updateBtn.Location = new System.Drawing.Point(196, 523);
+            this.updateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(162, 55);
+            this.updateBtn.TabIndex = 16;
+            this.updateBtn.Text = "UPDATE";
+            this.updateBtn.UseVisualStyleBackColor = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
             // label3
             // 
@@ -308,107 +310,82 @@
             // 
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(22, 82);
+            this.label4.Location = new System.Drawing.Point(22, 94);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(240, 33);
             this.label4.TabIndex = 1;
             this.label4.Text = "Employee Gender";
             // 
-            // button6
+            // addBtn
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(32, 497);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(156, 55);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "ADD";
-            this.button6.UseVisualStyleBackColor = false;
+            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.Black;
+            this.addBtn.Location = new System.Drawing.Point(32, 523);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(156, 55);
+            this.addBtn.TabIndex = 16;
+            this.addBtn.Text = "ADD";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
-            // textBox1
+            // txtEmpName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(28, 36);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(330, 43);
-            this.textBox1.TabIndex = 0;
+            this.txtEmpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtEmpName.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtEmpName.Location = new System.Drawing.Point(28, 36);
+            this.txtEmpName.Name = "txtEmpName";
+            this.txtEmpName.Size = new System.Drawing.Size(330, 43);
+            this.txtEmpName.TabIndex = 0;
             // 
-            // label6
+            // genderCb
             // 
-            this.label6.AutoSize = true;
-            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(22, 158);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(301, 33);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Employee Department";
-            // 
-            // dateTimePicker2
-            // 
-            this.dateTimePicker2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker2.Location = new System.Drawing.Point(32, 447);
-            this.dateTimePicker2.Name = "dateTimePicker2";
-            this.dateTimePicker2.Size = new System.Drawing.Size(326, 39);
-            this.dateTimePicker2.TabIndex = 3;
-            // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("Poppins Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Items.AddRange(new object[] {
+            this.genderCb.Font = new System.Drawing.Font("Poppins Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.genderCb.FormattingEnabled = true;
+            this.genderCb.Items.AddRange(new object[] {
             "Male",
             "Female"});
-            this.comboBox1.Location = new System.Drawing.Point(28, 117);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(330, 44);
-            this.comboBox1.TabIndex = 2;
+            this.genderCb.Location = new System.Drawing.Point(28, 129);
+            this.genderCb.Name = "genderCb";
+            this.genderCb.Size = new System.Drawing.Size(330, 44);
+            this.genderCb.TabIndex = 1;
             // 
-            // textBox3
+            // txtSal
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(28, 277);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(330, 43);
-            this.textBox3.TabIndex = 0;
+            this.txtSal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtSal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSal.Location = new System.Drawing.Point(28, 480);
+            this.txtSal.Name = "txtSal";
+            this.txtSal.Size = new System.Drawing.Size(330, 35);
+            this.txtSal.TabIndex = 5;
             // 
             // label8
             // 
             this.label8.AutoSize = true;
             this.label8.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label8.Location = new System.Drawing.Point(26, 406);
+            this.label8.Location = new System.Drawing.Point(22, 357);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(176, 33);
             this.label8.TabIndex = 1;
             this.label8.Text = "Joining Date";
             // 
-            // comboBox2
+            // deptCb
             // 
-            this.comboBox2.Font = new System.Drawing.Font("Poppins Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(28, 194);
-            this.comboBox2.Name = "comboBox2";
-            this.comboBox2.Size = new System.Drawing.Size(330, 44);
-            this.comboBox2.TabIndex = 2;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dateTimePicker1.Location = new System.Drawing.Point(28, 364);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(330, 39);
-            this.dateTimePicker1.TabIndex = 3;
+            this.deptCb.Font = new System.Drawing.Font("Poppins Light", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deptCb.FormattingEnabled = true;
+            this.deptCb.Location = new System.Drawing.Point(32, 218);
+            this.deptCb.Name = "deptCb";
+            this.deptCb.Size = new System.Drawing.Size(330, 44);
+            this.deptCb.TabIndex = 2;
             // 
             // label7
             // 
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(22, 323);
+            this.label7.Location = new System.Drawing.Point(26, 262);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(180, 33);
             this.label7.TabIndex = 1;
@@ -418,27 +395,40 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(22, 241);
+            this.label5.Location = new System.Drawing.Point(22, 444);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(293, 33);
             this.label5.TabIndex = 1;
             this.label5.Text = "Employee Daily Salary";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Montserrat", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(26, 182);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(301, 33);
+            this.label6.TabIndex = 1;
+            this.label6.Text = "Employee Department";
             // 
             // notifyIcon1
             // 
             this.notifyIcon1.Text = "notifyIcon1";
             this.notifyIcon1.Visible = true;
             // 
-            // dataGridView1
+            // empList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(453, 231);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1443, 776);
-            this.dataGridView1.TabIndex = 29;
+            this.empList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.empList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.empList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.empList.Location = new System.Drawing.Point(459, 231);
+            this.empList.Name = "empList";
+            this.empList.RowHeadersWidth = 62;
+            this.empList.RowTemplate.Height = 28;
+            this.empList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.empList.Size = new System.Drawing.Size(1437, 698);
+            this.empList.TabIndex = 29;
+            this.empList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.empList_CellContentClick);
             // 
             // label9
             // 
@@ -459,7 +449,7 @@
             this.panel6.Controls.Add(this.button14);
             this.panel6.Controls.Add(this.button15);
             this.panel6.Controls.Add(this.button16);
-            this.panel6.Location = new System.Drawing.Point(12, 790);
+            this.panel6.Location = new System.Drawing.Point(12, 789);
             this.panel6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel6.Name = "panel6";
             this.panel6.Size = new System.Drawing.Size(405, 260);
@@ -529,16 +519,50 @@
             this.button16.UseVisualStyleBackColor = false;
             this.button16.Click += new System.EventHandler(this.button16_Click);
             // 
+            // dobDtp
+            // 
+            this.dobDtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dobDtp.Location = new System.Drawing.Point(32, 298);
+            this.dobDtp.Name = "dobDtp";
+            this.dobDtp.Size = new System.Drawing.Size(330, 39);
+            this.dobDtp.TabIndex = 3;
+            // 
+            // jDateDtp
+            // 
+            this.jDateDtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.jDateDtp.Location = new System.Drawing.Point(28, 393);
+            this.jDateDtp.Name = "jDateDtp";
+            this.jDateDtp.Size = new System.Drawing.Size(330, 39);
+            this.jDateDtp.TabIndex = 4;
+            this.jDateDtp.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // deleteBtn
+            // 
+            this.deleteBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.deleteBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.deleteBtn.ForeColor = System.Drawing.Color.Black;
+            this.deleteBtn.Location = new System.Drawing.Point(459, 956);
+            this.deleteBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.deleteBtn.Name = "deleteBtn";
+            this.deleteBtn.Size = new System.Drawing.Size(1437, 55);
+            this.deleteBtn.TabIndex = 16;
+            this.deleteBtn.Text = "DELETE EMPLOYEE";
+            this.deleteBtn.UseVisualStyleBackColor = false;
+            this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1917, 1050);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.empList);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
+            this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label26);
             this.Name = "Employee";
@@ -550,7 +574,7 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.empList)).EndInit();
             this.panel6.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -573,27 +597,28 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.ComboBox comboBox2;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox deptCb;
+        private System.Windows.Forms.ComboBox genderCb;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtSal;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtEmpName;
         private System.Windows.Forms.NotifyIcon notifyIcon1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Button updateBtn;
+        private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Label label8;
         private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView empList;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Button button11;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
         private System.Windows.Forms.Button button16;
+        private System.Windows.Forms.DateTimePicker dobDtp;
+        private System.Windows.Forms.DateTimePicker jDateDtp;
+        private System.Windows.Forms.Button deleteBtn;
     }
 }

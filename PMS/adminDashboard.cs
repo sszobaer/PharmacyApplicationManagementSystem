@@ -80,6 +80,7 @@ namespace PMS
         private void button3_Click(object sender, EventArgs e)
         {
             Employee employee = new Employee();
+            Form1.stack.Push(this);
             this.Hide();
             employee.ShowDialog();
             this.Show();
@@ -88,6 +89,7 @@ namespace PMS
         private void button1_Click(object sender, EventArgs e)
         {
             Department dpt = new Department();
+            Form1.stack.Push(this);
             this.Hide();
             dpt.ShowDialog();
             this.Show();
@@ -96,6 +98,7 @@ namespace PMS
         private void button7_Click(object sender, EventArgs e)
         {
             salary sal = new salary();
+            Form1.stack.Push(this);
             this.Hide();
             sal.ShowDialog();
             this.Show();

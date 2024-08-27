@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
+using System.Diagnostics.Contracts;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -12,12 +13,132 @@ namespace PMS
 {
     public partial class Department : Form
     {
+        Functions con;
         public Department()
         {
             InitializeComponent();
+            con = new Functions();
+            showDepartments();
+            ConfigureDataGridView();
         }
-  
-        
+        private void showDepartments()
+        {
+            string Query = "SELECT * FROM DepartmentTable";
+            deptList.DataSource = con.GetData(Query);
+        }
+        private void ConfigureDataGridView()
+        {
+            // Set alternating row colors for readability
+            deptList.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+
+            // Set header styles
+            deptList.EnableHeadersVisualStyles = false;
+            deptList.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 128, 0);
+            deptList.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            deptList.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Set grid line color
+            deptList.GridColor = Color.Black;
+
+            // Set default row styles
+            deptList.DefaultCellStyle.BackColor = Color.White;
+            deptList.DefaultCellStyle.ForeColor = Color.Black;
+            deptList.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Set selection styles
+            deptList.DefaultCellStyle.SelectionBackColor = Color.DarkOrange;
+            deptList.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fit columns to the DataGridView
+            deptList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Adjust row height to fit content
+            deptList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            // Disable column resize by the user for a consistent layout
+            deptList.AllowUserToResizeColumns = false;
+
+            // Set row and column headers visibility if needed
+            deptList.RowHeadersVisible = false;
+            deptList.ColumnHeadersVisible = true;
+        }
+
+        //Add department into Database
+        private void addBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDeptName.Text == "")
+                {
+                    MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string dept = txtDeptName.Text;
+                    string Query = "INSERT INTO DepartmentTable VALUES('{0}')";
+                    Query = string.Format(Query,txtDeptName.Text);
+                    con.setData(Query);
+                    showDepartments();
+                    deptList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+                    MessageBox.Show("Department added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtDeptName.Text = "";
+                }
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //Edit element into database
+        private void updateBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDeptName.Text == "")
+                {
+                    MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string dept = txtDeptName.Text;
+                    string Query = "UPDATE DepartmentTable SET deptName = '{0}' WHERE deptID = {1}";
+                    Query = string.Format(Query, txtDeptName.Text, key);
+                    con.setData(Query);
+                    showDepartments();
+                    MessageBox.Show("New Department updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtDeptName.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
+        //Delete from Database
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (txtDeptName.Text == "")
+                {
+                    MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string dept = txtDeptName.Text;
+                    string Query = "DELETE FROM DepartmentTable WHERE deptID = {0}";
+                    Query = string.Format(Query, key);
+                    con.setData(Query);
+                    showDepartments();
+                    MessageBox.Show("Department deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtDeptName.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+        }
 
         //Enable other form from this form
         private void label26_Click(object sender, EventArgs e)
@@ -175,6 +296,20 @@ namespace PMS
         private void label1_Leave(object sender, EventArgs e)
         {
             label1.ForeColor = Color.OrangeRed;
+        }
+        int key = 0;
+        private void deptList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtDeptName.Text = deptList.SelectedRows[0].Cells[1].Value.ToString();
+            if(txtDeptName.Text == "")
+            {
+                key = 0;
+            }
+            else
+            {
+                key = Convert.ToInt32(deptList.SelectedRows[0].Cells[0].Value.ToString());
+            }
+               
         }
 
         

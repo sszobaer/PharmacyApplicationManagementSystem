@@ -40,7 +40,7 @@
             this.label18 = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
             this.label9 = new System.Windows.Forms.Label();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.salList = new System.Windows.Forms.DataGridView();
             this.panel4 = new System.Windows.Forms.Panel();
             this.button10 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
@@ -62,7 +62,7 @@
             this.button16 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salList)).BeginInit();
             this.panel4.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -225,16 +225,16 @@
             this.label9.TabIndex = 37;
             this.label9.Text = "Salary List";
             // 
-            // dataGridView1
+            // salList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(469, 249);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1415, 757);
-            this.dataGridView1.TabIndex = 36;
+            this.salList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.salList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.salList.Location = new System.Drawing.Point(469, 249);
+            this.salList.Name = "salList";
+            this.salList.RowHeadersWidth = 62;
+            this.salList.RowTemplate.Height = 28;
+            this.salList.Size = new System.Drawing.Size(1415, 757);
+            this.salList.TabIndex = 36;
             // 
             // panel4
             // 
@@ -479,7 +479,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1917, 1050);
             this.Controls.Add(this.panel6);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.salList);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.panel1);
@@ -490,7 +490,7 @@
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salList)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.panel1.ResumeLayout(false);
@@ -514,7 +514,7 @@
         private System.Windows.Forms.Label label18;
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label9;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView salList;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button button10;
         private System.Windows.Forms.Button button6;

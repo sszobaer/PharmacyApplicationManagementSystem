@@ -48,18 +48,19 @@
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.button10 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.txtDeptName = new System.Windows.Forms.TextBox();
+            this.updateBtn = new System.Windows.Forms.Button();
+            this.addBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.deptList = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
+            this.delBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptList)).BeginInit();
             this.SuspendLayout();
             // 
             // panel3
@@ -230,7 +231,7 @@
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.button3);
-            this.panel5.Location = new System.Drawing.Point(12, 500);
+            this.panel5.Location = new System.Drawing.Point(12, 623);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
             this.panel5.Size = new System.Drawing.Size(405, 261);
@@ -332,68 +333,74 @@
             this.label3.TabIndex = 33;
             this.label3.Text = "Department Name";
             // 
-            // textBox1
+            // txtDeptName
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(9, 48);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(377, 43);
-            this.textBox1.TabIndex = 32;
+            this.txtDeptName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtDeptName.Font = new System.Drawing.Font("Poppins Light", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtDeptName.Location = new System.Drawing.Point(9, 48);
+            this.txtDeptName.Name = "txtDeptName";
+            this.txtDeptName.Size = new System.Drawing.Size(377, 43);
+            this.txtDeptName.TabIndex = 32;
             // 
-            // button10
+            // updateBtn
             // 
-            this.button10.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button10.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button10.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.ForeColor = System.Drawing.Color.Black;
-            this.button10.Location = new System.Drawing.Point(213, 118);
-            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(173, 55);
-            this.button10.TabIndex = 16;
-            this.button10.Text = "UPDATE";
-            this.button10.UseVisualStyleBackColor = false;
+            this.updateBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.updateBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.updateBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.updateBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.updateBtn.ForeColor = System.Drawing.Color.Black;
+            this.updateBtn.Location = new System.Drawing.Point(197, 183);
+            this.updateBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.updateBtn.Name = "updateBtn";
+            this.updateBtn.Size = new System.Drawing.Size(189, 55);
+            this.updateBtn.TabIndex = 16;
+            this.updateBtn.Text = "UPDATE";
+            this.updateBtn.UseVisualStyleBackColor = false;
+            this.updateBtn.Click += new System.EventHandler(this.updateBtn_Click);
             // 
-            // button6
+            // addBtn
             // 
-            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button6.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.ForeColor = System.Drawing.Color.Black;
-            this.button6.Location = new System.Drawing.Point(9, 118);
-            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(173, 55);
-            this.button6.TabIndex = 16;
-            this.button6.Text = "ADD";
-            this.button6.UseVisualStyleBackColor = false;
+            this.addBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.addBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.addBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.addBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.addBtn.ForeColor = System.Drawing.Color.Black;
+            this.addBtn.Location = new System.Drawing.Point(9, 118);
+            this.addBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.addBtn.Name = "addBtn";
+            this.addBtn.Size = new System.Drawing.Size(377, 55);
+            this.addBtn.TabIndex = 16;
+            this.addBtn.Text = "ADD";
+            this.addBtn.UseVisualStyleBackColor = false;
+            this.addBtn.Click += new System.EventHandler(this.addBtn_Click);
             // 
             // panel4
             // 
             this.panel4.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel4.Controls.Add(this.label3);
-            this.panel4.Controls.Add(this.button6);
-            this.panel4.Controls.Add(this.textBox1);
-            this.panel4.Controls.Add(this.button10);
+            this.panel4.Controls.Add(this.delBtn);
+            this.panel4.Controls.Add(this.addBtn);
+            this.panel4.Controls.Add(this.txtDeptName);
+            this.panel4.Controls.Add(this.updateBtn);
             this.panel4.Location = new System.Drawing.Point(17, 277);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(400, 190);
+            this.panel4.Size = new System.Drawing.Size(400, 254);
             this.panel4.TabIndex = 34;
             // 
-            // dataGridView1
+            // deptList
             // 
-            this.dataGridView1.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(460, 277);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.RowHeadersWidth = 62;
-            this.dataGridView1.RowTemplate.Height = 28;
-            this.dataGridView1.Size = new System.Drawing.Size(1445, 729);
-            this.dataGridView1.TabIndex = 35;
+            this.deptList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.deptList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.deptList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
+            this.deptList.Location = new System.Drawing.Point(460, 277);
+            this.deptList.Name = "deptList";
+            this.deptList.RowHeadersWidth = 62;
+            this.deptList.RowTemplate.Height = 28;
+            this.deptList.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.deptList.Size = new System.Drawing.Size(1445, 729);
+            this.deptList.TabIndex = 35;
+            this.deptList.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.deptList_CellContentClick);
             // 
             // label4
             // 
@@ -406,13 +413,29 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Department List";
             // 
+            // delBtn
+            // 
+            this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.delBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delBtn.ForeColor = System.Drawing.Color.Black;
+            this.delBtn.Location = new System.Drawing.Point(9, 183);
+            this.delBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(180, 55);
+            this.delBtn.TabIndex = 16;
+            this.delBtn.Text = "DELETE";
+            this.delBtn.UseVisualStyleBackColor = false;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
+            // 
             // Department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1917, 1050);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.deptList);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.panel5);
@@ -428,7 +451,7 @@
             this.panel1.PerformLayout();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.deptList)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -455,11 +478,12 @@
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Button button10;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.TextBox txtDeptName;
+        private System.Windows.Forms.Button updateBtn;
+        private System.Windows.Forms.Button addBtn;
         private System.Windows.Forms.Panel panel4;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DataGridView deptList;
         private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Button delBtn;
     }
 }

@@ -84,6 +84,7 @@
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
     </Compile>
+    <Compile Include="Functions.cs" />
     <Compile Include="FileFreshDetails.cs">
       <SubType>Form</SubType>
     </Compile>

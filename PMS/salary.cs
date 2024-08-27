@@ -15,6 +15,44 @@ namespace PMS
         public salary()
         {
             InitializeComponent();
+            ConfigureDataGridView();
+        }
+
+        private void ConfigureDataGridView()
+        {
+            // Set alternating row colors for readability
+            salList.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+
+            // Set header styles
+            salList.EnableHeadersVisualStyles = false;
+            salList.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 128, 0);
+            salList.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            salList.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Set grid line color
+            salList.GridColor = Color.Black;
+
+            // Set default row styles
+            salList.DefaultCellStyle.BackColor = Color.White;
+            salList.DefaultCellStyle.ForeColor = Color.Black;
+            salList.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Set selection styles
+            salList.DefaultCellStyle.SelectionBackColor = Color.DarkOrange;
+            salList.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fit columns to the DataGridView
+            salList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Adjust row height to fit content
+            salList.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            // Disable column resize by the user
+            salList.AllowUserToResizeColumns = false;
+
+            // Set row and column headers visibility
+            salList.RowHeadersVisible = false;
+            salList.ColumnHeadersVisible = true;
         }
 
         private void label26_Click(object sender, EventArgs e)
