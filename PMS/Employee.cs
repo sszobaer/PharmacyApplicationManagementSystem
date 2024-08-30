@@ -21,114 +21,141 @@ namespace PMS
             showEmployees();
             GetDept();
         }
+
         private void showEmployees()
         {
             string Query = "SELECT * FROM EmployeeTable";
-            empList.DataSource=con.GetData(Query);
+            empList.DataSource = con.GetData(Query);
         }
+
         private void GetDept()
         {
             string Query = "SELECT * FROM DepartmentTable";
-            deptCb.DisplayMember = con.GetData(Query).Columns["deptName"].ToString();
-            deptCb.ValueMember = con.GetData(Query).Columns["deptID"].ToString();
-            deptCb.DataSource = con.GetData(Query);
+            DataTable dt = con.GetData(Query);
+            deptCb.DisplayMember = "deptName";
+            deptCb.ValueMember = "deptID";
+            deptCb.DataSource = dt;
         }
+
+        int key = 0;
+        private void empList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            txtEmpName.Text = empList.SelectedRows[0].Cells[1].Value.ToString();
+            genderCb.Text = empList.SelectedRows[0].Cells[2].Value.ToString();
+            deptCb.SelectedValue = empList.SelectedRows[0].Cells[3].Value.ToString();
+            dobDtp.Text = empList.SelectedRows[0].Cells[4].Value.ToString();
+            jDateDtp.Text = empList.SelectedRows[0].Cells[5].Value.ToString();
+            txtSal.Text = empList.SelectedRows[0].Cells[6].Value.ToString();
+            key = txtEmpName.Text == "" ? 0 : Convert.ToInt32(empList.SelectedRows[0].Cells[0].Value.ToString());
+        }
+
         private void addBtn_Click(object sender, EventArgs e)
         {
+            key = 0;
             try
             {
                 if (txtEmpName.Text == "" || genderCb.SelectedIndex == -1 || txtSal.Text == "")
                 {
                     MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
+
+                string Name = txtEmpName.Text;
+                string Gender = genderCb.SelectedItem.ToString();
+                int Dept = Convert.ToInt32(deptCb.SelectedValue.ToString());
+                string Dob = dobDtp.Value.ToString("yyyy-MM-dd");
+                string jDate = jDateDtp.Value.ToString("yyyy-MM-dd");
+                int Salary = Convert.ToInt32(txtSal.Text);
+
+                string Query = "INSERT INTO EmployeeTable (empName, empGender, empDept, empDob, empJDate, empSal) VALUES (@Name, @Gender, @Dept, @Dob, @jDate, @Salary)";
+                Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
-                    string Name = txtEmpName.Text;
-                    string Gender = genderCb.SelectedItem.ToString();
-                    int Dept = Convert.ToInt32(deptCb.SelectedValue.ToString());
-                    string Dob = dobDtp.Value.ToString();
-                    string jDate = jDateDtp.Value.ToString();
-                    int Salary = Convert.ToInt32(txtSal.Text);
+                    { "@Name", Name },
+                    { "@Gender", Gender },
+                    { "@Dept", Dept },
+                    { "@Dob", Dob },
+                    { "@jDate", jDate },
+                    { "@Salary", Salary }
+                };
 
-
-                    string Query = "INSERT INTO EmployeeTable VALUES('{0}','{1}',{2},'{3}','{4}',{5})";
-                    Query = string.Format(Query, Name, Gender, Dept, Dob, jDate, Salary);
-                    con.setData(Query);
-                    showEmployees();
-                    MessageBox.Show("New employee added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtEmpName.Text = "";
-                    txtSal.Text = "";
-                    genderCb.SelectedIndex = -1;
-                    deptCb.SelectedIndex = -1;
-                }
+                con.setData(Query, parameters);
+                showEmployees();
+                MessageBox.Show("New employee added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
         private void updateBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtEmpName.Text == "" || genderCb.SelectedIndex == -1 || txtSal.Text == "")
+                if (txtEmpName.Text == "" || genderCb.SelectedIndex == -1 || txtSal.Text == "" || key == 0)
                 {
                     MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
+
+                string Name = txtEmpName.Text;
+                string Gender = genderCb.SelectedItem.ToString();
+                int Dept = Convert.ToInt32(deptCb.SelectedValue.ToString());
+                string Dob = dobDtp.Value.ToString("yyyy-MM-dd");
+                string jDate = jDateDtp.Value.ToString("yyyy-MM-dd");
+                int Salary = Convert.ToInt32(txtSal.Text);
+
+                string Query = "UPDATE EmployeeTable SET eDate =mpName = @Name, empGender = @Gender, empDept = @Dept, empDob = @Dob, empJ @jDate, empSal = @Salary WHERE empID = @ID";
+                Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
-                    string Name = txtEmpName.Text;
-                    string Gender = genderCb.SelectedItem.ToString();
-                    int Dept = Convert.ToInt32(deptCb.SelectedValue.ToString());
-                    string Dob = dobDtp.Value.ToString();
-                    string jDate = jDateDtp.Value.ToString();
-                    int Salary = Convert.ToInt32(txtSal.Text);
+                    { "@Name", Name },
+                    { "@Gender", Gender },
+                    { "@Dept", Dept },
+                    { "@Dob", Dob },
+                    { "@jDate", jDate },
+                    { "@Salary", Salary },
+                    { "@ID", key }
+                };
 
-
-                    string Query;
-                    Query = "UPDATE EmployeeTable SET empName = '{0}', empGender= '{1}',empDept={2},empDob='{3}',empJDate='{4}',empSal={5} WHERE empID={6}";
-                    Query = string.Format(Query, Name, Gender, Dept, Dob, jDate, Salary, key);
-                    con.setData(Query);
-                    showEmployees();
-                    MessageBox.Show("Employee's info updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtEmpName.Text = "";
-                    txtSal.Text = "";
-                    genderCb.SelectedIndex = -1;
-                    deptCb.SelectedIndex = -1;
-                }
+                con.setData(Query, parameters);
+                showEmployees();
+                MessageBox.Show("Employee's info updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
         private void deleteBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (key==0)
+                if (key == 0)
                 {
                     MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
                 }
-                else
-                { 
-                    string Query;
-                    Query = "DELETE FROM EmployeeTable WHERE empID={0}";
-                    Query = string.Format(Query, key);
-                    con.setData(Query);
-                    showEmployees();
-                    MessageBox.Show("Employee's info deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtEmpName.Text = "";
-                    txtSal.Text = "";
-                    genderCb.SelectedIndex = -1;
-                    deptCb.SelectedIndex = -1;
-                }
+
+                string Query = "DELETE FROM EmployeeTable WHERE empID = @ID";
+                Dictionary<string, object> parameters = new Dictionary<string, object>
+                {
+                    { "@ID", key }
+                };
+
+                con.setData(Query, parameters);
+                showEmployees();
+                MessageBox.Show("Employee's info deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                ClearFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"Error: {ex.Message}");
             }
         }
+
         private void ConfigureDataGridView()
         {
             // Set alternating row colors for readability
@@ -165,6 +192,18 @@ namespace PMS
             empList.RowHeadersVisible = false;
             empList.ColumnHeadersVisible = true;
         }
+
+        private void ClearFields()
+        {
+            txtEmpName.Text = "";
+            txtSal.Text = "";
+            genderCb.SelectedIndex = -1;
+            deptCb.SelectedIndex = -1;
+            dobDtp.Value = DateTime.Now;
+            jDateDtp.Value = DateTime.Now;
+            key = 0;
+        }
+
 
         private void label26_Click(object sender, EventArgs e)
         {
@@ -330,28 +369,6 @@ namespace PMS
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
-        }
-
-        
-        int key = 0;
-        private void empList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtEmpName.Text = empList.SelectedRows[0].Cells[1].Value.ToString();
-            genderCb.Text = empList.SelectedRows[0].Cells[2].Value.ToString();
-            deptCb.Text = empList.SelectedRows[0].Cells[3].Value.ToString();
-            dobDtp.Text = empList.SelectedRows[0].Cells[4].Value.ToString();
-            jDateDtp.Text = empList.SelectedRows[0].Cells[5].Value.ToString();
-            txtSal.Text = empList.SelectedRows[0].Cells[6].Value.ToString();
-            if (txtEmpName.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(empList.SelectedRows[0].Cells[0].Value.ToString());
-            }
-        }
-
-        
+        }   
     }
 }

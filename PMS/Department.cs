@@ -14,6 +14,7 @@ namespace PMS
     public partial class Department : Form
     {
         Functions con;
+
         public Department()
         {
             InitializeComponent();
@@ -21,11 +22,13 @@ namespace PMS
             showDepartments();
             ConfigureDataGridView();
         }
+
         private void showDepartments()
         {
-            string Query = "SELECT * FROM DepartmentTable";
-            deptList.DataSource = con.GetData(Query);
+            string query = "SELECT * FROM DepartmentTable";
+            deptList.DataSource = con.GetData(query);
         }
+
         private void ConfigureDataGridView()
         {
             // Set alternating row colors for readability
@@ -62,73 +65,104 @@ namespace PMS
             deptList.RowHeadersVisible = false;
             deptList.ColumnHeadersVisible = true;
         }
+        int key = 0;
+        private void deptList_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (e.RowIndex >= 0 && deptList.Rows[e.RowIndex].Cells.Count > 0)
+            {
+                if (deptList.Rows[e.RowIndex].Cells[1].Value != null)
+                {
+                    txtDeptName.Text = deptList.Rows[e.RowIndex].Cells[1].Value.ToString();
 
-        //Add department into Database
+                    key = Convert.ToInt32(deptList.Rows[e.RowIndex].Cells[0].Value);
+                }
+                else
+                {
+                    key = 0;
+                }
+            }
+            else
+            {
+                key = 0;
+            }
+        }
+
         private void addBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtDeptName.Text == "")
+                if (string.IsNullOrWhiteSpace(txtDeptName.Text))
                 {
                     MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     string dept = txtDeptName.Text;
-                    string Query = "INSERT INTO DepartmentTable VALUES('{0}')";
-                    Query = string.Format(Query,txtDeptName.Text);
-                    con.setData(Query);
+                    string query = "INSERT INTO DepartmentTable (deptName) VALUES (@deptName)";
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "@deptName", dept }
+                    };
+                    con.setData(query, parameters);
                     showDepartments();
-                    deptList.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
                     MessageBox.Show("Department added successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtDeptName.Text = "";
-                }
-            }
-            catch(Exception ex)
-            {
-                MessageBox.Show(ex.Message);
-            }
-        }
-        //Edit element into database
-        private void updateBtn_Click(object sender, EventArgs e)
-        {
-            try
-            {
-                if (txtDeptName.Text == "")
-                {
-                    MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                else
-                {
-                    string dept = txtDeptName.Text;
-                    string Query = "UPDATE DepartmentTable SET deptName = '{0}' WHERE deptID = {1}";
-                    Query = string.Format(Query, txtDeptName.Text, key);
-                    con.setData(Query);
-                    showDepartments();
-                    MessageBox.Show("New Department updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtDeptName.Text = "";
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
-        //Delete from Database
-        private void delBtn_Click(object sender, EventArgs e)
+
+
+        // Edit element into Database
+        private void updateBtn_Click(object sender, EventArgs e)
         {
             try
             {
-                if (txtDeptName.Text == "")
+                if (string.IsNullOrWhiteSpace(txtDeptName.Text) || key == 0)
                 {
-                    MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Data missing or no department selected!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
                     string dept = txtDeptName.Text;
-                    string Query = "DELETE FROM DepartmentTable WHERE deptID = {0}";
-                    Query = string.Format(Query, key);
-                    con.setData(Query);
+                    string query = "UPDATE DepartmentTable SET deptName = @deptName WHERE deptID = @deptID";
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "@deptName", dept },
+                        { "@deptID", key }
+                    };
+                    con.setData(query, parameters);
+                    showDepartments();
+                    MessageBox.Show("Department updated successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    txtDeptName.Text = "";
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        // Delete from Database
+        private void delBtn_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (key == 0)
+                {
+                    MessageBox.Show("No department selected!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string query = "DELETE FROM DepartmentTable WHERE deptID = @deptID";
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "@deptID", key }
+                    };
+                    con.setData(query, parameters);
                     showDepartments();
                     MessageBox.Show("Department deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtDeptName.Text = "";
@@ -136,7 +170,7 @@ namespace PMS
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -297,21 +331,5 @@ namespace PMS
         {
             label1.ForeColor = Color.OrangeRed;
         }
-        int key = 0;
-        private void deptList_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-            txtDeptName.Text = deptList.SelectedRows[0].Cells[1].Value.ToString();
-            if(txtDeptName.Text == "")
-            {
-                key = 0;
-            }
-            else
-            {
-                key = Convert.ToInt32(deptList.SelectedRows[0].Cells[0].Value.ToString());
-            }
-               
-        }
-
-        
     }
 }

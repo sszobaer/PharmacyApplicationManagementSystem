@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Data;
 using System.Data.SqlClient;
+using System.Collections.Generic;
 
 namespace PMS
 {
@@ -8,7 +9,6 @@ namespace PMS
     {
         private SqlConnection con;
         private SqlCommand cmd;
-        private SqlDataReader reader;
         private SqlDataAdapter sda;
         private DataTable dt;
         private string conStr;
@@ -22,18 +22,33 @@ namespace PMS
         }
 
         // Method to get data from the database
-        public DataTable GetData(string query)
+        public DataTable GetData(string query, Dictionary<string, object> parameters = null)
         {
-            dt = new DataTable();
-            using (sda = new SqlDataAdapter(query, conStr))
+            DataTable dt = new DataTable();
+            using (SqlConnection con = new SqlConnection(conStr))
             {
-                sda.Fill(dt);
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                        {
+                            cmd.Parameters.AddWithValue(param.Key, param.Value);
+                        }
+                    }
+
+                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                    {
+                        sda.Fill(dt);
+                    }
+                }
             }
             return dt;
         }
 
-        // Method to execute a non-query (insert, update, delete) command
-        public int setData(string query)
+
+        //Execute a non-query (insert, update, delete) command
+        public int setData(string query, Dictionary<string, object> parameters = null)
         {
             int cnt = 0;
             try
@@ -42,12 +57,27 @@ namespace PMS
                 {
                     con.Open();
                 }
-                cmd.CommandText = query;
-                cnt = cmd.ExecuteNonQuery();
+
+                using (SqlCommand cmd = new SqlCommand(query, con))
+                {
+                    // Clear previous parameters
+                    cmd.Parameters.Clear();
+
+                    // Add new parameters
+                    if (parameters != null)
+                    {
+                        foreach (var param in parameters)
+                        {
+                            // Use Add with parameter type if needed
+                            cmd.Parameters.AddWithValue(param.Key, param.Value);
+                        }
+                    }
+
+                    cnt = cmd.ExecuteNonQuery();
+                }
             }
             catch (Exception ex)
             {
-                // Handle exception (log or display error message)
                 Console.WriteLine($"An error occurred: {ex.Message}");
             }
             finally
@@ -59,5 +89,6 @@ namespace PMS
             }
             return cnt;
         }
+
     }
 }
