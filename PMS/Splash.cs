@@ -19,16 +19,16 @@ namespace PMS
 
         private void Splash_Load(object sender, EventArgs e)
         {
-            timer1.Interval = 10;
+            timer1.Interval = 10;//ms
             timer1.Start();
-            progressBar.ForeColor = Color.Orange;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (progressBar.Value < 100)
+            if(progressBar1.Value<100)
             {
-                progressBar.Value += 1;
+                //0 +1 = 1 , 1+1 = 2......100
+                progressBar1.Value += 1;
             }
             else
             {

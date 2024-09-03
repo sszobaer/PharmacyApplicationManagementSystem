@@ -331,5 +331,10 @@ namespace PMS
         {
             label1.ForeColor = Color.OrangeRed;
         }
+
+        private void Department_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

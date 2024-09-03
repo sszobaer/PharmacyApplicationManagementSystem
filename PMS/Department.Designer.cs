@@ -52,9 +52,9 @@
             this.updateBtn = new System.Windows.Forms.Button();
             this.addBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.delBtn = new System.Windows.Forms.Button();
             this.deptList = new System.Windows.Forms.DataGridView();
             this.label4 = new System.Windows.Forms.Label();
-            this.delBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
@@ -388,6 +388,22 @@
             this.panel4.Size = new System.Drawing.Size(400, 254);
             this.panel4.TabIndex = 34;
             // 
+            // delBtn
+            // 
+            this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.delBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.delBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.delBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.delBtn.ForeColor = System.Drawing.Color.Black;
+            this.delBtn.Location = new System.Drawing.Point(9, 183);
+            this.delBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.delBtn.Name = "delBtn";
+            this.delBtn.Size = new System.Drawing.Size(180, 55);
+            this.delBtn.TabIndex = 16;
+            this.delBtn.Text = "DELETE";
+            this.delBtn.UseVisualStyleBackColor = false;
+            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
+            // 
             // deptList
             // 
             this.deptList.BackgroundColor = System.Drawing.SystemColors.ButtonHighlight;
@@ -413,22 +429,6 @@
             this.label4.TabIndex = 33;
             this.label4.Text = "Department List";
             // 
-            // delBtn
-            // 
-            this.delBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.delBtn.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.delBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.delBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.delBtn.ForeColor = System.Drawing.Color.Black;
-            this.delBtn.Location = new System.Drawing.Point(9, 183);
-            this.delBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.delBtn.Name = "delBtn";
-            this.delBtn.Size = new System.Drawing.Size(180, 55);
-            this.delBtn.TabIndex = 16;
-            this.delBtn.Text = "DELETE";
-            this.delBtn.UseVisualStyleBackColor = false;
-            this.delBtn.Click += new System.EventHandler(this.delBtn_Click);
-            // 
             // Department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -443,6 +443,7 @@
             this.Controls.Add(this.panel3);
             this.Name = "Department";
             this.Text = "Department";
+            this.Load += new System.EventHandler(this.Department_Load);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
