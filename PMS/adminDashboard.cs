@@ -103,5 +103,26 @@ namespace PMS
             sal.ShowDialog();
             this.Show();
         }
+
+        private void label18_Click(object sender, EventArgs e)
+        {
+            Home home = new Home();
+            this.Hide();
+            home.ShowDialog();
+        }
+
+        private void label17_Click(object sender, EventArgs e)
+        {
+            requestOrder ro = new requestOrder();
+            this.Hide();
+            ro.ShowDialog();
+        }
+
+        private void label16_Click(object sender, EventArgs e)
+        {
+            offer of = new offer();
+            this.Hide();
+            of.ShowDialog();
+        }
     }
 }

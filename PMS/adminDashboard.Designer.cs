@@ -175,7 +175,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(97, 26);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Loaction";
+            this.label15.Text = "Location";
             // 
             // label16
             // 
@@ -187,6 +187,7 @@
             this.label16.Size = new System.Drawing.Size(72, 26);
             this.label16.TabIndex = 3;
             this.label16.Text = "Offers";
+            this.label16.Click += new System.EventHandler(this.label16_Click);
             // 
             // label17
             // 
@@ -198,6 +199,7 @@
             this.label17.Size = new System.Drawing.Size(156, 26);
             this.label17.TabIndex = 2;
             this.label17.Text = "Request Order";
+            this.label17.Click += new System.EventHandler(this.label17_Click);
             // 
             // label18
             // 
@@ -209,6 +211,7 @@
             this.label18.Size = new System.Drawing.Size(71, 26);
             this.label18.TabIndex = 1;
             this.label18.Text = "Home";
+            this.label18.Click += new System.EventHandler(this.label18_Click);
             // 
             // pictureBox5
             // 

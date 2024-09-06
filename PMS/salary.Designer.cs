@@ -147,7 +147,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(97, 26);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Loaction";
+            this.label15.Text = "Location";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
             this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
@@ -221,7 +221,7 @@
             this.salList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.salList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.salList.Location = new System.Drawing.Point(313, 162);
-            this.salList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.salList.Margin = new System.Windows.Forms.Padding(2);
             this.salList.Name = "salList";
             this.salList.RowHeadersWidth = 62;
             this.salList.RowTemplate.Height = 28;
@@ -244,7 +244,7 @@
             this.panel4.Controls.Add(this.txtAmount);
             this.panel4.Controls.Add(this.txtAttendence);
             this.panel4.Location = new System.Drawing.Point(11, 162);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(271, 298);
             this.panel4.TabIndex = 35;
@@ -253,7 +253,7 @@
             // 
             this.periodDTP.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.periodDTP.Location = new System.Drawing.Point(35, 154);
-            this.periodDTP.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.periodDTP.Margin = new System.Windows.Forms.Padding(2);
             this.periodDTP.Name = "periodDTP";
             this.periodDTP.Size = new System.Drawing.Size(189, 29);
             this.periodDTP.TabIndex = 3;
@@ -263,7 +263,7 @@
             this.empCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.empCb.FormattingEnabled = true;
             this.empCb.Location = new System.Drawing.Point(35, 29);
-            this.empCb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.empCb.Margin = new System.Windows.Forms.Padding(2);
             this.empCb.Name = "empCb";
             this.empCb.Size = new System.Drawing.Size(189, 24);
             this.empCb.TabIndex = 2;
@@ -335,7 +335,7 @@
             this.txtAmount.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAmount.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.txtAmount.Location = new System.Drawing.Point(35, 213);
-            this.txtAmount.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAmount.Margin = new System.Windows.Forms.Padding(2);
             this.txtAmount.Name = "txtAmount";
             this.txtAmount.Size = new System.Drawing.Size(191, 19);
             this.txtAmount.TabIndex = 0;
@@ -345,7 +345,7 @@
             this.txtAttendence.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtAttendence.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtAttendence.Location = new System.Drawing.Point(35, 94);
-            this.txtAttendence.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtAttendence.Margin = new System.Windows.Forms.Padding(2);
             this.txtAttendence.Name = "txtAttendence";
             this.txtAttendence.Size = new System.Drawing.Size(192, 26);
             this.txtAttendence.TabIndex = 0;
@@ -470,7 +470,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.label9);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "salary";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "salary";

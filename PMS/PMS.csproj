@@ -54,6 +54,30 @@
     <Compile Include="adminDashboard.Designer.cs">
       <DependentUpon>adminDashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="babyCare.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="babyCare.Designer.cs">
+      <DependentUpon>babyCare.cs</DependentUpon>
+    </Compile>
+    <Compile Include="babyHair.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="babyHair.Designer.cs">
+      <DependentUpon>babyHair.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bloodGlucoseMetter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bloodGlucoseMetter.Designer.cs">
+      <DependentUpon>bloodGlucoseMetter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="bodyWash.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="bodyWash.Designer.cs">
+      <DependentUpon>bodyWash.cs</DependentUpon>
+    </Compile>
     <Compile Include="CoDopaCR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,11 +151,23 @@
     <Compile Include="Montene.Designer.cs">
       <DependentUpon>Montene.cs</DependentUpon>
     </Compile>
+    <Compile Include="NeocareToiletries.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="NeocareToiletries.Designer.cs">
+      <DependentUpon>NeocareToiletries.cs</DependentUpon>
+    </Compile>
     <Compile Include="offer.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="offer.Designer.cs">
       <DependentUpon>offer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="omronNebulizer.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="omronNebulizer.Designer.cs">
+      <DependentUpon>omronNebulizer.cs</DependentUpon>
     </Compile>
     <Compile Include="optimox.cs">
       <SubType>Form</SubType>
@@ -190,11 +226,29 @@
     <Compile Include="surgicalProduct.Designer.cs">
       <DependentUpon>surgicalProduct.cs</DependentUpon>
     </Compile>
+    <Compile Include="taylorBrace.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="taylorBrace.Designer.cs">
+      <DependentUpon>taylorBrace.cs</DependentUpon>
+    </Compile>
+    <Compile Include="toothPaste.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="toothPaste.Designer.cs">
+      <DependentUpon>toothPaste.cs</DependentUpon>
+    </Compile>
     <Compile Include="userDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="userDashboard.Designer.cs">
       <DependentUpon>userDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="wristSplint.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="wristSplint.Designer.cs">
+      <DependentUpon>wristSplint.cs</DependentUpon>
     </Compile>
     <Compile Include="Zimax.cs">
       <SubType>Form</SubType>
@@ -204,6 +258,18 @@
     </Compile>
     <EmbeddedResource Include="adminDashboard.resx">
       <DependentUpon>adminDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="babyCare.resx">
+      <DependentUpon>babyCare.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="babyHair.resx">
+      <DependentUpon>babyHair.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bloodGlucoseMetter.resx">
+      <DependentUpon>bloodGlucoseMetter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="bodyWash.resx">
+      <DependentUpon>bodyWash.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="CoDopaCR.resx">
       <DependentUpon>CoDopaCR.cs</DependentUpon>
@@ -241,8 +307,14 @@
     <EmbeddedResource Include="Montene.resx">
       <DependentUpon>Montene.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="NeocareToiletries.resx">
+      <DependentUpon>NeocareToiletries.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="offer.resx">
       <DependentUpon>offer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="omronNebulizer.resx">
+      <DependentUpon>omronNebulizer.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="optimox.resx">
       <DependentUpon>optimox.cs</DependentUpon>
@@ -280,8 +352,17 @@
     <EmbeddedResource Include="surgicalProduct.resx">
       <DependentUpon>surgicalProduct.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="taylorBrace.resx">
+      <DependentUpon>taylorBrace.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="toothPaste.resx">
+      <DependentUpon>toothPaste.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="userDashboard.resx">
       <DependentUpon>userDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="wristSplint.resx">
+      <DependentUpon>wristSplint.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Zimax.resx">
       <DependentUpon>Zimax.cs</DependentUpon>

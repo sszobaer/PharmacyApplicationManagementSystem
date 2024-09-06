@@ -145,7 +145,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(97, 26);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Loaction";
+            this.label15.Text = "Location";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
             this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
@@ -325,7 +325,7 @@
             this.txtDeptName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtDeptName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtDeptName.Location = new System.Drawing.Point(6, 31);
-            this.txtDeptName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtDeptName.Margin = new System.Windows.Forms.Padding(2);
             this.txtDeptName.Name = "txtDeptName";
             this.txtDeptName.Size = new System.Drawing.Size(252, 26);
             this.txtDeptName.TabIndex = 32;
@@ -370,7 +370,7 @@
             this.panel4.Controls.Add(this.txtDeptName);
             this.panel4.Controls.Add(this.updateBtn);
             this.panel4.Location = new System.Drawing.Point(11, 180);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(267, 166);
             this.panel4.TabIndex = 34;
@@ -396,7 +396,7 @@
             this.deptList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.deptList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.deptList.Location = new System.Drawing.Point(307, 180);
-            this.deptList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deptList.Margin = new System.Windows.Forms.Padding(2);
             this.deptList.Name = "deptList";
             this.deptList.RowHeadersWidth = 62;
             this.deptList.RowTemplate.Height = 28;
@@ -429,7 +429,7 @@
             this.Controls.Add(this.panel5);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel3);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Department";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Department";

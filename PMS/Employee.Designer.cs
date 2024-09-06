@@ -157,7 +157,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(97, 26);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Loaction";
+            this.label15.Text = "Location";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
             this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
@@ -266,7 +266,7 @@
             this.panel4.Controls.Add(this.label7);
             this.panel4.Controls.Add(this.label6);
             this.panel4.Location = new System.Drawing.Point(8, 124);
-            this.panel4.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(271, 386);
             this.panel4.TabIndex = 28;
@@ -275,7 +275,7 @@
             // 
             this.jDateDtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.jDateDtp.Location = new System.Drawing.Point(19, 255);
-            this.jDateDtp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.jDateDtp.Margin = new System.Windows.Forms.Padding(2);
             this.jDateDtp.Name = "jDateDtp";
             this.jDateDtp.Size = new System.Drawing.Size(221, 29);
             this.jDateDtp.TabIndex = 4;
@@ -285,7 +285,7 @@
             // 
             this.dobDtp.Font = new System.Drawing.Font("Microsoft Sans Serif", 14F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dobDtp.Location = new System.Drawing.Point(21, 194);
-            this.dobDtp.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.dobDtp.Margin = new System.Windows.Forms.Padding(2);
             this.dobDtp.Name = "dobDtp";
             this.dobDtp.Size = new System.Drawing.Size(221, 29);
             this.dobDtp.TabIndex = 3;
@@ -347,7 +347,7 @@
             this.txtEmpName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtEmpName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtEmpName.Location = new System.Drawing.Point(19, 23);
-            this.txtEmpName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtEmpName.Margin = new System.Windows.Forms.Padding(2);
             this.txtEmpName.Name = "txtEmpName";
             this.txtEmpName.Size = new System.Drawing.Size(221, 26);
             this.txtEmpName.TabIndex = 0;
@@ -368,7 +368,7 @@
             this.txtSal.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.txtSal.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSal.Location = new System.Drawing.Point(19, 312);
-            this.txtSal.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.txtSal.Margin = new System.Windows.Forms.Padding(2);
             this.txtSal.Name = "txtSal";
             this.txtSal.Size = new System.Drawing.Size(221, 26);
             this.txtSal.TabIndex = 5;
@@ -381,7 +381,7 @@
             "Male",
             "Female"});
             this.genderCb.Location = new System.Drawing.Point(19, 84);
-            this.genderCb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.genderCb.Margin = new System.Windows.Forms.Padding(2);
             this.genderCb.Name = "genderCb";
             this.genderCb.Size = new System.Drawing.Size(221, 24);
             this.genderCb.TabIndex = 1;
@@ -402,7 +402,7 @@
             this.deptCb.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deptCb.FormattingEnabled = true;
             this.deptCb.Location = new System.Drawing.Point(21, 142);
-            this.deptCb.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.deptCb.Margin = new System.Windows.Forms.Padding(2);
             this.deptCb.Name = "deptCb";
             this.deptCb.Size = new System.Drawing.Size(221, 24);
             this.deptCb.TabIndex = 2;
@@ -440,7 +440,7 @@
             this.empList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.empList.EditMode = System.Windows.Forms.DataGridViewEditMode.EditProgrammatically;
             this.empList.Location = new System.Drawing.Point(306, 150);
-            this.empList.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.empList.Margin = new System.Windows.Forms.Padding(2);
             this.empList.Name = "empList";
             this.empList.RowHeadersWidth = 62;
             this.empList.RowTemplate.Height = 28;
@@ -563,7 +563,7 @@
             this.Controls.Add(this.deleteBtn);
             this.Controls.Add(this.label9);
             this.Controls.Add(this.label26);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Employee";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Employee";

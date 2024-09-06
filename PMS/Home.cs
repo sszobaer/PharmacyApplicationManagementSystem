@@ -29,7 +29,6 @@ namespace PMS
             Home frm = new Home();
             this.Hide();
             frm.ShowDialog();
-            this.Show();
         }
 
 
@@ -73,7 +72,7 @@ namespace PMS
                     Home.stack.Push(this);
                     this.Hide();
                     adminDashboard.ShowDialog();
-                    this.Show();
+                    //;
                     return; // Return early if admin login is successful
                 }
                 adminReader.Close(); // Close reader before reusing connection
@@ -106,7 +105,6 @@ namespace PMS
                     Home.stack.Push(this);
                     this.Hide();
                     userDashboard.ShowDialog();
-                    this.Show();
                     return;
                 }
                 else
@@ -122,8 +120,7 @@ namespace PMS
             signUp su = new signUp();
             Home.stack.Push(this);
             this.Hide();
-            su.ShowDialog();
-            this.Show();   
+            su.ShowDialog();  
         }
         
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
@@ -144,7 +141,6 @@ namespace PMS
             Home.stack.Push(this);
             this.Hide();
             pm.ShowDialog();
-            this.Show();
         }
 
 
@@ -161,7 +157,6 @@ namespace PMS
             Home.stack.Push(this);
             this.Hide();
             cn.ShowDialog();
-            this.Show();
         }
 
         private void label17_Click(object sender, EventArgs e)
@@ -170,7 +165,6 @@ namespace PMS
             Home.stack.Push(this);
             this.Hide();
             ro.ShowDialog();
-            this.Show();
         }
 
         private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
@@ -179,7 +173,6 @@ namespace PMS
             this.Hide();
             Home.stack.Push(this);
             fp.ShowDialog();
-            this.Show();
             
         }
 
@@ -189,7 +182,7 @@ namespace PMS
             Home.stack.Push(this);
             this.Hide();
             of.ShowDialog();
-            this.Show();
+            
         }
 
         private void label15_Click(object sender, EventArgs e)
@@ -198,7 +191,6 @@ namespace PMS
             Home.stack.Push(this);
             this.Hide();
             lc.ShowDialog();
-            this.Show();
         }
 
         private void label18_MouseHover(object sender, EventArgs e)
@@ -296,6 +288,22 @@ namespace PMS
         private void panel1_MouseLeave(object sender, EventArgs e)
         {
             panel1.Visible = false;
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            surgicalProduct surgicalProduct = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            surgicalProduct.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            babyCare babycare = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            babycare.ShowDialog();
         }
     }
 }

@@ -320,7 +320,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(97, 26);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Loaction";
+            this.label15.Text = "Location";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             this.label15.MouseEnter += new System.EventHandler(this.label15_MouseEnter);
             this.label15.MouseLeave += new System.EventHandler(this.label15_MouseLeave);
@@ -472,6 +472,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "Baby Care";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -498,6 +499,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Surgical Product";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button1
             // 

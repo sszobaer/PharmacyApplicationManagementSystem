@@ -281,7 +281,7 @@
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(97, 26);
             this.label15.TabIndex = 4;
-            this.label15.Text = "Loaction";
+            this.label15.Text = "Location";
             this.label15.Click += new System.EventHandler(this.label15_Click);
             // 
             // label16

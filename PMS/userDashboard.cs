@@ -282,13 +282,13 @@ namespace PMS
             DataTable parametersResult = con.GetData(ValidationQuery,validationParameters);
 
             //Update Password
-            if (parametersResult.Rows.Count > 0 && Convert.ToInt32(parametersResult.Rows[0][0]) > 0)
+            if (parametersResult.Rows.Count > 0 && parametersResult.Rows[0][0].ToString() == curPass)
             {
-                string updatePassQuery = "UPDATE SignUpTable SET pass = @newPass WHERE username = @username AND pass = @CurPass";
+                string updatePassQuery = "UPDATE SignUpTable SET pass = @newPass WHERE username = @username AND pass = @curPass";
                 var updatePassParam = new Dictionary<string, object>
                 {
                     {"@username",username},
-                    {"@CurPass", curPass},
+                    {"@curPass", curPass},
                     {"@newPass", newPass}
                 };
                 int rowsAffected = con.setData(updatePassQuery,updatePassParam);
