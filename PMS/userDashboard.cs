@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -7,17 +8,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement.Button;
 
 namespace PMS
 {
-    
+
     public partial class userDashboard : Form
     {
-        public userDashboard()
-        {
-            InitializeComponent();
-        }
 
+        Functions con;
         private string firstname;
         private string lastname;
         private string email;
@@ -36,6 +35,7 @@ namespace PMS
             this.dateofbirth = dateofbirth;
             this.gender = gender;
             this.address = adress;
+            con = new Functions();
         }
 
         
@@ -51,9 +51,9 @@ namespace PMS
         {
             if (keyData == Keys.Escape)
             {
-                if (Form1.stack.Count > 0)
+                if (Home.stack.Count > 0)
                 {
-                    Form previousForm = Form1.stack.Pop();
+                    Form previousForm = Home.stack.Pop();
                     this.Hide();
                     previousForm.Show();
                 }
@@ -63,8 +63,8 @@ namespace PMS
         }
         private void label18_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
-            Form1.stack.Push(this);
+            Home frm = new Home();
+            Home.stack.Push(this);
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -73,7 +73,7 @@ namespace PMS
         private void label17_Click(object sender, EventArgs e)
         {
             requestOrder ro = new requestOrder();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             ro.ShowDialog();
             this.Show();
@@ -82,7 +82,7 @@ namespace PMS
         private void label16_Click(object sender, EventArgs e)
         {
             offer of = new offer();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             of.ShowDialog();
             this.Show();
@@ -91,7 +91,7 @@ namespace PMS
         private void label15_Click(object sender, EventArgs e)
         {
             location lc = new location();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             lc.ShowDialog();
             this.Show();
@@ -100,7 +100,7 @@ namespace PMS
         private void label13_Click(object sender, EventArgs e)
         {
             Contacts cn = new Contacts();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             cn.ShowDialog();
             this.Show();
@@ -110,9 +110,9 @@ namespace PMS
 
         private void label26_Click_1(object sender, EventArgs e)
         {
-            if (Form1.stack.Count > 0)
+            if (Home.stack.Count > 0)
             {
-                Form previousForm = Form1.stack.Pop();
+                Form previousForm = Home.stack.Pop();
                 this.Hide();
                 previousForm.Show();
             }
@@ -214,7 +214,7 @@ namespace PMS
         private void button4_Click(object sender, EventArgs e)
         {
             sessionManager.IsLoggedIn = false;
-            Form1 frm = new Form1();
+            Home frm = new Home();
             this.Hide();    
             frm.ShowDialog();
             this.Show();
@@ -232,6 +232,76 @@ namespace PMS
             lblGender.Text = gender;
             lblDoB.Text = dateofbirth;
             lblAdress.Text = address;
+        }
+
+        private void UpdatePassBtn_Click(object sender, EventArgs e)
+        {
+            string username = txtUsername.Text;
+            string currentPassword = txtCurPass.Text;
+            string newPassword = txtNewPass.Text;
+            string confirmPassword = txtConPass.Text;
+
+            if (validationInputs(username, currentPassword, newPassword, confirmPassword))
+            {
+                if(updatePassword(username, currentPassword, newPassword))
+                {
+                    MessageBox.Show("Password changed successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Current Password is Incorrect !!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+
+        }
+        private bool validationInputs(string username, string curPass, string newPass, string conPass)
+        {
+            //String.IsNullOrWhiteSpace(value)
+            if(username=="" || curPass =="" || newPass == "" || conPass == "")
+            {
+                MessageBox.Show("Please fill all fields", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if(newPass != conPass)
+            {
+                MessageBox.Show("New Password and Confirm Password do not match", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            return true;
+        }
+        
+        private bool updatePassword(string username, string curPass, string newPass)
+        {
+            string ValidationQuery = "SELECT pass FROM SignUpTable WHERE username = @username";
+            var validationParameters = new Dictionary<string, object>
+            {
+                {"username", username}    
+            };
+            DataTable parametersResult = con.GetData(ValidationQuery,validationParameters);
+
+            //Update Password
+            if (parametersResult.Rows.Count > 0 && Convert.ToInt32(parametersResult.Rows[0][0]) > 0)
+            {
+                string updatePassQuery = "UPDATE SignUpTable SET pass = @newPass WHERE username = @username AND pass = @CurPass";
+                var updatePassParam = new Dictionary<string, object>
+                {
+                    {"@username",username},
+                    {"@CurPass", curPass},
+                    {"@newPass", newPass}
+                };
+                int rowsAffected = con.setData(updatePassQuery,updatePassParam);
+                return rowsAffected > 0;
+            }
+            return false;
+        }
+
+        private void showPass_CheckedChanged(object sender, EventArgs e)
+        {
+            txtCurPass.UseSystemPasswordChar = !showPass.Checked;
+            txtNewPass.UseSystemPasswordChar = !showPass.Checked;
+            txtConPass.UseSystemPasswordChar = !showPass.Checked;
         }
     }
 }

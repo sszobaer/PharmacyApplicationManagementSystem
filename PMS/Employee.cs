@@ -207,9 +207,9 @@ namespace PMS
 
         private void label26_Click(object sender, EventArgs e)
         {
-            if (Form1.stack.Count > 0)
+            if (Home.stack.Count > 0)
             {
-                Form previousForm = Form1.stack.Pop();
+                Form previousForm = Home.stack.Pop();
                 this.Hide();
                 previousForm.Show();
             }
@@ -217,8 +217,8 @@ namespace PMS
 
         private void label18_Click(object sender, EventArgs e)
         {
-            Form1 fm = new Form1();
-            Form1.stack.Push(this);
+            Home fm = new Home();
+            Home.stack.Push(this);
             this.Hide();
             fm.ShowDialog();
             this.Show();
@@ -227,7 +227,7 @@ namespace PMS
         private void label17_Click(object sender, EventArgs e)
         {
             requestOrder ro = new requestOrder();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             ro.ShowDialog();
             this.Show();
@@ -236,7 +236,7 @@ namespace PMS
         private void label16_Click(object sender, EventArgs e)
         {
             offer of = new offer();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             of.ShowDialog();
             this.Show();
@@ -245,7 +245,7 @@ namespace PMS
         private void label15_Click(object sender, EventArgs e)
         {
             location lc = new location();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             lc.ShowDialog();
             this.Show();
@@ -254,7 +254,7 @@ namespace PMS
         private void label13_Click(object sender, EventArgs e)
         {
             Contacts cn = new Contacts();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             cn.ShowDialog();
             this.Show();
@@ -263,7 +263,7 @@ namespace PMS
         private void button11_Click(object sender, EventArgs e)
         {
             adminDashboard ad = new adminDashboard();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             ad.ShowDialog();
             this.Show();
@@ -272,7 +272,7 @@ namespace PMS
         private void button16_Click(object sender, EventArgs e)
         {
             Employee emp = new Employee();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             emp.ShowDialog();
             this.Show();
@@ -281,7 +281,7 @@ namespace PMS
         private void button14_Click(object sender, EventArgs e)
         {
             Department dpt = new Department();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             dpt.ShowDialog();
             this.Show();
@@ -290,7 +290,7 @@ namespace PMS
         private void button15_Click(object sender, EventArgs e)
         {
             salary sal = new salary();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             sal.ShowDialog();
             this.Show();

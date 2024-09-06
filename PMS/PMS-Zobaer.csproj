@@ -103,11 +103,11 @@
     <Compile Include="forgotPass2.Designer.cs">
       <DependentUpon>forgotPass2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Home.cs">
+    <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Home.Designer.cs">
-      <DependentUpon>Home.cs</DependentUpon>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
     <Compile Include="lijenta.cs">
       <SubType>Form</SubType>
@@ -178,17 +178,11 @@
     <Compile Include="signUp.Designer.cs">
       <DependentUpon>signUp.cs</DependentUpon>
     </Compile>
-    <Compile Include="Splash.cs">
+    <Compile Include="splashScreen.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Splash.Designer.cs">
-      <DependentUpon>Splash.cs</DependentUpon>
-    </Compile>
-    <Compile Include="surgicalProduct.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="surgicalProduct.Designer.cs">
-      <DependentUpon>surgicalProduct.cs</DependentUpon>
+    <Compile Include="splashScreen.Designer.cs">
+      <DependentUpon>splashScreen.cs</DependentUpon>
     </Compile>
     <Compile Include="userDashboard.cs">
       <SubType>Form</SubType>
@@ -229,8 +223,8 @@
     <EmbeddedResource Include="forgotPass2.resx">
       <DependentUpon>forgotPass2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Home.resx">
-      <DependentUpon>Home.cs</DependentUpon>
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="lijenta.resx">
       <DependentUpon>lijenta.cs</DependentUpon>
@@ -274,11 +268,8 @@
     <EmbeddedResource Include="signUp.resx">
       <DependentUpon>signUp.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Splash.resx">
-      <DependentUpon>Splash.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="surgicalProduct.resx">
-      <DependentUpon>surgicalProduct.cs</DependentUpon>
+    <EmbeddedResource Include="splashScreen.resx">
+      <DependentUpon>splashScreen.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="userDashboard.resx">
       <DependentUpon>userDashboard.cs</DependentUpon>

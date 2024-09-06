@@ -25,26 +25,38 @@ namespace PMS
         public DataTable GetData(string query, Dictionary<string, object> parameters = null)
         {
             DataTable dt = new DataTable();
-            using (SqlConnection con = new SqlConnection(conStr))
+            try
             {
-                using (SqlCommand cmd = new SqlCommand(query, con))
+                using (SqlConnection con = new SqlConnection(conStr))
                 {
-                    if (parameters != null)
+                    using (SqlCommand cmd = new SqlCommand(query, con))
                     {
-                        foreach (var param in parameters)
+                        if (parameters != null)
                         {
-                            cmd.Parameters.AddWithValue(param.Key, param.Value);
+                            foreach (var param in parameters)
+                            {
+                                cmd.Parameters.AddWithValue(param.Key, param.Value);
+                            }
                         }
-                    }
 
-                    using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
-                    {
-                        sda.Fill(dt);
+                        using (SqlDataAdapter sda = new SqlDataAdapter(cmd))
+                        {
+                            
+                            sda.Fill(dt);
+                            return dt;
+                        }
                     }
                 }
             }
-            return dt;
+            catch (Exception ex)
+            {
+                // Log the exception message for debugging
+                Console.WriteLine($"An error occurred: {ex.Message}");
+            }
+
+            return dt; // Always return a DataTable (empty if an error occurred)
         }
+
 
 
         //Execute a non-query (insert, update, delete) command

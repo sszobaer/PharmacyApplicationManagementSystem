@@ -1,6 +1,6 @@
 ﻿namespace PMS
 {
-    partial class Form1
+    partial class Home
     {
         /// <summary>
         /// Required designer variable.
@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Home));
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -91,7 +91,7 @@
             this.label7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.label7.Location = new System.Drawing.Point(703, 107);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(841, 199);
+            this.label7.Size = new System.Drawing.Size(560, 132);
             this.label7.TabIndex = 2;
             this.label7.Text = "SURGEON";
             // 
@@ -102,7 +102,7 @@
             this.label8.Font = new System.Drawing.Font("Montserrat", 39.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label8.Location = new System.Drawing.Point(743, 221);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(681, 111);
+            this.label8.Size = new System.Drawing.Size(454, 73);
             this.label8.TabIndex = 3;
             this.label8.Text = "MEDICAL HALL";
             // 
@@ -131,7 +131,7 @@
             this.linkLabel2.LinkColor = System.Drawing.Color.Black;
             this.linkLabel2.Location = new System.Drawing.Point(203, 177);
             this.linkLabel2.Name = "linkLabel2";
-            this.linkLabel2.Size = new System.Drawing.Size(141, 19);
+            this.linkLabel2.Size = new System.Drawing.Size(97, 14);
             this.linkLabel2.TabIndex = 7;
             this.linkLabel2.TabStop = true;
             this.linkLabel2.Text = "Forgot Password?";
@@ -143,7 +143,7 @@
             this.txtPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPass.Location = new System.Drawing.Point(48, 146);
             this.txtPass.Name = "txtPass";
-            this.txtPass.Size = new System.Drawing.Size(253, 35);
+            this.txtPass.Size = new System.Drawing.Size(253, 26);
             this.txtPass.TabIndex = 13;
             this.txtPass.UseSystemPasswordChar = true;
             // 
@@ -154,7 +154,7 @@
             this.txtUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtUsername.Location = new System.Drawing.Point(47, 83);
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(253, 35);
+            this.txtUsername.Size = new System.Drawing.Size(253, 26);
             this.txtUsername.TabIndex = 12;
             // 
             // label12
@@ -163,7 +163,7 @@
             this.label12.Font = new System.Drawing.Font("Montserrat", 21.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label12.Location = new System.Drawing.Point(40, 2);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(157, 61);
+            this.label12.Size = new System.Drawing.Size(103, 40);
             this.label12.TabIndex = 5;
             this.label12.Text = "Login";
             // 
@@ -174,7 +174,7 @@
             this.linkLabel1.LinkColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.linkLabel1.Location = new System.Drawing.Point(232, 267);
             this.linkLabel1.Name = "linkLabel1";
-            this.linkLabel1.Size = new System.Drawing.Size(99, 29);
+            this.linkLabel1.Size = new System.Drawing.Size(60, 18);
             this.linkLabel1.TabIndex = 5;
             this.linkLabel1.TabStop = true;
             this.linkLabel1.Text = "Sign Up";
@@ -186,7 +186,7 @@
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label11.Location = new System.Drawing.Point(49, 267);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(257, 29);
+            this.label11.Size = new System.Drawing.Size(177, 20);
             this.label11.TabIndex = 5;
             this.label11.Text = "Don\'t have an account?";
             // 
@@ -197,7 +197,7 @@
             this.checkBox1.Font = new System.Drawing.Font("Arial Narrow", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBox1.Location = new System.Drawing.Point(53, 178);
             this.checkBox1.Name = "checkBox1";
-            this.checkBox1.Size = new System.Drawing.Size(135, 26);
+            this.checkBox1.Size = new System.Drawing.Size(95, 19);
             this.checkBox1.TabIndex = 11;
             this.checkBox1.Text = "Show Password";
             this.checkBox1.UseVisualStyleBackColor = true;
@@ -209,7 +209,7 @@
             this.label10.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.Location = new System.Drawing.Point(46, 123);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(134, 33);
+            this.label10.Size = new System.Drawing.Size(91, 22);
             this.label10.TabIndex = 10;
             this.label10.Text = "Password";
             // 
@@ -219,7 +219,7 @@
             this.label9.Font = new System.Drawing.Font("Montserrat SemiBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.Location = new System.Drawing.Point(45, 60);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(142, 33);
+            this.label9.Size = new System.Drawing.Size(96, 22);
             this.label9.TabIndex = 9;
             this.label9.Text = "Username";
             // 
@@ -263,7 +263,7 @@
             this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.label1.Location = new System.Drawing.Point(253, 10);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 50);
+            this.label1.Size = new System.Drawing.Size(206, 33);
             this.label1.TabIndex = 7;
             this.label1.Text = "CATEGORIES    ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
@@ -291,7 +291,7 @@
             this.label13.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label13.Location = new System.Drawing.Point(1081, 14);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(152, 40);
+            this.label13.Size = new System.Drawing.Size(100, 26);
             this.label13.TabIndex = 6;
             this.label13.Text = "Contacts";
             this.label13.Click += new System.EventHandler(this.label13_Click);
@@ -305,7 +305,7 @@
             this.label14.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label14.Location = new System.Drawing.Point(1002, 14);
             this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 40);
+            this.label14.Size = new System.Drawing.Size(73, 26);
             this.label14.TabIndex = 5;
             this.label14.Text = "About";
             this.label14.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
@@ -318,7 +318,7 @@
             this.label15.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label15.Location = new System.Drawing.Point(899, 14);
             this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(150, 40);
+            this.label15.Size = new System.Drawing.Size(97, 26);
             this.label15.TabIndex = 4;
             this.label15.Text = "Loaction";
             this.label15.Click += new System.EventHandler(this.label15_Click);
@@ -332,7 +332,7 @@
             this.label16.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label16.Location = new System.Drawing.Point(821, 14);
             this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(109, 40);
+            this.label16.Size = new System.Drawing.Size(72, 26);
             this.label16.TabIndex = 3;
             this.label16.Text = "Offers";
             this.label16.Click += new System.EventHandler(this.label16_Click);
@@ -346,7 +346,7 @@
             this.label17.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label17.Location = new System.Drawing.Point(659, 14);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(238, 40);
+            this.label17.Size = new System.Drawing.Size(156, 26);
             this.label17.TabIndex = 2;
             this.label17.Text = "Request Order";
             this.label17.Click += new System.EventHandler(this.label17_Click);
@@ -360,7 +360,7 @@
             this.label18.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label18.Location = new System.Drawing.Point(582, 13);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(107, 40);
+            this.label18.Size = new System.Drawing.Size(71, 26);
             this.label18.TabIndex = 1;
             this.label18.Text = "Home";
             this.label18.MouseEnter += new System.EventHandler(this.label18_MouseEnter_1);
@@ -521,7 +521,7 @@
             // 
             this.errorProvider2.ContainerControl = this;
             // 
-            // Form1
+            // Home
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Inherit;
             this.ClientSize = new System.Drawing.Size(1278, 682);
@@ -531,7 +531,7 @@
             this.Controls.Add(this.label7);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.pictureBox2);
-            this.Name = "Form1";
+            this.Name = "Home";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Home";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();

@@ -61,9 +61,9 @@ namespace PMS
 
         private void label26_Click(object sender, EventArgs e)
         {
-            if (Form1.stack.Count > 0)
+            if (Home.stack.Count > 0)
             {
-                Form previousForm = Form1.stack.Pop();
+                Form previousForm = Home.stack.Pop();
                 this.Hide();
                 previousForm.Show();
             }
@@ -72,7 +72,7 @@ namespace PMS
         private void button8_Click(object sender, EventArgs e)
         {
             sessionManager.IsLoggedIn = false;
-            Form1 frm = new Form1();
+            Home frm = new Home();
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -80,7 +80,7 @@ namespace PMS
         private void button3_Click(object sender, EventArgs e)
         {
             Employee employee = new Employee();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             employee.ShowDialog();
             this.Show();
@@ -89,7 +89,7 @@ namespace PMS
         private void button1_Click(object sender, EventArgs e)
         {
             Department dpt = new Department();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             dpt.ShowDialog();
             this.Show();
@@ -98,7 +98,7 @@ namespace PMS
         private void button7_Click(object sender, EventArgs e)
         {
             salary sal = new salary();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             sal.ShowDialog();
             this.Show();

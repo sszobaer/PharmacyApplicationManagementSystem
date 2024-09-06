@@ -50,8 +50,8 @@ namespace PMS
 
         private void label18_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
-            Form1.stack.Push(this);
+            Home frm = new Home();
+            Home.stack.Push(this);
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -60,7 +60,7 @@ namespace PMS
         private void label13_Click(object sender, EventArgs e)
         {
             Contacts cn = new Contacts();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             cn.ShowDialog();
             this.Show();
@@ -70,9 +70,9 @@ namespace PMS
         {
             if (keyData == Keys.Escape)
             {
-                if (Form1.stack.Count > 0)
+                if (Home.stack.Count > 0)
                 {
-                    Form previousForm = Form1.stack.Pop();
+                    Form previousForm = Home.stack.Pop();
                     this.Hide();
                     previousForm.Show();
                 }
@@ -84,7 +84,7 @@ namespace PMS
         private void label17_Click(object sender, EventArgs e)
         {
             requestOrder ro = new requestOrder();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             ro.ShowDialog();
             this.Show();
@@ -93,7 +93,7 @@ namespace PMS
         private void label16_Click(object sender, EventArgs e)
         {
             offer of = new offer();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             of.ShowDialog();
             this.Show();
@@ -102,7 +102,7 @@ namespace PMS
         private void label15_Click(object sender, EventArgs e)
         {
             location lc = new location();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             lc.ShowDialog();
             this.Show();
@@ -110,9 +110,9 @@ namespace PMS
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            if (Form1.stack.Count > 0)
+            if (Home.stack.Count > 0)
             {
-                Form previousForm = Form1.stack.Pop();
+                Form previousForm = Home.stack.Pop();
                 this.Hide();
                 previousForm.Show();
             }
@@ -122,9 +122,9 @@ namespace PMS
 
         private void label26_Click_1(object sender, EventArgs e)
         {
-            if (Form1.stack.Count > 0)
+            if (Home.stack.Count > 0)
             {
-                Form previousForm = Form1.stack.Pop();
+                Form previousForm = Home.stack.Pop();
                 this.Hide();
                 previousForm.Show();
             }

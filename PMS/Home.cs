@@ -15,10 +15,10 @@ using System.Windows.Forms;
 
 namespace PMS
 {
-    public partial class Form1 : Form
+    public partial class Home : Form
     {
         public static Stack<Form> stack = new Stack<Form>();
-        public Form1()
+        public Home()
         {
             InitializeComponent();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
@@ -26,7 +26,7 @@ namespace PMS
 
         private void label1_Click(object sender, EventArgs e)
         {
-            Form1 frm = new Form1();
+            Home frm = new Home();
             this.Hide();
             frm.ShowDialog();
             this.Show();
@@ -70,7 +70,7 @@ namespace PMS
                     sessionManager.IsLoggedIn = true;
 
                     adminDashboard adminDashboard = new adminDashboard(name, email, contactno, dateofbirth, gender, address);
-                    Form1.stack.Push(this);
+                    Home.stack.Push(this);
                     this.Hide();
                     adminDashboard.ShowDialog();
                     this.Show();
@@ -103,7 +103,7 @@ namespace PMS
                     sessionManager.IsLoggedIn = true;
 
                     userDashboard userDashboard = new userDashboard(firstname, lastname, email, contactno, dateofbirth, gender, address);
-                    Form1.stack.Push(this);
+                    Home.stack.Push(this);
                     this.Hide();
                     userDashboard.ShowDialog();
                     this.Show();
@@ -120,7 +120,7 @@ namespace PMS
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             signUp su = new signUp();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             su.ShowDialog();
             this.Show();   
@@ -141,7 +141,7 @@ namespace PMS
         private void button1_Click(object sender, EventArgs e)
         {
             prescriptionMedicine pm = new prescriptionMedicine();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             pm.ShowDialog();
             this.Show();
@@ -158,7 +158,7 @@ namespace PMS
         private void label13_Click(object sender, EventArgs e)
         {
             Contacts cn = new Contacts();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             cn.ShowDialog();
             this.Show();
@@ -167,7 +167,7 @@ namespace PMS
         private void label17_Click(object sender, EventArgs e)
         { 
             requestOrder ro = new requestOrder();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             ro.ShowDialog();
             this.Show();
@@ -177,7 +177,7 @@ namespace PMS
         {
             forgotPass fp = new forgotPass();
             this.Hide();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             fp.ShowDialog();
             this.Show();
             
@@ -186,7 +186,7 @@ namespace PMS
         private void label16_Click(object sender, EventArgs e)
         {
             offer of = new offer();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             of.ShowDialog();
             this.Show();
@@ -195,7 +195,7 @@ namespace PMS
         private void label15_Click(object sender, EventArgs e)
         {
             location lc = new location();
-            Form1.stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             lc.ShowDialog();
             this.Show();

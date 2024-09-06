@@ -33,7 +33,7 @@ namespace PMS
             else
             {
                 timer1.Stop();
-                Form1 frm = new Form1();
+                Home frm = new Home();
                 this.Hide();
                 frm.ShowDialog();
                 this.Close();

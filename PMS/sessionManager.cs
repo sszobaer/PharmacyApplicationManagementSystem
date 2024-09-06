@@ -9,5 +9,6 @@ namespace PMS
     public static class sessionManager
     {
         public static bool IsLoggedIn { get; set; }
+        
     }
 }
