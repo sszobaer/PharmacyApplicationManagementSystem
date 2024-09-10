@@ -1,4 +1,4 @@
-# Pharmacy Management System
+# Pharmacy Application Management System
 
 Welcome to the Pharmacy Management System project! 🚀 This project empowers you to efficiently manage a Pharmacy, handle products, employees, departments, salaries, users by admin and handle cart, order by users in C#(.Net) and integrated with a Microsoft SQL database, it ensures seamless data storage and retrieval.
 
