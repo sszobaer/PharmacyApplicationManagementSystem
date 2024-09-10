@@ -69,7 +69,7 @@ Coming Soon
 
 ## Feedback
 
-If you have any feedback, please reach out to us at fake@fake.com
+If you have any feedback, please reach out to us at ahmedsszobaer@gmail.com
 
 ## License
 
