@@ -38,10 +38,41 @@ Before starting make sure you have the following:
     git clone https://github.com/sszobaer/PharmacyManagementSystem.git
     cd sszobaerahmed.dev
     ```
-2. **Database Configuration:** Configure the database connection:
+2. **Database Configuration:** 
 
-    Go to SSMS and create your own server. Then, go to Visual Studio and connect to this server.
+   **Database Setup Instructions**
 
+1. **Create a New Server in SSMS:**
+   - **Open SQL Server Management Studio (SSMS).**
+   - **Connect to a Server:**
+     - In the "Connect to Server" window, enter your server details. If you're setting up a new server, use the default settings or consult your IT team for specifics.
+     - Click "Connect" to establish a connection to the server.
+   - **Create a New Database (if needed):**
+     - Right-click on "Databases" in the Object Explorer pane.
+     - Select "New Database..."
+     - Enter the database name (e.g., `PharmacyManagementSystem`), and click "OK."
+
+2. **Access Database Files:**
+   - Go to your repository and navigate to the "database" section.
+   - Locate and download the SQL script files for each table.
+
+3. **Execute SQL Scripts:**
+   - Open a new query window in SSMS by clicking "New Query."
+   - Copy and paste the SQL scripts from the downloaded files into the query window.
+
+4. **Script Execution Order:**
+   - Execute the SQL scripts in the following order to ensure proper table relationships:
+     - `SignUpTable`
+     - `AdminTable`
+     - `DepartmentTable`
+     - `EmployeeTable`
+     - `SalaryTable`
+   - **Note:** For the initial script (e.g., `SignUpTable`), use `CREATE DATABASE PharmacyManagementSystem;` instead of `USE PharmacyManagementSystem;` to create the database if it doesn’t already exist.
+
+5. **Run the Scripts:**
+   - Execute each script in the specified order to set up your database.
+
+Adjust the sequence or add additional tables as necessary for your setup.
 3. **Library Dependencies:** Add the MSSQL developer tool:
    - Get the [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads)
 
