@@ -1,4 +1,4 @@
-# Pharmacy Management System
+# Pharmacy Application Management System
 
 Welcome to the Pharmacy Management System project! This application is designed to efficiently manage a pharmacy, including handling products, employees, departments, salaries, and user orders. Built with C# (.NET) and integrated with a Microsoft SQL Server database, it ensures seamless data storage and retrieval.
 
@@ -48,8 +48,8 @@ Before starting, ensure you have the following installed:
 Obtain your own copy of the project with:
     
 ```bash
-git clone https://github.com/sszobaer/PharmacyManagementSystem.git
-cd PharmacyManagementSystem
+git clone https://github.com/sszobaer/PharmacyAppliactionManagementSystem.git
+cd PharmacyApplicationManagementSystem
 ```
 
 ### Database Configuration
