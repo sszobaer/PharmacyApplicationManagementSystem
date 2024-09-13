@@ -114,7 +114,7 @@ Make sure the connection string is set up properly to ensure smooth communicatio
 ![Flow Chart](assets/img/flowChart.jpg)
 
 ### Database Schema Diagram
-![Schema Diagram](assets/img/schemaDiagram.png)
+![Schema Diagram](assets/img/SchemaDiagram.png)
 
 ## Application's Screenshots
 ### Home Page
