@@ -104,7 +104,14 @@ Make sure the connection string is set up properly to ensure smooth communicatio
 
 - Ensure you have the [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) developer tools installed.
 
-## UI / UX ScreenShots
+### Architecture/Technology Sections
+### Software Architechture Diagram
+![Flow Chart](assets/img/Flow Chart(1).jpg)
+
+### Database Schema Diagram
+![Schema Diagram](asstes/img/schemaDiagram.png)
+
+## Features Screenshots
 ### Home Page
 here's the home page and the login UI
 ![Home Page](assets/img/home.png)
@@ -161,6 +168,7 @@ here's the Manage Salary UI
 ### Request Order
 here's the Request Order UI
 ![Home Page](assets/img/requestorder.png)
+
 
 
 ## Features
