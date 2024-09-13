@@ -1,3 +1,7 @@
+Here is the updated README with a revised **Table of Contents**:
+
+---
+
 # Pharmacy Management System
 
 Welcome to the Pharmacy Management System project! This application is designed to efficiently manage a pharmacy, including handling products, employees, departments, salaries, and user orders. Built with C# (.NET) and integrated with a Microsoft SQL Server database, it ensures seamless data storage and retrieval.
@@ -11,14 +15,17 @@ Welcome to the Pharmacy Management System project! This application is designed 
    - [Database Configuration](#database-configuration)
    - [Library Dependencies](#library-dependencies)
 4. [Features](#features)
+   - [User Features](#user-features)
+   - [Admin Features](#admin-features)
 5. [Technology Used](#technology-used)
 6. [Color Reference](#color-reference)
 7. [Roadmap](#roadmap)
 8. [Lessons Learned](#lessons-learned)
-9. [Feedback](#feedback)
-10. [License](#license)
-11. [Acknowledgements](#acknowledgements)
-12. [Contact](#contact)
+9. [FAQ](#faq)
+10. [Feedback](#feedback)
+11. [License](#license)
+12. [Acknowledgements](#acknowledgements)
+13. [Contact](#contact)
 
 ## Authors
 
@@ -101,7 +108,33 @@ Make sure the connection string is set up properly to ensure smooth communicatio
 
 ## Features
 
-Coming Soon
+### User Features
+
+- **Sign Up & Login:**
+   - Users can create a new account, log in, and access their personalized dashboard.
+   - Password management includes change and recovery options like "Forgot Password."
+
+- **Product Management:**
+   - Users can browse available products and add items to their cart.
+   - After selecting products, users can review and place an order from the cart.
+
+- **Order and Payment:**
+   - Multiple payment methods are available, including **bKash**, **Nagad**, **Rocket**, and **Banking**.
+   - On order confirmation, users can see the total bill and complete their payment.
+
+- **Order History:**
+   - Users can view their order history and track past purchases easily.
+
+- **Additional Features:**
+   - Users can make request orders, see current offers, and check important information like store locations, contacts, and about info.
+
+### Admin Features
+
+- **Department & Employee Management:**
+   - Admins can add new departments and manage employees within each department, including adding employee details like name, ID, daily salary, date of birth, and joining date.
+
+- **Salary Management:**
+   - Admins can calculate and pay employee salaries based on their daily wage and the number of days attended.
 
 ## Technology Used
 
@@ -117,30 +150,111 @@ Coming Soon
 | Orange  | ![#ff4522](https://via.placeholder.com/10/ff4522?text=+) #ff4522   |
 
 ## Roadmap
+The future plans and milestones for my project. Based on my current development stage and features, here’s a sample roadmap:
 
-Coming Soon
+### Q4 2024
+
+1. **Feature Enhancements:**
+   - Expand the **Order System** to include additional payment methods and integrate more detailed analytics for sales and transactions.
+   - Improve the **User Dashboard** with advanced features for managing orders and tracking history.
+
+2. **Admin Features:**
+   - Implement advanced **Employee Management** tools, including performance tracking and automated attendance reports.
+   - Add functionality for **Department and Employee Reports** to generate summaries and insights for better management.
+
+3. **User Experience Improvements:**
+   - Refine the **User Interface** based on user feedback to enhance usability and accessibility.
+   - Optimize the **Drop-Down Menu** and navigation for better performance and user interaction.
+
+### Q1 2025
+
+4. **Mobile Compatibility:**
+   - Develop a **Responsive Design** to ensure compatibility with mobile devices and tablets.
+   - Explore the potential for a **Mobile App** version for enhanced accessibility on the go.
+
+5. **Security Enhancements:**
+   - Strengthen **Data Security** with advanced encryption methods and secure authentication practices.
+   - Conduct a **Security Audit** to identify and address potential vulnerabilities.
+
+6. **Performance Optimization:**
+   - Improve the **Performance** of data operations and load times across the application.
+   - Implement **Caching** and **Database Optimization** strategies for better efficiency.
+
+### Q2 2025
+
+7. **Integration and Extensions:**
+   - Integrate with additional **Third-Party Services** for extended functionality, such as CRM systems or additional payment gateways.
+   - Develop **Custom Extensions** or plugins based on user needs and feedback.
+
+8. **User Feedback and Iteration:**
+   - Collect user feedback through surveys and user testing to identify areas for improvement.
+   - Implement iterative changes and updates based on the collected feedback to enhance user satisfaction.
+
+9. **Documentation and Training:**
+   - Update **Documentation** to reflect new features and changes.
+   - Develop **Training Materials** and tutorials to assist users and administrators in utilizing new functionalities.
 
 ## Lessons Learned
 
-Coming Soon
+1. **Authentication and Role Management:**
+   - Implementing different user roles (User and Admin) provided valuable insight into securing access to specific features, ensuring that users only have access to relevant parts of the system.
+
+2. **Order and Cart System Development:**
+   - Building a cart and order system taught the importance of session management, ensuring that user actions like adding to the cart persist seamlessly.
+   - Handling multiple payment methods like **bKash**, **Nagad**, **Rocket**, and **Banking** offered practical experience in integrating diverse payment gateways.
+
+3. **Order
+
+ History and Reporting:**
+   - Developing the order history feature highlighted the need for efficient data retrieval and presentation. Ensuring that users can easily access their past orders and details is crucial for a positive user experience.
+
+4. **Database Design:**
+   - Designing and managing the database schema for product, employee, and salary tables emphasized the importance of normalization and efficient data organization for scalability and performance.
+
+5. **User Interface and Experience:**
+   - Implementing user interfaces and navigation components, such as drop-down menus and splash screens, underscored the need for a clean and intuitive design to improve user interaction and satisfaction.
+
+6. **Error Handling and Security:**
+   - Encountering and resolving exceptions, such as connection issues and authentication problems, reinforced the significance of robust error handling and security measures in application development.
+
+## FAQ
+
+**Q: How can I add more products to the system?**
+A: To add products, use the product management interface available in the Admin panel. Admins can input product details, including name, price, and description, directly into the system.
+
+**Q: What should I do if I forget my password?**
+A: Use the "Forgot Password" feature on the login page to reset your password. Follow the instructions sent to your registered email address.
+
+**Q: How do I change my email or contact information?**
+A: Log in to your account and navigate to the profile settings. You can update your email and contact information from there.
 
 ## Feedback
 
-For feedback, please reach out to us at [ahmedsszobaer@gmail.com](mailto:ahmedsszobaer@gmail.com).
+If you have any feedback or suggestions for this project, please feel free to reach out or submit an issue on the [GitHub repository](https://github.com/sszobaer/PharmacyManagementSystem/issues).
 
 ## License
 
-This project is licensed under the [MIT License](https://github.com/sszobaer/PharmacyManagementSystem/blob/main/LICENSE).
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## Acknowledgements
 
 Special thanks to:
-
+- **Microsoft** for their development tools and platform.
+- **Stack Overflow** and **GitHub** communities for their valuable support and resources.
+- And Also
 🎓 **Dr. Md. Iftekharul Mobin**  
-🎓 Assistant Professor, Department of Computer Science
-
+🎓 Assistant Professor, Department of Computer Science, AIUB
 Your guidance has been instrumental in the development of this project.
+
 
 ## Contact
 
-Feel free to reach out to me at [ahmedsszobaer@gmail.com](mailto:ahmedsszobaer@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/s-s-zobaer-ahmed-209bab296/).
+For more information, reach out to:
+
+- **Email:** [ahmedsszobaer@gmail.com](mailto:ahmedsszobaer@gmail.com)
+- **GitHub:** [S. S. Zobaer Ahmed](https://www.github.com/sszobaer)
+- **YouTube Channel:** [Code Craft Zobaer](https://www.youtube.com/@CodeCraftZobaer)
+
+---
+
+Feel free to modify any sections or add more details as needed!
