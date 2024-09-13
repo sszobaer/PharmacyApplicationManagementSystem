@@ -113,14 +113,62 @@ here's the home page and the login UI
 here's the sign up page UI
 ![Sign up](assets/img/signup.png)
 
+### Request Order
+here's the Request Order UI
+![Request Order](assets/img/requestorder.png)
+
+### Product Section
+here's the Products UI
+![Product Section](assets/img/productsection.png)
+
+### Location
+here's the Location UI
+![Location](assets/img/location.png)
+
+### Contacts
+here's the contacts UI
+![Contacts](assets/img/contacts.png)
+
+### User Dashboard
+here's the User Dashboard UI
+![User Dashboard](assets/img/userdashboard.png)
+
+### Cart
+here's the Cart UI
+![Cart](assets/img/cartsection.png)
+
+### Payment Section
+here's the Payment UI
+![Payment Section](assets/img/payment.png)
+
+### Admin Dashboard
+here's the Admin Dashboard UI
+![Admin Dashboard](assets/img/admindashboard.png)
+
+### Manage Department
+here's the Manage Department UI
+![Manage Department](assets/img/managedepartment.png)
+
+### Manage Employees
+here's the Manage Employees UI
+![Manage Employees](assets/img/manageemployee.png)
+
+
+### Manage Salary
+here's the Manage Salary UI
+![Manage Salary](assets/img/managesalary.png)
+
+### Request Order
+here's the Request Order UI
+![Home Page](assets/img/requestorder.png)
 
 
 ## Features
 
 ### User Features
 
-- **Sign Up & Login:**
-   - Users can create a new account, log in, and access their personalized dashboard.
+- **Sign Up & Login / Logout:**
+   - Users can create a new account, log in, logout and access their personalized dashboard.
    - Password management includes change and recovery options like "Forgot Password."
 
 - **Product Management:**
