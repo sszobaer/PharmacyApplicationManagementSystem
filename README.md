@@ -106,7 +106,7 @@ Make sure the connection string is set up properly to ensure smooth communicatio
 
 ### Architecture/Technology Sections
 ### Software Architechture Diagram
-![Flow Chart](assets/img/Flow Chart (1).jpg)
+![Flow Chart](assets/img/flowChart.jpg)
 
 ### Database Schema Diagram
 ![Schema Diagram](assets/img/schemaDiagram.png)
