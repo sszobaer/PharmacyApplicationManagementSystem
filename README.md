@@ -104,6 +104,14 @@ Make sure the connection string is set up properly to ensure smooth communicatio
 
 - Ensure you have the [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) developer tools installed.
 
+### Forms UI Screenshots
+
+### Home Page
+Here's an example of the user dashboard after login:
+
+![Home Page](assets/img/home.png)
+
+
 ## Features
 
 ### User Features
