@@ -31,46 +31,58 @@ Before starting, ensure you have the following installed:
 - **.NET Framework:** Available via Visual Studio or [Microsoft's official site](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 - **SQL Server Management Studio (SSMS):** [Download the latest version](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
-## Get Started
+### Database Configuration
 
-1. **Clone the Repository:**
-   Obtain your own copy of the project with:
-    ```bash
-    git clone https://github.com/sszobaer/PharmacyManagementSystem.git
-    cd PharmacyManagementSystem
-    ```
+**Database Setup Instructions:**
 
-2. **Database Configuration:**
+1. **Create a New Server in SSMS:**
+   - Open **SQL Server Management Studio (SSMS)**.
+   - Connect to your server using the appropriate credentials.
+   - To create a new database, right-click on "Databases" in the Object Explorer pane, select "New Database...", enter `PharmacyManagementSystem`, and click "OK."
 
-   **Database Setup Instructions:**
+2. **Access Database Files:**
+   - Navigate to the "database" section in this repository.
+   - Download the SQL script files for each table.
 
-   1. **Create a New Server in SSMS:**
-      - Open SQL Server Management Studio (SSMS).
-      - Connect to your server by entering the server details. For a new server, use default settings or consult your IT team or leave a massage to me at my [Contacts Section](#contacts).
-      - Click "Connect" to establish the connection.
-      - To create a new database, right-click on "Databases" in the Object Explorer pane, select "New Database...", enter `PharmacyManagementSystem`, and click "OK."
+3. **Execute SQL Scripts:**
+   - Open a new query window in SSMS.
+   - Copy and paste or directly open the SQL scripts from the downloaded files into the query window.
 
-   2. **Access Database Files:**
-      - Navigate to the "database" section in your repository.
-      - Download the SQL script files for each table.
+4. **Script Execution Order:**
+   - Run the SQL scripts in this order:
+     1. `SignUpTable`
+     2. `AdminTable`
+     3. `DepartmentTable`
+     4. `EmployeeTable`
+     5. `SalaryTable`
+   - **Note:** When setting up the database for the first time, use `CREATE DATABASE PharmacyManagementSystem;` if the database doesn't exist, rather than `USE PharmacyManagementSystem;`.
 
-   3. **Execute SQL Scripts:**
-      - Open a new query window in SSMS by clicking "New Query."
-      - Copy and paste the SQL scripts from the downloaded files into the query window.
+5. **Configure Connection String:**
+   - In the **app.config** or **web.config** file of your WinForms application, update the connection string with your SQL Server details:
 
-   4. **Script Execution Order:**
-      - Execute the SQL scripts in the following order to maintain table relationships:
-        - `SignUpTable`
-        - `AdminTable`
-        - `DepartmentTable`
-        - `EmployeeTable`
-        - `SalaryTable`
-      - **Note:** For the initial script (e.g., `SignUpTable`), use `CREATE DATABASE PharmacyManagementSystem;` instead of `USE PharmacyManagementSystem;` if the database does not already exist.
+   ```xml
+   <connectionStrings>
+     <add name="PharmacyDB"
+          connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=PharmacyManagementSystem;Integrated Security=True"
+          providerName="System.Data.SqlClient" />
+   </connectionStrings>
+   ```
 
-   5. **Run the Scripts:**
-      - Execute each script in the specified order to set up your database.
+   - Replace `YOUR_SERVER_NAME` with the name of your SQL Server instance (for example, `localhost` or `.\SQLEXPRESS`).
 
-   Adjust the sequence or add additional tables as necessary for your setup.
+6. **Integrated Security:**
+   - If you're using **Windows Authentication** to access your database, the `Integrated Security=True` setting should work fine.
+   - If you're using **SQL Server Authentication**, replace `Integrated Security=True` with the `User ID` and `Password` for your SQL Server credentials:
+
+   ```xml
+   <connectionStrings>
+     <add name="PharmacyDB"
+          connectionString="Data Source=YOUR_SERVER_NAME;Initial Catalog=PharmacyManagementSystem;User ID=yourUsername;Password=yourPassword"
+          providerName="System.Data.SqlClient" />
+   </connectionStrings>
+   ```
+
+Make sure the connection string is set up properly to ensure smooth communication between your application and the database.
 
 3. **Library Dependencies:**
    - Ensure you have the [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) developer tools installed.
