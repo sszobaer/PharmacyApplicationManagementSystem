@@ -119,7 +119,7 @@ here's the Request Order UI
 
 ### Product Section
 here's the Products UI
-![Product Section](assets/img/productsection.png)
+![Product Section](assets/img/productssection.png)
 
 ### Location
 here's the Location UI
@@ -131,7 +131,7 @@ here's the contacts UI
 
 ### User Dashboard
 here's the User Dashboard UI
-![User Dashboard](assets/img/userdashboard.png)
+![User Dashboard](assets/img/usersdashboard.png)
 
 ### Cart
 here's the Cart UI
