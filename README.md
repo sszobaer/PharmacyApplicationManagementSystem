@@ -106,12 +106,12 @@ Make sure the connection string is set up properly to ensure smooth communicatio
 
 ### Architecture/Technology Sections
 ### Software Architechture Diagram
-![Flow Chart](assets/img/Flow Chart(1).jpg)
+![Flow Chart](assets/img/Flow Chart (1).jpg)
 
 ### Database Schema Diagram
-![Schema Diagram](asstes/img/schemaDiagram.png)
+![Schema Diagram](assets/img/schemaDiagram.png)
 
-## Features Screenshots
+## Application's Screenshots
 ### Home Page
 here's the home page and the login UI
 ![Home Page](assets/img/home.png)
