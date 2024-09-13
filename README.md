@@ -295,7 +295,7 @@ A: Log in to your account and navigate to the profile settings. You can update y
 
 ## Feedback
 
-If you have any feedback or suggestions for this project, please feel free to reach out or submit an issue on the [GitHub repository](https://github.com/sszobaer/PharmacyManagementSystem/issues).
+If you have any feedback or suggestions for this project, please feel free to reach out or submit an issue on the [GitHub repository](https://github.com/sszobaer/PharmacyApplicationManagementSystem/issues).
 
 ## License
 
