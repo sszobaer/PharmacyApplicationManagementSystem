@@ -134,5 +134,10 @@ namespace PMS
                 MessageBox.Show("Please login", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void categoriesBtn_Click(object sender, EventArgs e)
+        {
+            ddMenu.Visible = !ddMenu.Visible;
+        }
     }
 }

@@ -124,5 +124,10 @@ namespace PMS
             con.setData(query, parameters);
             MessageBox.Show("Order placed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
+
+        private void categoriesBtn_Click(object sender, EventArgs e)
+        {
+            ddMenu.Visible = !ddMenu.Visible;
+        }
     }
 }

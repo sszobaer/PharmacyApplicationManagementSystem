@@ -16,9 +16,11 @@ namespace PMS
 
     public partial class Contacts : Form
     {
+        Functions con;
         public Contacts()
         {
             InitializeComponent();
+            con = new Functions();
         }
 
         private void label1_Click(object sender, EventArgs e)
@@ -71,11 +73,6 @@ namespace PMS
             {
                 MessageBox.Show("Unable to open the mail. " + ex.Message);
             }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -230,6 +227,40 @@ namespace PMS
             else
             {
                 MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void submitBtn_Click(object sender, EventArgs e)
+        {
+            
+            try
+            {
+                if (txtEmail.Text == "" || txtName.Text == "" || txtMessage.Text == "")
+                {
+                    MessageBox.Show("Please fill all of the field", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+
+                string name = txtName.Text;
+                string email = txtEmail.Text;
+                string message = txtMessage.Text;
+
+                string Query = "INSERT INTO ContactsTable VALUES(@name, @email, @message)";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@name",name },
+                    {"@email", email},
+                    {"@message", message}
+                };
+
+                con.setData(Query, parameters);
+                
+                MessageBox.Show("Your message reached to our team", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

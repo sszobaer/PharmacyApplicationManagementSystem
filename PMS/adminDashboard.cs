@@ -124,5 +124,42 @@ namespace PMS
             this.Hide();
             of.ShowDialog();
         }
+
+        private void categoriesBtn_Click(object sender, EventArgs e)
+        {
+            ddMenu.Visible = !ddMenu.Visible;
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            otcMedicine otc = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otc.ShowDialog();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            prescriptionMedicine p = new prescriptionMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            p.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            surgicalProduct o = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            o.ShowDialog();
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            babyCare bc = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            bc.ShowDialog();
+        }
     }
 }

@@ -252,5 +252,29 @@ namespace PMS
                 MessageBox.Show("Please login", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            otcMedicine otcMedicine = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otcMedicine.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            babyCare babyCare = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            babyCare.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            surgicalProduct sp = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            sp.ShowDialog();
+        }
     }
 }

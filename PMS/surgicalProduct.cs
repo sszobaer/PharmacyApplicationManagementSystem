@@ -276,5 +276,10 @@ namespace PMS
                 MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void categoriesBtn_Click(object sender, EventArgs e)
+        {
+            ddMenu.Visible = !ddMenu.Visible;
+        }
     }
 }

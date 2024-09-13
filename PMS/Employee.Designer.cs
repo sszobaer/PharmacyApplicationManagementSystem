@@ -31,7 +31,7 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Employee));
             this.panel3 = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
+            this.categoriesBtn = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
             this.label14 = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
@@ -66,18 +66,29 @@
             this.button15 = new System.Windows.Forms.Button();
             this.button16 = new System.Windows.Forms.Button();
             this.deleteBtn = new System.Windows.Forms.Button();
+            this.ddMenu = new System.Windows.Forms.Panel();
+            this.button12 = new System.Windows.Forms.Button();
+            this.button10 = new System.Windows.Forms.Button();
+            this.button9 = new System.Windows.Forms.Button();
+            this.button8 = new System.Windows.Forms.Button();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button13 = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empList)).BeginInit();
             this.panel6.SuspendLayout();
+            this.ddMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel3
             // 
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.categoriesBtn);
             this.panel3.Controls.Add(this.label13);
             this.panel3.Controls.Add(this.label14);
             this.panel3.Controls.Add(this.label15);
@@ -91,22 +102,23 @@
             this.panel3.Size = new System.Drawing.Size(1986, 78);
             this.panel3.TabIndex = 14;
             // 
-            // label1
+            // categoriesBtn
             // 
-            this.label1.AutoSize = true;
-            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label1.Font = new System.Drawing.Font("Montserrat ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
-            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.label1.Location = new System.Drawing.Point(378, 15);
-            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(307, 50);
-            this.label1.TabIndex = 7;
-            this.label1.Text = "CATEGORIES    ";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
-            this.label1.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
-            this.label1.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
+            this.categoriesBtn.AutoSize = true;
+            this.categoriesBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.categoriesBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.categoriesBtn.Image = ((System.Drawing.Image)(resources.GetObject("categoriesBtn.Image")));
+            this.categoriesBtn.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.categoriesBtn.Location = new System.Drawing.Point(378, 15);
+            this.categoriesBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.categoriesBtn.Name = "categoriesBtn";
+            this.categoriesBtn.Size = new System.Drawing.Size(307, 50);
+            this.categoriesBtn.TabIndex = 7;
+            this.categoriesBtn.Text = "CATEGORIES    ";
+            this.categoriesBtn.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            this.categoriesBtn.Click += new System.EventHandler(this.categoriesBtn_Click);
+            this.categoriesBtn.MouseEnter += new System.EventHandler(this.label1_MouseEnter);
+            this.categoriesBtn.MouseLeave += new System.EventHandler(this.label1_MouseLeave);
             // 
             // label13
             // 
@@ -536,11 +548,163 @@
             this.deleteBtn.UseVisualStyleBackColor = false;
             this.deleteBtn.Click += new System.EventHandler(this.deleteBtn_Click);
             // 
+            // ddMenu
+            // 
+            this.ddMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.ddMenu.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ddMenu.Controls.Add(this.button12);
+            this.ddMenu.Controls.Add(this.button10);
+            this.ddMenu.Controls.Add(this.button9);
+            this.ddMenu.Controls.Add(this.button8);
+            this.ddMenu.Controls.Add(this.button7);
+            this.ddMenu.Controls.Add(this.button6);
+            this.ddMenu.Controls.Add(this.button13);
+            this.ddMenu.Controls.Add(this.button1);
+            this.ddMenu.Controls.Add(this.button2);
+            this.ddMenu.ForeColor = System.Drawing.Color.Black;
+            this.ddMenu.Location = new System.Drawing.Point(321, 72);
+            this.ddMenu.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.ddMenu.Name = "ddMenu";
+            this.ddMenu.Size = new System.Drawing.Size(366, 715);
+            this.ddMenu.TabIndex = 32;
+            this.ddMenu.Visible = false;
+            // 
+            // button12
+            // 
+            this.button12.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button12.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button12.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button12.ForeColor = System.Drawing.Color.Black;
+            this.button12.Location = new System.Drawing.Point(26, 632);
+            this.button12.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button12.Name = "button12";
+            this.button12.Size = new System.Drawing.Size(318, 66);
+            this.button12.TabIndex = 17;
+            this.button12.Text = "Supplements / Vitamins";
+            this.button12.UseVisualStyleBackColor = false;
+            // 
+            // button10
+            // 
+            this.button10.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button10.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button10.ForeColor = System.Drawing.Color.Black;
+            this.button10.Location = new System.Drawing.Point(21, 551);
+            this.button10.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button10.Name = "button10";
+            this.button10.Size = new System.Drawing.Size(318, 66);
+            this.button10.TabIndex = 15;
+            this.button10.Text = "Diabetic Accessories";
+            this.button10.UseVisualStyleBackColor = false;
+            // 
+            // button9
+            // 
+            this.button9.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button9.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button9.ForeColor = System.Drawing.Color.Black;
+            this.button9.Location = new System.Drawing.Point(21, 475);
+            this.button9.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button9.Name = "button9";
+            this.button9.Size = new System.Drawing.Size(318, 66);
+            this.button9.TabIndex = 14;
+            this.button9.Text = "Dental And Oral Care";
+            this.button9.UseVisualStyleBackColor = false;
+            // 
+            // button8
+            // 
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button8.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button8.ForeColor = System.Drawing.Color.Black;
+            this.button8.Location = new System.Drawing.Point(21, 400);
+            this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button8.Name = "button8";
+            this.button8.Size = new System.Drawing.Size(318, 66);
+            this.button8.TabIndex = 13;
+            this.button8.Text = "Personal Care";
+            this.button8.UseVisualStyleBackColor = false;
+            // 
+            // button7
+            // 
+            this.button7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.ForeColor = System.Drawing.Color.Black;
+            this.button7.Location = new System.Drawing.Point(21, 325);
+            this.button7.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(318, 66);
+            this.button7.TabIndex = 12;
+            this.button7.Text = "Women\'s Care";
+            this.button7.UseVisualStyleBackColor = false;
+            // 
+            // button6
+            // 
+            this.button6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.ForeColor = System.Drawing.Color.Black;
+            this.button6.Location = new System.Drawing.Point(21, 249);
+            this.button6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(318, 66);
+            this.button6.TabIndex = 11;
+            this.button6.Text = "Baby Care";
+            this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button13
+            // 
+            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button13.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button13.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button13.ForeColor = System.Drawing.Color.Black;
+            this.button13.Location = new System.Drawing.Point(21, 174);
+            this.button13.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button13.Name = "button13";
+            this.button13.Size = new System.Drawing.Size(318, 66);
+            this.button13.TabIndex = 10;
+            this.button13.Text = "OTC Medicine";
+            this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(21, 98);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(318, 66);
+            this.button1.TabIndex = 9;
+            this.button1.Text = "Surgical Product";
+            this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button2.Font = new System.Drawing.Font("Montserrat", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.Black;
+            this.button2.Location = new System.Drawing.Point(21, 22);
+            this.button2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(318, 66);
+            this.button2.TabIndex = 8;
+            this.button2.Text = "Prescription Medicine";
+            this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
+            // 
             // Employee
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1917, 1049);
+            this.Controls.Add(this.ddMenu);
             this.Controls.Add(this.panel6);
             this.Controls.Add(this.empList);
             this.Controls.Add(this.panel4);
@@ -561,6 +725,7 @@
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.empList)).EndInit();
             this.panel6.ResumeLayout(false);
+            this.ddMenu.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -569,7 +734,7 @@
         #endregion
 
         private System.Windows.Forms.Panel panel3;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label categoriesBtn;
         private System.Windows.Forms.Label label13;
         private System.Windows.Forms.Label label14;
         private System.Windows.Forms.Label label15;
@@ -604,5 +769,15 @@
         private System.Windows.Forms.DateTimePicker dobDtp;
         private System.Windows.Forms.DateTimePicker jDateDtp;
         private System.Windows.Forms.Button deleteBtn;
+        private System.Windows.Forms.Panel ddMenu;
+        private System.Windows.Forms.Button button12;
+        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button button9;
+        private System.Windows.Forms.Button button8;
+        private System.Windows.Forms.Button button7;
+        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
     }
 }
