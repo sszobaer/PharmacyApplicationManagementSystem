@@ -31,7 +31,17 @@ Before starting, ensure you have the following installed:
 - **.NET Framework:** Available via Visual Studio or [Microsoft's official site](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 - **SQL Server Management Studio (SSMS):** [Download the latest version](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
-### Database Configuration
+  ## Get Started
+
+i. **Clone the Repository:**
+   Obtain your own copy of the project with:
+    
+```bash
+    git clone https://github.com/sszobaer/PharmacyManagementSystem.git
+    cd PharmacyManagementSystem
+```
+
+ii. **Database Configuration:**
 
 **Database Setup Instructions:**
 
@@ -84,7 +94,7 @@ Before starting, ensure you have the following installed:
 
 Make sure the connection string is set up properly to ensure smooth communication between your application and the database.
 
-3. **Library Dependencies:**
+iii. **Library Dependencies:**
    - Ensure you have the [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) developer tools installed.
 
 ## Features
