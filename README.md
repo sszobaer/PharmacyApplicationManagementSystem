@@ -201,7 +201,7 @@ The future plans and milestones for my project. Based on my current development 
    - Building a cart and order system taught the importance of session management, ensuring that user actions like adding to the cart persist seamlessly.
    - Handling multiple payment methods like **bKash**, **Nagad**, **Rocket**, and **Banking** offered practical experience in integrating diverse payment gateways.
 
-3. **Order
+3. **Order**
 
  History and Reporting:**
    - Developing the order history feature highlighted the need for efficient data retrieval and presentation. Ensuring that users can easily access their past orders and details is crucial for a positive user experience.
@@ -252,7 +252,3 @@ For more information, reach out to:
 - **Email:** [ahmedsszobaer@gmail.com](mailto:ahmedsszobaer@gmail.com)
 - **GitHub:** [S. S. Zobaer Ahmed](https://www.github.com/sszobaer)
 - **YouTube Channel:** [Code Craft Zobaer](https://www.youtube.com/@CodeCraftZobaer)
-
----
-
-Feel free to modify any sections or add more details as needed!
