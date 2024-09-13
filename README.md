@@ -1,10 +1,8 @@
-Here is the updated README with a revised **Table of Contents**:
-
----
-
 # Pharmacy Management System
 
 Welcome to the Pharmacy Management System project! This application is designed to efficiently manage a pharmacy, including handling products, employees, departments, salaries, and user orders. Built with C# (.NET) and integrated with a Microsoft SQL Server database, it ensures seamless data storage and retrieval.
+
+---
 
 ## Table of Contents
 
