@@ -239,9 +239,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 Special thanks to:
 - **Microsoft** for their development tools and platform.
 - **Stack Overflow** and **GitHub** communities for their valuable support and resources.
-- And Also
-🎓 **Dr. Md. Iftekharul Mobin**  
-🎓 Assistant Professor, Department of Computer Science, AIUB
+- And Also <br>
+🎓 **Dr. Md. Iftekharul Mobin**  <br>
+🎓 Assistant Professor, Department of Computer Science, AIUB <br>
 Your guidance has been instrumental in the development of this project.
 
 
