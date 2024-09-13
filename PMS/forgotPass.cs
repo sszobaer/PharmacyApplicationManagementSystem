@@ -12,18 +12,69 @@ namespace PMS
 {
     public partial class forgotPass : Form
     {
+        Functions con;
         public forgotPass()
         {
             InitializeComponent();
+            con = new Functions();
         }
-
-        private void button13_Click(object sender, EventArgs e)
+        private void txtForgotBtn_Click(object sender, EventArgs e)
         {
-            forgotPass2 fo2 = new forgotPass2();
-            Home.stack.Push(this);
-            this.Hide();
-            fo2.ShowDialog();
-            this.Show();
+            string email = txtEmail.Text;
+            string newPass = txtNewPass.Text;
+            string conPass = txtConPass.Text;
+
+            if (validationInputs(email, newPass,conPass ))
+            {
+                if (forgotPassword(email,newPass))
+                {
+                    MessageBox.Show("Password changed successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+                else
+                {
+                    MessageBox.Show("Something went wrong !!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    return;
+                }
+            }
+        }
+        private bool validationInputs(string username, string newPass, string conPass)
+        {
+            //String.IsNullOrWhiteSpace(value)
+            if (username == "" || newPass == "" || conPass == "")
+            {
+                MessageBox.Show("Please fill all fields", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            if (newPass != conPass)
+            {
+                MessageBox.Show("New Password and Confirm Password do not match", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                return false;
+            }
+            return true;
+        }
+        private bool forgotPassword(string email, string newPass)
+        {
+            string ValidationQuery = "SELECT pass FROM SignUpTable WHERE email = @email";
+            var validationParameters = new Dictionary<string, object>
+            {
+                {"email", email}
+            };
+            DataTable parametersResult = con.GetData(ValidationQuery, validationParameters);
+
+            //Update Password
+            if (parametersResult.Rows.Count > 0 && parametersResult.Rows[0][0].ToString() == newPass)
+            {
+                string updatePassQuery = "UPDATE SignUpTable SET pass = @newPass WHERE email = @email";
+                var updatePassParam = new Dictionary<string, object>
+                {
+                    {"@email",email},
+                    {"@newPass", newPass}
+                };
+                int rowsAffected = con.setData(updatePassQuery, updatePassParam);
+                return rowsAffected > 0;
+            }
+            return false;
         }
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
@@ -190,6 +241,38 @@ namespace PMS
                 this.Hide();
                 previousForm.Show();
             }
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            surgicalProduct sp = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            sp.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            otcMedicine otcMedicine = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otcMedicine.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            babyCare babyCare = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            babyCare.ShowDialog();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
         }
     }
 }

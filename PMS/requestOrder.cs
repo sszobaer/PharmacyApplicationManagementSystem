@@ -367,5 +367,37 @@ namespace PMS
                 MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
+        private void button16_Click(object sender, EventArgs e)
+        {
+            surgicalProduct surgicalProduct = new surgicalProduct();
+            Home.stack.Push(this);  
+            this.Hide();
+            surgicalProduct.ShowDialog();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            otcMedicine otc = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otc.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            babyCare babyCare = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            babyCare.ShowDialog();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
+        }
     }
 }

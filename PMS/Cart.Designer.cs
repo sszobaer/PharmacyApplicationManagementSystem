@@ -117,6 +117,7 @@ namespace PMS
             this.aboutBtn.Size = new System.Drawing.Size(111, 40);
             this.aboutBtn.TabIndex = 5;
             this.aboutBtn.Text = "About";
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
             // locationBtn
             // 
@@ -206,6 +207,7 @@ namespace PMS
             // deleteBtn
             // 
             this.deleteBtn.BackColor = System.Drawing.Color.Transparent;
+            this.deleteBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.deleteBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.deleteBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.deleteBtn.Location = new System.Drawing.Point(978, 942);
@@ -220,6 +222,7 @@ namespace PMS
             // orderBtn
             // 
             this.orderBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.orderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.orderBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.orderBtn.Font = new System.Drawing.Font("Montserrat", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.orderBtn.Location = new System.Drawing.Point(21, 942);

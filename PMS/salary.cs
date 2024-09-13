@@ -364,5 +364,45 @@ namespace PMS
         {
             ddMenu.Visible = !ddMenu.Visible;
         }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            prescriptionMedicine prescriptionMedicine = new prescriptionMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            prescriptionMedicine.ShowDialog();
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            surgicalProduct prescription = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            prescription.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            otcMedicine otcMedicine = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otcMedicine.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            babyCare babyCare = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            babyCare.ShowDialog();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
+        }
     }
 }

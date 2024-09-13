@@ -153,6 +153,7 @@
             this.label14.Size = new System.Drawing.Size(111, 40);
             this.label14.TabIndex = 5;
             this.label14.Text = "About";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             this.label14.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
             this.label14.MouseLeave += new System.EventHandler(this.label14_MouseLeave);
             // 
@@ -579,6 +580,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "Baby Care";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button13
             // 
@@ -593,6 +595,7 @@
             this.button13.TabIndex = 10;
             this.button13.Text = "OTC Medicine";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button1
             // 
@@ -607,6 +610,7 @@
             this.button1.TabIndex = 9;
             this.button1.Text = "Surgical Product";
             this.button1.UseVisualStyleBackColor = false;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // button2
             // 
@@ -621,6 +625,7 @@
             this.button2.TabIndex = 8;
             this.button2.Text = "Prescription Medicine";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // salary
             // 

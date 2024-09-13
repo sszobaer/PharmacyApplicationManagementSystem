@@ -33,7 +33,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cartBtn = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.aboutbtn = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -77,7 +77,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.cartBtn);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.aboutbtn);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label17);
@@ -136,19 +136,20 @@
             this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
             this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
             // 
-            // label14
+            // aboutbtn
             // 
-            this.label14.AutoSize = true;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1503, 22);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 40);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "About";
-            this.label14.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
-            this.label14.MouseLeave += new System.EventHandler(this.label14_MouseLeave);
+            this.aboutbtn.AutoSize = true;
+            this.aboutbtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aboutbtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutbtn.Location = new System.Drawing.Point(1503, 22);
+            this.aboutbtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.aboutbtn.Name = "aboutbtn";
+            this.aboutbtn.Size = new System.Drawing.Size(111, 40);
+            this.aboutbtn.TabIndex = 5;
+            this.aboutbtn.Text = "About";
+            this.aboutbtn.Click += new System.EventHandler(this.aboutbtn_Click);
+            this.aboutbtn.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
+            this.aboutbtn.MouseLeave += new System.EventHandler(this.label14_MouseLeave);
             // 
             // label15
             // 
@@ -597,7 +598,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cartBtn;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label aboutbtn;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;

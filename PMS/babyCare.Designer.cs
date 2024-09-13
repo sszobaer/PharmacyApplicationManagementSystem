@@ -54,7 +54,7 @@
             this.categoriesBtn = new System.Windows.Forms.Label();
             this.button2 = new System.Windows.Forms.Button();
             this.contactsBtn = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.aboutBtn = new System.Windows.Forms.Label();
             this.locationBtn = new System.Windows.Forms.Label();
             this.offersBtn = new System.Windows.Forms.Label();
             this.requestOrderBtn = new System.Windows.Forms.Label();
@@ -353,7 +353,7 @@
             this.panel3.Controls.Add(this.categoriesBtn);
             this.panel3.Controls.Add(this.button2);
             this.panel3.Controls.Add(this.contactsBtn);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.aboutBtn);
             this.panel3.Controls.Add(this.locationBtn);
             this.panel3.Controls.Add(this.offersBtn);
             this.panel3.Controls.Add(this.requestOrderBtn);
@@ -408,17 +408,18 @@
             this.contactsBtn.TabIndex = 6;
             this.contactsBtn.Text = "Contacts";
             // 
-            // label14
+            // aboutBtn
             // 
-            this.label14.AutoSize = true;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1514, 22);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 40);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "About";
+            this.aboutBtn.AutoSize = true;
+            this.aboutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aboutBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutBtn.Location = new System.Drawing.Point(1514, 22);
+            this.aboutBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.aboutBtn.Name = "aboutBtn";
+            this.aboutBtn.Size = new System.Drawing.Size(111, 40);
+            this.aboutBtn.TabIndex = 5;
+            this.aboutBtn.Text = "About";
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
             // locationBtn
             // 
@@ -701,7 +702,7 @@
         private System.Windows.Forms.Label categoriesBtn;
         private System.Windows.Forms.Button button2;
         private System.Windows.Forms.Label contactsBtn;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label aboutBtn;
         private System.Windows.Forms.Label locationBtn;
         private System.Windows.Forms.Label offersBtn;
         private System.Windows.Forms.Label requestOrderBtn;

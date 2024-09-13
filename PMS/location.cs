@@ -187,7 +187,10 @@ namespace PMS
         //Pending work
         private void label14_Click(object sender, EventArgs e)
         {
-
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
         }
 
         
@@ -215,6 +218,22 @@ namespace PMS
             {
                 MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            surgicalProduct sp = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            sp.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            otcMedicine otc = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otc.ShowDialog();
         }
     }
 }

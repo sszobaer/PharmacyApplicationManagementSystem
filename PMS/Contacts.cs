@@ -179,12 +179,12 @@ namespace PMS
 
         private void label14_MouseEnter(object sender, EventArgs e)
         {
-            label14.ForeColor = Color.OrangeRed;
+            aboutbtn.ForeColor = Color.OrangeRed;
         }
 
         private void label14_MouseLeave(object sender, EventArgs e)
         {
-            label14.ForeColor = Color.Black;
+            aboutbtn.ForeColor = Color.Black;
         }
 
         private void label13_MouseEnter(object sender, EventArgs e)
@@ -262,6 +262,14 @@ namespace PMS
             {
                 MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+        private void aboutbtn_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
         }
     }
 }

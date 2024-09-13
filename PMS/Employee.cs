@@ -388,7 +388,7 @@ namespace PMS
         private void button2_Click(object sender, EventArgs e)
         {
             prescriptionMedicine pm = new prescriptionMedicine();
-            Home.Stack.Push(this);
+            Home.stack.Push(this);
             this.Hide();
             pm.ShowDialog();
         }
@@ -415,6 +415,14 @@ namespace PMS
             Home.stack.Push(this);
             this.Hide();
             bc.ShowDialog();
+        }
+
+        private void label14_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
         }
     }
 }

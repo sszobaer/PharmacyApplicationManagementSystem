@@ -378,7 +378,36 @@ namespace PMS
             }
         }
 
+        private void button4_Click(object sender, EventArgs e)
+        {
+            surgicalProduct su = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            su.ShowDialog();
+        }
 
-        //More Update coming Soon
+        private void button5_Click(object sender, EventArgs e)
+        {
+            otcMedicine otcMedicine = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otcMedicine.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            babyCare babyCare = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            babyCare.ShowDialog();
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
+        }
     }
 }

@@ -101,33 +101,95 @@ namespace PMS
         string username = sessionManager.Username;
         private void cardMakePaymentbtn_Click(object sender, EventArgs e)
         {
-            string query = "UPDATE TABLE ProductTable SET pStatus = @pstatus WHERE username = @username ";
-            var parameters = new Dictionary<string, object>
+            try
             {
-                { "@status", status },
-                {"@username", username}
-                
-            };
-            con.setData(query, parameters);
-            MessageBox.Show("Order placed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                if (txtCardExpiry.Text == "" || txtCardHolderName.Text == "" || txtCardNumber.Text =="" || txtCVC.Text =="" )
+                {
+                    MessageBox.Show($"Please fill all of the field", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                string query = "UPDATE ProductTable SET pStatus = @pstatus WHERE username = @username AND pStatus = 'Cart'";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@pstatus", status },
+                    {"@username", username}
+
+                };
+                con.setData(query, parameters);
+                MessageBox.Show("Order placed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void mobileBankingBtn_Click(object sender, EventArgs e)
         {
-            string query = "UPDATE TABLE ProductTable SET pStatus = @pstatus WHERE username = @username ";
-            var parameters = new Dictionary<string, object>
+            try
             {
-                { "@status", status },
-                {"@username", username}
+                if (txtPhone.Text=="" || txtPin.Text=="")
+                {
+                    MessageBox.Show("Please fill all of the fields", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                string query = "UPDATE ProductTable SET pStatus = @pstatus WHERE username = @username AND pStatus = 'Cart'";
+                var parameters = new Dictionary<string, object>
+                {
+                    { "@pstatus", status },
+                    {"@username", username}
 
-            };
-            con.setData(query, parameters);
-            MessageBox.Show("Order placed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                };
+                con.setData(query, parameters);
+                MessageBox.Show("Order placed", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            catch (Exception ex) 
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private void categoriesBtn_Click(object sender, EventArgs e)
         {
             ddMenu.Visible = !ddMenu.Visible;
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            prescriptionMedicine pm = new prescriptionMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            pm.ShowDialog();
+        }
+
+        private void button14_Click(object sender, EventArgs e)
+        {
+            surgicalProduct sp = new surgicalProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            sp.ShowDialog();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
+        {
+            otcMedicine om = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            om.ShowDialog();
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            babyCare bc = new babyCare();
+            Home.stack.Push(this);
+            this.Hide();
+            bc.ShowDialog();
+        }
+
+        private void aboutBtn_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
         }
     }
 }

@@ -172,5 +172,13 @@ namespace PMS
             this.Hide();
             bc.ShowDialog();
         }
+
+        private void aboutBtn_Click(object sender, EventArgs e)
+        {
+            About about = new About();
+            Home.stack.Push(this);
+            this.Hide();
+            about.ShowDialog();
+        }
     }
 }

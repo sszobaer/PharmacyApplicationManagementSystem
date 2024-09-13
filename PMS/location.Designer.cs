@@ -439,6 +439,7 @@
             this.button13.TabIndex = 10;
             this.button13.Text = "OTC Medicine";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -453,6 +454,7 @@
             this.button14.TabIndex = 9;
             this.button14.Text = "Surgical Product";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 

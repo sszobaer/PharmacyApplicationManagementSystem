@@ -516,6 +516,7 @@
             this.label3.Size = new System.Drawing.Size(111, 40);
             this.label3.TabIndex = 5;
             this.label3.Text = "About";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             this.label3.MouseEnter += new System.EventHandler(this.label3_MouseEnter);
             this.label3.MouseLeave += new System.EventHandler(this.label3_MouseLeave);
             // 
@@ -709,6 +710,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "Baby Care";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button5
             // 
@@ -723,6 +725,7 @@
             this.button5.TabIndex = 10;
             this.button5.Text = "OTC Medicine";
             this.button5.UseVisualStyleBackColor = false;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
             // button4
             // 
@@ -737,6 +740,7 @@
             this.button4.TabIndex = 9;
             this.button4.Text = "Surgical Product";
             this.button4.UseVisualStyleBackColor = false;
+            this.button4.Click += new System.EventHandler(this.button4_Click);
             // 
             // button13
             // 

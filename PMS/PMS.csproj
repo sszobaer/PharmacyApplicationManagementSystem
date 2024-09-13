@@ -48,6 +48,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="About.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="About.Designer.cs">
+      <DependentUpon>About.cs</DependentUpon>
+    </Compile>
     <Compile Include="adminDashboard.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -138,12 +144,6 @@
     </Compile>
     <Compile Include="forgotPass.Designer.cs">
       <DependentUpon>forgotPass.cs</DependentUpon>
-    </Compile>
-    <Compile Include="forgotPass2.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="forgotPass2.Designer.cs">
-      <DependentUpon>forgotPass2.cs</DependentUpon>
     </Compile>
     <Compile Include="Home.cs">
       <SubType>Form</SubType>
@@ -298,6 +298,9 @@
     <Compile Include="Zimax.Designer.cs">
       <DependentUpon>Zimax.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="About.resx">
+      <DependentUpon>About.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="adminDashboard.resx">
       <DependentUpon>adminDashboard.cs</DependentUpon>
     </EmbeddedResource>
@@ -342,9 +345,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="forgotPass.resx">
       <DependentUpon>forgotPass.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="forgotPass2.resx">
-      <DependentUpon>forgotPass2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Home.resx">
       <DependentUpon>Home.cs</DependentUpon>

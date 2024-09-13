@@ -58,7 +58,6 @@
             this.button4 = new System.Windows.Forms.Button();
             this.button3 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -70,7 +69,7 @@
             this.label1 = new System.Windows.Forms.Label();
             this.cartBtn = new System.Windows.Forms.Button();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.aboutBtn = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -433,10 +432,10 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(1188, 558);
+            this.button4.Location = new System.Drawing.Point(34, 419);
             this.button4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(267, 55);
+            this.button4.Size = new System.Drawing.Size(612, 55);
             this.button4.TabIndex = 22;
             this.button4.Text = "REVIEWS";
             this.button4.UseVisualStyleBackColor = false;
@@ -449,10 +448,10 @@
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(884, 558);
+            this.button3.Location = new System.Drawing.Point(32, 316);
             this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(267, 55);
+            this.button3.Size = new System.Drawing.Size(614, 55);
             this.button3.TabIndex = 21;
             this.button3.Text = "INFORMATION";
             this.button3.UseVisualStyleBackColor = false;
@@ -461,32 +460,19 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.button4);
             this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.button3);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(884, 109);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 397);
+            this.panel1.Size = new System.Drawing.Size(671, 504);
             this.panel1.TabIndex = 20;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(33, 298);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(615, 55);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add to cart";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -571,7 +557,7 @@
             this.panel3.Controls.Add(this.label1);
             this.panel3.Controls.Add(this.cartBtn);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.aboutBtn);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label17);
@@ -631,19 +617,20 @@
             this.label13.MouseEnter += new System.EventHandler(this.label13_MouseEnter);
             this.label13.MouseLeave += new System.EventHandler(this.label13_MouseLeave);
             // 
-            // label14
+            // aboutBtn
             // 
-            this.label14.AutoSize = true;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1514, 22);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 40);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "About";
-            this.label14.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
-            this.label14.MouseLeave += new System.EventHandler(this.label14_MouseLeave);
+            this.aboutBtn.AutoSize = true;
+            this.aboutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aboutBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutBtn.Location = new System.Drawing.Point(1514, 22);
+            this.aboutBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.aboutBtn.Name = "aboutBtn";
+            this.aboutBtn.Size = new System.Drawing.Size(111, 40);
+            this.aboutBtn.TabIndex = 5;
+            this.aboutBtn.Text = "About";
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
+            this.aboutBtn.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
+            this.aboutBtn.MouseLeave += new System.EventHandler(this.label14_MouseLeave);
             // 
             // label15
             // 
@@ -734,8 +721,6 @@
             this.ClientSize = new System.Drawing.Size(1917, 1049);
             this.Controls.Add(this.label26);
             this.Controls.Add(this.panel5);
-            this.Controls.Add(this.button4);
-            this.Controls.Add(this.button3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel3);
@@ -792,7 +777,6 @@
         private System.Windows.Forms.Button button4;
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
@@ -804,7 +788,7 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button cartBtn;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label aboutBtn;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;

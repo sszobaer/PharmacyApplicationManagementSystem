@@ -49,7 +49,6 @@
             this.reviewsBtn = new System.Windows.Forms.Button();
             this.informationBtn = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.button1 = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
@@ -297,10 +296,10 @@
             this.reviewsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.reviewsBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.reviewsBtn.ForeColor = System.Drawing.Color.Black;
-            this.reviewsBtn.Location = new System.Drawing.Point(1196, 555);
+            this.reviewsBtn.Location = new System.Drawing.Point(34, 421);
             this.reviewsBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.reviewsBtn.Name = "reviewsBtn";
-            this.reviewsBtn.Size = new System.Drawing.Size(267, 55);
+            this.reviewsBtn.Size = new System.Drawing.Size(613, 55);
             this.reviewsBtn.TabIndex = 32;
             this.reviewsBtn.Text = "REVIEWS";
             this.reviewsBtn.UseVisualStyleBackColor = false;
@@ -313,10 +312,10 @@
             this.informationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.informationBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.informationBtn.ForeColor = System.Drawing.Color.Black;
-            this.informationBtn.Location = new System.Drawing.Point(891, 555);
+            this.informationBtn.Location = new System.Drawing.Point(32, 316);
             this.informationBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.informationBtn.Name = "informationBtn";
-            this.informationBtn.Size = new System.Drawing.Size(267, 55);
+            this.informationBtn.Size = new System.Drawing.Size(615, 55);
             this.informationBtn.TabIndex = 31;
             this.informationBtn.Text = "INFORMATION";
             this.informationBtn.UseVisualStyleBackColor = false;
@@ -325,32 +324,19 @@
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panel1.Controls.Add(this.button1);
             this.panel1.Controls.Add(this.label7);
             this.panel1.Controls.Add(this.label6);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.reviewsBtn);
             this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.informationBtn);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(891, 106);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(671, 397);
+            this.panel1.Size = new System.Drawing.Size(671, 504);
             this.panel1.TabIndex = 30;
-            // 
-            // button1
-            // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(33, 298);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(615, 55);
-            this.button1.TabIndex = 12;
-            this.button1.Text = "Add to cart";
-            this.button1.UseVisualStyleBackColor = false;
             // 
             // label7
             // 
@@ -502,6 +488,7 @@
             this.label14.Size = new System.Drawing.Size(111, 40);
             this.label14.TabIndex = 5;
             this.label14.Text = "About";
+            this.label14.Click += new System.EventHandler(this.label14_Click);
             // 
             // locationBtn
             // 
@@ -725,8 +712,6 @@
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.backBtn);
             this.Controls.Add(this.panel4);
-            this.Controls.Add(this.reviewsBtn);
-            this.Controls.Add(this.informationBtn);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.panel2);
@@ -771,7 +756,6 @@
         private System.Windows.Forms.Button reviewsBtn;
         private System.Windows.Forms.Button informationBtn;
         private System.Windows.Forms.Panel panel1;
-        private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;

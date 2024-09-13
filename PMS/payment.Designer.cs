@@ -44,17 +44,17 @@
             this.requestOrderBtn = new System.Windows.Forms.Label();
             this.homeBtn = new System.Windows.Forms.Label();
             this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtPhone = new System.Windows.Forms.TextBox();
+            this.txtPin = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.mobileBankingBtn = new System.Windows.Forms.Button();
             this.mobileBankingPanel = new System.Windows.Forms.Panel();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.txtCardNumber = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.textBox4 = new System.Windows.Forms.TextBox();
-            this.textBox5 = new System.Windows.Forms.TextBox();
-            this.textBox6 = new System.Windows.Forms.TextBox();
+            this.txtCardExpiry = new System.Windows.Forms.TextBox();
+            this.txtCVC = new System.Windows.Forms.TextBox();
+            this.txtCardHolderName = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
@@ -217,6 +217,7 @@
             this.aboutBtn.Size = new System.Drawing.Size(111, 40);
             this.aboutBtn.TabIndex = 5;
             this.aboutBtn.Text = "About";
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
             // 
             // locationBtn
             // 
@@ -276,25 +277,26 @@
             this.pictureBox5.TabIndex = 1;
             this.pictureBox5.TabStop = false;
             // 
-            // textBox1
+            // txtPhone
             // 
-            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox1.Location = new System.Drawing.Point(18, 45);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(374, 35);
-            this.textBox1.TabIndex = 100;
+            this.txtPhone.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPhone.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPhone.Location = new System.Drawing.Point(18, 45);
+            this.txtPhone.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPhone.Name = "txtPhone";
+            this.txtPhone.Size = new System.Drawing.Size(374, 35);
+            this.txtPhone.TabIndex = 100;
             // 
-            // textBox2
+            // txtPin
             // 
-            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox2.Location = new System.Drawing.Point(18, 142);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(374, 35);
-            this.textBox2.TabIndex = 100;
+            this.txtPin.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtPin.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtPin.Location = new System.Drawing.Point(18, 142);
+            this.txtPin.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtPin.Name = "txtPin";
+            this.txtPin.Size = new System.Drawing.Size(374, 35);
+            this.txtPin.TabIndex = 100;
+            this.txtPin.UseSystemPasswordChar = true;
             // 
             // label2
             // 
@@ -321,6 +323,7 @@
             // mobileBankingBtn
             // 
             this.mobileBankingBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.mobileBankingBtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.mobileBankingBtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.mobileBankingBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.mobileBankingBtn.Location = new System.Drawing.Point(20, 206);
@@ -336,9 +339,9 @@
             // 
             this.mobileBankingPanel.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.mobileBankingPanel.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.mobileBankingPanel.Controls.Add(this.textBox1);
+            this.mobileBankingPanel.Controls.Add(this.txtPhone);
             this.mobileBankingPanel.Controls.Add(this.mobileBankingBtn);
-            this.mobileBankingPanel.Controls.Add(this.textBox2);
+            this.mobileBankingPanel.Controls.Add(this.txtPin);
             this.mobileBankingPanel.Controls.Add(this.label3);
             this.mobileBankingPanel.Controls.Add(this.label2);
             this.mobileBankingPanel.Location = new System.Drawing.Point(766, 605);
@@ -348,15 +351,15 @@
             this.mobileBankingPanel.TabIndex = 103;
             this.mobileBankingPanel.Visible = false;
             // 
-            // textBox3
+            // txtCardNumber
             // 
-            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox3.Location = new System.Drawing.Point(27, 55);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(490, 35);
-            this.textBox3.TabIndex = 100;
+            this.txtCardNumber.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCardNumber.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardNumber.Location = new System.Drawing.Point(27, 55);
+            this.txtCardNumber.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCardNumber.Name = "txtCardNumber";
+            this.txtCardNumber.Size = new System.Drawing.Size(490, 35);
+            this.txtCardNumber.TabIndex = 100;
             // 
             // label4
             // 
@@ -369,35 +372,35 @@
             this.label4.TabIndex = 101;
             this.label4.Text = "CARD NUMBER";
             // 
-            // textBox4
+            // txtCardExpiry
             // 
-            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox4.Location = new System.Drawing.Point(27, 152);
-            this.textBox4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(316, 35);
-            this.textBox4.TabIndex = 100;
+            this.txtCardExpiry.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCardExpiry.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardExpiry.Location = new System.Drawing.Point(27, 152);
+            this.txtCardExpiry.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCardExpiry.Name = "txtCardExpiry";
+            this.txtCardExpiry.Size = new System.Drawing.Size(316, 35);
+            this.txtCardExpiry.TabIndex = 100;
             // 
-            // textBox5
+            // txtCVC
             // 
-            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox5.Location = new System.Drawing.Point(352, 152);
-            this.textBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(164, 35);
-            this.textBox5.TabIndex = 100;
+            this.txtCVC.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCVC.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCVC.Location = new System.Drawing.Point(352, 152);
+            this.txtCVC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCVC.Name = "txtCVC";
+            this.txtCVC.Size = new System.Drawing.Size(164, 35);
+            this.txtCVC.TabIndex = 100;
             // 
-            // textBox6
+            // txtCardHolderName
             // 
-            this.textBox6.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBox6.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.textBox6.Location = new System.Drawing.Point(27, 251);
-            this.textBox6.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.textBox6.Name = "textBox6";
-            this.textBox6.Size = new System.Drawing.Size(490, 35);
-            this.textBox6.TabIndex = 100;
+            this.txtCardHolderName.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.txtCardHolderName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtCardHolderName.Location = new System.Drawing.Point(27, 251);
+            this.txtCardHolderName.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtCardHolderName.Name = "txtCardHolderName";
+            this.txtCardHolderName.Size = new System.Drawing.Size(490, 35);
+            this.txtCardHolderName.TabIndex = 100;
             // 
             // label5
             // 
@@ -435,6 +438,7 @@
             // cardMakePaymentbtn
             // 
             this.cardMakePaymentbtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cardMakePaymentbtn.Cursor = System.Windows.Forms.Cursors.Hand;
             this.cardMakePaymentbtn.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.cardMakePaymentbtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cardMakePaymentbtn.Location = new System.Drawing.Point(27, 300);
@@ -450,16 +454,16 @@
             // 
             this.panelCard.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panelCard.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.panelCard.Controls.Add(this.textBox3);
-            this.panelCard.Controls.Add(this.textBox5);
+            this.panelCard.Controls.Add(this.txtCardNumber);
+            this.panelCard.Controls.Add(this.txtCVC);
             this.panelCard.Controls.Add(this.label4);
             this.panelCard.Controls.Add(this.cardMakePaymentbtn);
             this.panelCard.Controls.Add(this.label5);
-            this.panelCard.Controls.Add(this.textBox4);
+            this.panelCard.Controls.Add(this.txtCardExpiry);
             this.panelCard.Controls.Add(this.label7);
-            this.panelCard.Controls.Add(this.textBox6);
+            this.panelCard.Controls.Add(this.txtCardHolderName);
             this.panelCard.Controls.Add(this.label6);
-            this.panelCard.Location = new System.Drawing.Point(675, 605);
+            this.panelCard.Location = new System.Drawing.Point(698, 604);
             this.panelCard.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.panelCard.Name = "panelCard";
             this.panelCard.Size = new System.Drawing.Size(552, 377);
@@ -570,6 +574,7 @@
             this.button6.TabIndex = 11;
             this.button6.Text = "Baby Care";
             this.button6.UseVisualStyleBackColor = false;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
             // button13
             // 
@@ -584,6 +589,7 @@
             this.button13.TabIndex = 10;
             this.button13.Text = "OTC Medicine";
             this.button13.UseVisualStyleBackColor = false;
+            this.button13.Click += new System.EventHandler(this.button13_Click);
             // 
             // button14
             // 
@@ -598,6 +604,7 @@
             this.button14.TabIndex = 9;
             this.button14.Text = "Surgical Product";
             this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
             // 
             // button15
             // 
@@ -612,6 +619,7 @@
             this.button15.TabIndex = 8;
             this.button15.Text = "Prescription Medicine";
             this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // payment
             // 
@@ -664,17 +672,17 @@
         private System.Windows.Forms.Label requestOrderBtn;
         private System.Windows.Forms.Label homeBtn;
         private System.Windows.Forms.PictureBox pictureBox5;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtPhone;
+        private System.Windows.Forms.TextBox txtPin;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Button mobileBankingBtn;
         private System.Windows.Forms.Panel mobileBankingPanel;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox txtCardNumber;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox textBox4;
-        private System.Windows.Forms.TextBox textBox5;
-        private System.Windows.Forms.TextBox textBox6;
+        private System.Windows.Forms.TextBox txtCardExpiry;
+        private System.Windows.Forms.TextBox txtCVC;
+        private System.Windows.Forms.TextBox txtCardHolderName;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;

@@ -32,7 +32,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.categoriesBtn = new System.Windows.Forms.Label();
             this.label13 = new System.Windows.Forms.Label();
-            this.label14 = new System.Windows.Forms.Label();
+            this.aboutBtn = new System.Windows.Forms.Label();
             this.label15 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
@@ -78,7 +78,7 @@
             this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.panel3.Controls.Add(this.categoriesBtn);
             this.panel3.Controls.Add(this.label13);
-            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.aboutBtn);
             this.panel3.Controls.Add(this.label15);
             this.panel3.Controls.Add(this.label16);
             this.panel3.Controls.Add(this.label17);
@@ -123,19 +123,20 @@
             this.label13.Enter += new System.EventHandler(this.label13_Enter);
             this.label13.Leave += new System.EventHandler(this.label13_Leave);
             // 
-            // label14
+            // aboutBtn
             // 
-            this.label14.AutoSize = true;
-            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.label14.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label14.Location = new System.Drawing.Point(1644, 22);
-            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(111, 40);
-            this.label14.TabIndex = 5;
-            this.label14.Text = "About";
-            this.label14.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
-            this.label14.MouseLeave += new System.EventHandler(this.label14_MouseLeave);
+            this.aboutBtn.AutoSize = true;
+            this.aboutBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.aboutBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.aboutBtn.Location = new System.Drawing.Point(1644, 22);
+            this.aboutBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.aboutBtn.Name = "aboutBtn";
+            this.aboutBtn.Size = new System.Drawing.Size(111, 40);
+            this.aboutBtn.TabIndex = 5;
+            this.aboutBtn.Text = "About";
+            this.aboutBtn.Click += new System.EventHandler(this.aboutBtn_Click);
+            this.aboutBtn.MouseEnter += new System.EventHandler(this.label14_MouseEnter);
+            this.aboutBtn.MouseLeave += new System.EventHandler(this.label14_MouseLeave);
             // 
             // label15
             // 
@@ -613,7 +614,7 @@
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Label categoriesBtn;
         private System.Windows.Forms.Label label13;
-        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label aboutBtn;
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.Label label16;
         private System.Windows.Forms.Label label17;
