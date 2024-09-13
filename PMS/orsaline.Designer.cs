@@ -1,0 +1,628 @@
+﻿namespace PMS
+{
+    partial class orsaline
+    {
+        /// <summary>
+        /// Required designer variable.
+        /// </summary>
+        private System.ComponentModel.IContainer components = null;
+
+        /// <summary>
+        /// Clean up any resources being used.
+        /// </summary>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
+        protected override void Dispose(bool disposing)
+        {
+            if (disposing && (components != null))
+            {
+                components.Dispose();
+            }
+            base.Dispose(disposing);
+        }
+
+        #region Windows Form Designer generated code
+
+        /// <summary>
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
+        /// </summary>
+        private void InitializeComponent()
+        {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(orsaline));
+            this.backBtn = new System.Windows.Forms.Label();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.postBtn = new System.Windows.Forms.Button();
+            this.txtReview = new System.Windows.Forms.RichTextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.label11 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label8 = new System.Windows.Forms.Label();
+            this.reviewsBtn = new System.Windows.Forms.Button();
+            this.informationBtn = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.button1 = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label5 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
+            this.cartBtn = new System.Windows.Forms.Button();
+            this.contactsBtn = new System.Windows.Forms.Label();
+            this.label14 = new System.Windows.Forms.Label();
+            this.loactionBtn = new System.Windows.Forms.Label();
+            this.offersBtn = new System.Windows.Forms.Label();
+            this.requestOrderBtn = new System.Windows.Forms.Label();
+            this.homeBtn = new System.Windows.Forms.Label();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.panel4.SuspendLayout();
+            this.panel2.SuspendLayout();
+            this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel3.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // backBtn
+            // 
+            this.backBtn.AutoSize = true;
+            this.backBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.backBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 28F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.backBtn.Location = new System.Drawing.Point(-2, 78);
+            this.backBtn.Name = "backBtn";
+            this.backBtn.Size = new System.Drawing.Size(92, 64);
+            this.backBtn.TabIndex = 27;
+            this.backBtn.Text = "🔙";
+            this.backBtn.Click += new System.EventHandler(this.backBtn_Click);
+            // 
+            // panel4
+            // 
+            this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel4.Controls.Add(this.postBtn);
+            this.panel4.Controls.Add(this.txtReview);
+            this.panel4.Location = new System.Drawing.Point(356, 655);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(1200, 140);
+            this.panel4.TabIndex = 25;
+            this.panel4.Visible = false;
+            // 
+            // postBtn
+            // 
+            this.postBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.postBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.postBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.postBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.postBtn.ForeColor = System.Drawing.Color.Black;
+            this.postBtn.Location = new System.Drawing.Point(1029, 45);
+            this.postBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.postBtn.Name = "postBtn";
+            this.postBtn.Size = new System.Drawing.Size(147, 55);
+            this.postBtn.TabIndex = 14;
+            this.postBtn.Text = "Post";
+            this.postBtn.UseVisualStyleBackColor = false;
+            this.postBtn.Click += new System.EventHandler(this.postBtn_Click);
+            // 
+            // txtReview
+            // 
+            this.txtReview.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtReview.Location = new System.Drawing.Point(24, 45);
+            this.txtReview.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.txtReview.Name = "txtReview";
+            this.txtReview.Size = new System.Drawing.Size(974, 53);
+            this.txtReview.TabIndex = 0;
+            this.txtReview.Text = "";
+            // 
+            // panel2
+            // 
+            this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel2.Controls.Add(this.label25);
+            this.panel2.Controls.Add(this.label24);
+            this.panel2.Controls.Add(this.label23);
+            this.panel2.Controls.Add(this.label22);
+            this.panel2.Controls.Add(this.label21);
+            this.panel2.Controls.Add(this.label20);
+            this.panel2.Controls.Add(this.label19);
+            this.panel2.Controls.Add(this.label12);
+            this.panel2.Controls.Add(this.label11);
+            this.panel2.Controls.Add(this.label10);
+            this.panel2.Controls.Add(this.label9);
+            this.panel2.Controls.Add(this.label8);
+            this.panel2.Location = new System.Drawing.Point(356, 655);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(1200, 374);
+            this.panel2.TabIndex = 24;
+            this.panel2.Visible = false;
+            // 
+            // label25
+            // 
+            this.label25.AutoSize = true;
+            this.label25.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label25.Location = new System.Drawing.Point(484, 322);
+            this.label25.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(54, 29);
+            this.label25.TabIndex = 22;
+            this.label25.Text = "6 tk";
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label24.Location = new System.Drawing.Point(484, 265);
+            this.label24.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(136, 29);
+            this.label24.TabIndex = 21;
+            this.label24.Text = "ORSALINE";
+            // 
+            // label23
+            // 
+            this.label23.AutoSize = true;
+            this.label23.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label23.Location = new System.Drawing.Point(484, 205);
+            this.label23.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(21, 29);
+            this.label23.TabIndex = 21;
+            this.label23.Text = "-";
+            // 
+            // label22
+            // 
+            this.label22.AutoSize = true;
+            this.label22.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label22.Location = new System.Drawing.Point(484, 145);
+            this.label22.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(136, 29);
+            this.label22.TabIndex = 21;
+            this.label22.Text = "ORSALINE";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label21.Location = new System.Drawing.Point(484, 82);
+            this.label21.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(382, 29);
+            this.label21.TabIndex = 20;
+            this.label21.Text = "SOCIAL MARKETING COMPANY";
+            // 
+            // label20
+            // 
+            this.label20.AutoSize = true;
+            this.label20.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label20.Location = new System.Drawing.Point(484, 18);
+            this.label20.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(182, 29);
+            this.label20.TabIndex = 19;
+            this.label20.Text = "ORSALINE-N . \r\n";
+            // 
+            // label19
+            // 
+            this.label19.AutoSize = true;
+            this.label19.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label19.Location = new System.Drawing.Point(18, 322);
+            this.label19.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(71, 29);
+            this.label19.TabIndex = 15;
+            this.label19.Text = "Price";
+            // 
+            // label12
+            // 
+            this.label12.AutoSize = true;
+            this.label12.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label12.Location = new System.Drawing.Point(18, 265);
+            this.label12.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(116, 29);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Category";
+            // 
+            // label11
+            // 
+            this.label11.AutoSize = true;
+            this.label11.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label11.Location = new System.Drawing.Point(18, 205);
+            this.label11.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label11.Name = "label11";
+            this.label11.Size = new System.Drawing.Size(112, 29);
+            this.label11.TabIndex = 17;
+            this.label11.Text = "Strength";
+            // 
+            // label10
+            // 
+            this.label10.AutoSize = true;
+            this.label10.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label10.Location = new System.Drawing.Point(18, 145);
+            this.label10.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(173, 29);
+            this.label10.TabIndex = 16;
+            this.label10.Text = "Generic Name";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Location = new System.Drawing.Point(18, 82);
+            this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(122, 29);
+            this.label9.TabIndex = 15;
+            this.label9.Text = "Company";
+            // 
+            // label8
+            // 
+            this.label8.AutoSize = true;
+            this.label8.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label8.Location = new System.Drawing.Point(18, 18);
+            this.label8.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(77, 29);
+            this.label8.TabIndex = 14;
+            this.label8.Text = "Name";
+            // 
+            // reviewsBtn
+            // 
+            this.reviewsBtn.BackColor = System.Drawing.Color.White;
+            this.reviewsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.reviewsBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.reviewsBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.reviewsBtn.ForeColor = System.Drawing.Color.Black;
+            this.reviewsBtn.Location = new System.Drawing.Point(1190, 558);
+            this.reviewsBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.reviewsBtn.Name = "reviewsBtn";
+            this.reviewsBtn.Size = new System.Drawing.Size(267, 55);
+            this.reviewsBtn.TabIndex = 23;
+            this.reviewsBtn.Text = "REVIEWS";
+            this.reviewsBtn.UseVisualStyleBackColor = false;
+            this.reviewsBtn.Click += new System.EventHandler(this.reviewsBtn_Click);
+            // 
+            // informationBtn
+            // 
+            this.informationBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.informationBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.informationBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.informationBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.informationBtn.ForeColor = System.Drawing.Color.Black;
+            this.informationBtn.Location = new System.Drawing.Point(885, 558);
+            this.informationBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.informationBtn.Name = "informationBtn";
+            this.informationBtn.Size = new System.Drawing.Size(267, 55);
+            this.informationBtn.TabIndex = 22;
+            this.informationBtn.Text = "INFORMATION";
+            this.informationBtn.UseVisualStyleBackColor = false;
+            this.informationBtn.Click += new System.EventHandler(this.informationBtn_Click);
+            // 
+            // panel1
+            // 
+            this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.panel1.Controls.Add(this.button1);
+            this.panel1.Controls.Add(this.label7);
+            this.panel1.Controls.Add(this.label6);
+            this.panel1.Controls.Add(this.label5);
+            this.panel1.Controls.Add(this.label4);
+            this.panel1.Controls.Add(this.label3);
+            this.panel1.Controls.Add(this.label2);
+            this.panel1.Location = new System.Drawing.Point(885, 109);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(671, 397);
+            this.panel1.TabIndex = 21;
+            // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button1.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.Black;
+            this.button1.Location = new System.Drawing.Point(33, 298);
+            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(615, 55);
+            this.button1.TabIndex = 12;
+            this.button1.Text = "Add to cart";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Arial Black", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(22, 235);
+            this.label7.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(160, 58);
+            this.label7.TabIndex = 12;
+            this.label7.Text = "6 BDT";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label6.Location = new System.Drawing.Point(262, 158);
+            this.label6.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(312, 29);
+            this.label6.TabIndex = 14;
+            this.label6.Text = "SOCIAL MARKETING COMPANY\r\n";
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Font = new System.Drawing.Font("Arial Narrow", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(246, 98);
+            this.label5.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(113, 29);
+            this.label5.TabIndex = 12;
+            this.label5.Text = "ORSALINE";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(27, 152);
+            this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(229, 33);
+            this.label4.TabIndex = 13;
+            this.label4.Text = "Company Name:";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Arial Black", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(27, 92);
+            this.label3.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(210, 33);
+            this.label3.TabIndex = 12;
+            this.label3.Text = "Generic Name:";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Montserrat ExtraBold", 15.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(26, 22);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(401, 44);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ORSALINE-N . Orsaline";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(356, 109);
+            this.pictureBox1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(498, 504);
+            this.pictureBox1.TabIndex = 20;
+            this.pictureBox1.TabStop = false;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.panel3.Controls.Add(this.label1);
+            this.panel3.Controls.Add(this.cartBtn);
+            this.panel3.Controls.Add(this.contactsBtn);
+            this.panel3.Controls.Add(this.label14);
+            this.panel3.Controls.Add(this.loactionBtn);
+            this.panel3.Controls.Add(this.offersBtn);
+            this.panel3.Controls.Add(this.requestOrderBtn);
+            this.panel3.Controls.Add(this.homeBtn);
+            this.panel3.Controls.Add(this.pictureBox5);
+            this.panel3.Location = new System.Drawing.Point(-14, -2);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(1986, 78);
+            this.panel3.TabIndex = 19;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label1.Font = new System.Drawing.Font("Montserrat ExtraBold", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Image = ((System.Drawing.Image)(resources.GetObject("label1.Image")));
+            this.label1.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.label1.Location = new System.Drawing.Point(378, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(307, 50);
+            this.label1.TabIndex = 7;
+            this.label1.Text = "CATEGORIES    ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // cartBtn
+            // 
+            this.cartBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.cartBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.cartBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cartBtn.ForeColor = System.Drawing.Color.Black;
+            this.cartBtn.Location = new System.Drawing.Point(1790, 14);
+            this.cartBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.cartBtn.Name = "cartBtn";
+            this.cartBtn.Size = new System.Drawing.Size(128, 55);
+            this.cartBtn.TabIndex = 1;
+            this.cartBtn.Text = "Cart";
+            this.cartBtn.UseVisualStyleBackColor = false;
+            this.cartBtn.Click += new System.EventHandler(this.cartBtn_Click);
+            // 
+            // contactsBtn
+            // 
+            this.contactsBtn.AutoSize = true;
+            this.contactsBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.contactsBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.contactsBtn.Location = new System.Drawing.Point(1629, 22);
+            this.contactsBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.contactsBtn.Name = "contactsBtn";
+            this.contactsBtn.Size = new System.Drawing.Size(152, 40);
+            this.contactsBtn.TabIndex = 6;
+            this.contactsBtn.Text = "Contacts";
+            this.contactsBtn.Click += new System.EventHandler(this.contactsBtn_Click);
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.label14.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label14.Location = new System.Drawing.Point(1510, 22);
+            this.label14.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(111, 40);
+            this.label14.TabIndex = 5;
+            this.label14.Text = "About";
+            // 
+            // loactionBtn
+            // 
+            this.loactionBtn.AutoSize = true;
+            this.loactionBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.loactionBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.loactionBtn.Location = new System.Drawing.Point(1358, 22);
+            this.loactionBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.loactionBtn.Name = "loactionBtn";
+            this.loactionBtn.Size = new System.Drawing.Size(150, 40);
+            this.loactionBtn.TabIndex = 4;
+            this.loactionBtn.Text = "Location";
+            this.loactionBtn.Click += new System.EventHandler(this.locationBtn_Click);
+            // 
+            // offersBtn
+            // 
+            this.offersBtn.AutoSize = true;
+            this.offersBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.offersBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.offersBtn.Location = new System.Drawing.Point(1239, 22);
+            this.offersBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.offersBtn.Name = "offersBtn";
+            this.offersBtn.Size = new System.Drawing.Size(109, 40);
+            this.offersBtn.TabIndex = 3;
+            this.offersBtn.Text = "Offers";
+            this.offersBtn.Click += new System.EventHandler(this.offersBtn_Click);
+            // 
+            // requestOrderBtn
+            // 
+            this.requestOrderBtn.AutoSize = true;
+            this.requestOrderBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.requestOrderBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.requestOrderBtn.Location = new System.Drawing.Point(998, 22);
+            this.requestOrderBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.requestOrderBtn.Name = "requestOrderBtn";
+            this.requestOrderBtn.Size = new System.Drawing.Size(238, 40);
+            this.requestOrderBtn.TabIndex = 2;
+            this.requestOrderBtn.Text = "Request Order";
+            this.requestOrderBtn.Click += new System.EventHandler(this.requestOrderBtn_Click);
+            // 
+            // homeBtn
+            // 
+            this.homeBtn.AutoSize = true;
+            this.homeBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.homeBtn.Font = new System.Drawing.Font("Montserrat", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.homeBtn.Location = new System.Drawing.Point(880, 22);
+            this.homeBtn.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
+            this.homeBtn.Name = "homeBtn";
+            this.homeBtn.Size = new System.Drawing.Size(107, 40);
+            this.homeBtn.TabIndex = 1;
+            this.homeBtn.Text = "Home";
+            this.homeBtn.Click += new System.EventHandler(this.homeBtn_Click);
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
+            this.pictureBox5.Location = new System.Drawing.Point(22, 2);
+            this.pictureBox5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(208, 78);
+            this.pictureBox5.TabIndex = 1;
+            this.pictureBox5.TabStop = false;
+            // 
+            // orsaline
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
+            this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.ClientSize = new System.Drawing.Size(1917, 1049);
+            this.Controls.Add(this.backBtn);
+            this.Controls.Add(this.panel4);
+            this.Controls.Add(this.reviewsBtn);
+            this.Controls.Add(this.informationBtn);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.panel3);
+            this.Controls.Add(this.panel2);
+            this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.Name = "orsaline";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "orsaline";
+            this.panel4.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
+            this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
+        }
+
+        #endregion
+
+        private System.Windows.Forms.Label backBtn;
+        private System.Windows.Forms.Panel panel4;
+        private System.Windows.Forms.Button postBtn;
+        private System.Windows.Forms.RichTextBox txtReview;
+        private System.Windows.Forms.Panel panel2;
+        private System.Windows.Forms.Label label25;
+        private System.Windows.Forms.Label label24;
+        private System.Windows.Forms.Label label23;
+        private System.Windows.Forms.Label label22;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.Label label20;
+        private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label label12;
+        private System.Windows.Forms.Label label11;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label8;
+        private System.Windows.Forms.Button reviewsBtn;
+        private System.Windows.Forms.Button informationBtn;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button cartBtn;
+        private System.Windows.Forms.Label contactsBtn;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.Label loactionBtn;
+        private System.Windows.Forms.Label offersBtn;
+        private System.Windows.Forms.Label requestOrderBtn;
+        private System.Windows.Forms.Label homeBtn;
+        private System.Windows.Forms.PictureBox pictureBox5;
+    }
+}

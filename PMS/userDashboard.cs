@@ -303,5 +303,20 @@ namespace PMS
             txtNewPass.UseSystemPasswordChar = !showPass.Checked;
             txtConPass.UseSystemPasswordChar = !showPass.Checked;
         }
+
+        private void viewCartBtn_Click(object sender, EventArgs e)
+        {
+            if (sessionManager.IsLoggedIn)
+            {
+                Cart cart = new Cart();
+                Home.stack.Push(this);
+                this.Hide();
+                cart.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

@@ -201,5 +201,20 @@ namespace PMS
                 previousForm.Show();
             }
         }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            if (sessionManager.IsLoggedIn)
+            {
+                Cart cart = new Cart();
+                Home.stack.Push(this);
+                this.Hide();
+                cart.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

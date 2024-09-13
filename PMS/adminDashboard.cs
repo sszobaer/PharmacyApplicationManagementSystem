@@ -51,7 +51,7 @@ namespace PMS
             lblGender.Text = gender;
             lblDoB.Text = dateofbirth;
             lblAdress.Text = address;
-        }
+         }
         
 
         private void button5_Click(object sender, EventArgs e)

@@ -9,6 +9,7 @@ namespace PMS
     public static class sessionManager
     {
         public static bool IsLoggedIn { get; set; }
-        
+        public static string Username { get; set; }
+        public static string productID {  get; set; }
     }
 }

@@ -78,6 +78,12 @@
     <Compile Include="bodyWash.Designer.cs">
       <DependentUpon>bodyWash.cs</DependentUpon>
     </Compile>
+    <Compile Include="Cart.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Cart.Designer.cs">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </Compile>
     <Compile Include="CoDopaCR.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -96,6 +102,12 @@
     <Compile Include="Department.Designer.cs">
       <DependentUpon>Department.cs</DependentUpon>
     </Compile>
+    <Compile Include="derminWhitefield.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="derminWhitefield.Designer.cs">
+      <DependentUpon>derminWhitefield.cs</DependentUpon>
+    </Compile>
     <Compile Include="Diamicron.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -107,6 +119,12 @@
     </Compile>
     <Compile Include="Employee.Designer.cs">
       <DependentUpon>Employee.cs</DependentUpon>
+    </Compile>
+    <Compile Include="famotack.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="famotack.Designer.cs">
+      <DependentUpon>famotack.cs</DependentUpon>
     </Compile>
     <Compile Include="Functions.cs" />
     <Compile Include="FileFreshDetails.cs">
@@ -174,6 +192,30 @@
     </Compile>
     <Compile Include="optimox.Designer.cs">
       <DependentUpon>optimox.cs</DependentUpon>
+    </Compile>
+    <Compile Include="oralon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="oralon.Designer.cs">
+      <DependentUpon>oralon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="orsaline.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="orsaline.Designer.cs">
+      <DependentUpon>orsaline.cs</DependentUpon>
+    </Compile>
+    <Compile Include="otcMedicine.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="otcMedicine.Designer.cs">
+      <DependentUpon>otcMedicine.cs</DependentUpon>
+    </Compile>
+    <Compile Include="payment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="payment.Designer.cs">
+      <DependentUpon>payment.cs</DependentUpon>
     </Compile>
     <Compile Include="prescriptionMedicine.cs">
       <SubType>Form</SubType>
@@ -271,6 +313,9 @@
     <EmbeddedResource Include="bodyWash.resx">
       <DependentUpon>bodyWash.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Cart.resx">
+      <DependentUpon>Cart.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="CoDopaCR.resx">
       <DependentUpon>CoDopaCR.cs</DependentUpon>
     </EmbeddedResource>
@@ -280,11 +325,17 @@
     <EmbeddedResource Include="Department.resx">
       <DependentUpon>Department.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="derminWhitefield.resx">
+      <DependentUpon>derminWhitefield.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Diamicron.resx">
       <DependentUpon>Diamicron.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Employee.resx">
       <DependentUpon>Employee.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="famotack.resx">
+      <DependentUpon>famotack.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FileFreshDetails.resx">
       <DependentUpon>FileFreshDetails.cs</DependentUpon>
@@ -318,6 +369,18 @@
     </EmbeddedResource>
     <EmbeddedResource Include="optimox.resx">
       <DependentUpon>optimox.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="oralon.resx">
+      <DependentUpon>oralon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="orsaline.resx">
+      <DependentUpon>orsaline.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="otcMedicine.resx">
+      <DependentUpon>otcMedicine.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="payment.resx">
+      <DependentUpon>payment.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="prescriptionMedicine.resx">
       <DependentUpon>prescriptionMedicine.cs</DependentUpon>

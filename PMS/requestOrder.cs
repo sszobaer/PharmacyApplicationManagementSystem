@@ -18,6 +18,7 @@ namespace PMS
         public requestOrder()
         {
             InitializeComponent();
+            ConfigureDataGridView();
             //Set the Initial text
             //Set the color silver as the texts are invisible
             textBox1.Text = "Napa Extra";
@@ -34,9 +35,9 @@ namespace PMS
         }
         private void requestOrder_Load(object sender, EventArgs e)
         {
-            dataGridView1.Columns.Add("Column1", "Product name");
-            dataGridView1.Columns.Add("Column2", "Strength");
-            dataGridView1.Columns.Add("Column3", "Quantity");
+            productsGridView.Columns.Add("Column1", "Product name");
+            productsGridView.Columns.Add("Column2", "Strength");
+            productsGridView.Columns.Add("Column3", "Quantity");
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -51,7 +52,7 @@ namespace PMS
             {
                 panel5.Visible = true;
 
-                dataGridView1.Rows.Add(Text1, Text2, Text3);
+                productsGridView.Rows.Add(Text1, Text2, Text3);
 
                 // Clear TextBoxes after adding
                 textBox1.Clear();
@@ -68,16 +69,52 @@ namespace PMS
                 
             }
         }
+        private void ConfigureDataGridView()
+        {
+            // Set alternating row colors for readability
+            productsGridView.AlternatingRowsDefaultCellStyle.BackColor = Color.LightGray;
+
+            // Set header styles
+            productsGridView.EnableHeadersVisualStyles = false;
+            productsGridView.ColumnHeadersDefaultCellStyle.BackColor = Color.FromArgb(255, 128, 0);
+            productsGridView.ColumnHeadersDefaultCellStyle.ForeColor = Color.Black;
+            productsGridView.ColumnHeadersDefaultCellStyle.Font = new Font("Segoe UI", 10, FontStyle.Bold);
+
+            // Set grid line color
+            productsGridView.GridColor = Color.Black;
+
+            // Set default row styles
+            productsGridView.DefaultCellStyle.BackColor = Color.White;
+            productsGridView.DefaultCellStyle.ForeColor = Color.Black;
+            productsGridView.DefaultCellStyle.Font = new Font("Segoe UI", 10);
+
+            // Set selection styles
+            productsGridView.DefaultCellStyle.SelectionBackColor = Color.DarkOrange;
+            productsGridView.DefaultCellStyle.SelectionForeColor = Color.White;
+
+            // Fit columns to the DataGridView
+            productsGridView.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            // Adjust row height to fit content
+            productsGridView.AutoSizeRowsMode = DataGridViewAutoSizeRowsMode.AllCells;
+
+            // Disable column resize by the user for a consistent layout
+            productsGridView.AllowUserToResizeColumns = false;
+
+            // Set row and column headers visibility if needed
+            productsGridView.RowHeadersVisible = false;
+            productsGridView.ColumnHeadersVisible = true;
+        }
         private void button3_Click_1(object sender, EventArgs e)
         {
-            if (dataGridView1.SelectedRows.Count > 0)
+            if (productsGridView.SelectedRows.Count > 0)
             {
                 try
                 {
                     // Remove each selected row
-                    foreach (DataGridViewRow row in dataGridView1.SelectedRows)
+                    foreach (DataGridViewRow row in productsGridView.SelectedRows)
                     {
-                        dataGridView1.Rows.Remove(row);
+                        productsGridView.Rows.Remove(row);
                     }
 
                 }
@@ -87,7 +124,7 @@ namespace PMS
                 }
             }
            
-            if (dataGridView1.Rows.Count == 1)
+            if (productsGridView.Rows.Count == 1)
             {
                 panel5.Visible = false;
             }
@@ -253,7 +290,7 @@ namespace PMS
                 {
                     con.Open();
 
-                    foreach(DataGridViewRow row in dataGridView1.Rows)
+                    foreach(DataGridViewRow row in productsGridView.Rows)
                     {
                         if(!row.IsNewRow)
                         {
@@ -306,16 +343,6 @@ namespace PMS
             }
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
         private void panel6_Paint(object sender, PaintEventArgs e)
         {
 
@@ -326,5 +353,19 @@ namespace PMS
 
         }
 
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            if (sessionManager.IsLoggedIn)
+            {
+                Cart cart = new Cart();
+                Home.stack.Push(this);
+                this.Hide();
+                cart.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
     }
 }

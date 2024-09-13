@@ -135,24 +135,33 @@ namespace PMS
             {
                 if (key == 0)
                 {
-                    MessageBox.Show("Data missing!!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("No employee selected!", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
 
-                string Query = "DELETE FROM EmployeeTable WHERE empID = @ID";
-                Dictionary<string, object> parameters = new Dictionary<string, object>
+                //1. Delete dependent records from SalaryTable
+                string salaryQuery = "DELETE FROM SalaryTable WHERE employee = @empID";
+                Dictionary<string, object> salaryParams = new Dictionary<string, object>
                 {
-                    { "@ID", key }
+                    { "@empID", key }
                 };
+                con.setData(salaryQuery, salaryParams);
 
-                con.setData(Query, parameters);
+                //2. Delete the employee from EmployeeTable
+                string empQuery = "DELETE FROM EmployeeTable WHERE empID = @empID";
+                Dictionary<string, object> empParams = new Dictionary<string, object>
+                {
+                    { "@empID", key }
+                };
+                con.setData(empQuery, empParams);
                 showEmployees();
                 MessageBox.Show("Employee's info deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
                 ClearFields();
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error: {ex.Message}");
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -369,6 +378,6 @@ namespace PMS
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
         {
 
-        }   
+        }
     }
 }

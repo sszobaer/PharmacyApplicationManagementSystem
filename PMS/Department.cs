@@ -157,15 +157,33 @@ namespace PMS
                 }
                 else
                 {
-                    string query = "DELETE FROM DepartmentTable WHERE deptID = @deptID";
-                    var parameters = new Dictionary<string, object>
+                    //1. Delete dependent records from SalaryTable
+                    string salaryQuery = "DELETE FROM SalaryTable WHERE employee IN (SELECT empID FROM EmployeeTable WHERE empDept = @deptID)";
+                    var salaryParams = new Dictionary<string, object>
                     {
                         { "@deptID", key }
                     };
-                    con.setData(query, parameters);
-                    showDepartments();
+                    con.setData(salaryQuery, salaryParams);
+
+                    //2. Delete dependent records from EmployeeTable
+                    string employeeQuery = "DELETE FROM EmployeeTable WHERE empDept = @deptID";
+                    var employeeParams = new Dictionary<string, object>
+                    {
+                        { "@deptID", key }
+                    };
+                    con.setData(employeeQuery, employeeParams);
+
+                    //3.Finally Delete the department itself
+                    string deptQuery = "DELETE FROM DepartmentTable WHERE deptID = @deptID";
+                    var deptParams = new Dictionary<string, object>
+                    {
+                        { "@deptID", key }
+                    };
+                    con.setData(deptQuery, deptParams);
+
+                    showDepartments(); 
                     MessageBox.Show("Department deleted successfully", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
-                    txtDeptName.Text = "";
+                    txtDeptName.Text = ""; 
                 }
             }
             catch (Exception ex)

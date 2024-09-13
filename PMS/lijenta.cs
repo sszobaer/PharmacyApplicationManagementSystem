@@ -12,9 +12,11 @@ namespace PMS
 {
     public partial class lijenta : Form
     {
+        Functions con;
         public lijenta()
         {
             InitializeComponent();
+            con = new Functions();
         }
 
 
@@ -212,6 +214,41 @@ namespace PMS
                 Form previousForm = Home.stack.Pop();
                 this.Hide();
                 previousForm.Show();
+            }
+        }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            if (sessionManager.IsLoggedIn)
+            {
+                Cart cart = new Cart();
+                Home.stack.Push(this);
+                this.Hide();
+                cart.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void postBtn_Click(object sender, EventArgs e)
+        {
+            string username = sessionManager.Username;
+            if (sessionManager.IsLoggedIn)
+            {
+                string query = "INSERT INTO ReviewsTable VALUES (@username, @review)";
+                var parameters = new Dictionary<string, object>
+                {
+                    {"@username",username },
+                    {"@review",txtReview.Text }
+                };
+                con.setData(query, parameters);
+                MessageBox.Show("Thanks for your valuable Comment", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            else
+            {
+                MessageBox.Show("Please login", "Failed", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

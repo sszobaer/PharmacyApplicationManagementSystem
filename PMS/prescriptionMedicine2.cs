@@ -5,17 +5,48 @@ using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
+using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace PMS
 {
     public partial class prescriptionMedicine2 : Form
     {
+        Functions con;
         public prescriptionMedicine2()
         {
             InitializeComponent();
+            con = new Functions();
         }
+        //Method for valid Product ID
+        private bool IsValidProductID(string pID)
+        {
+            string pattern = @"^p-\d{3}$"; // Pattern for 'p-XXX' where XXX is exactly three digits
+            Regex regex = new Regex(pattern);
+            return regex.IsMatch(pID);
+        }
+
+        // Format product ID
+        private string FormatProductID(int id)
+        {
+            return $"p-{id:D3}"; // Format integer as 'p-XXX' with leading zeros if necessary
+        }
+        //Declair Product informations
+        string currentUsername = sessionManager.Username;
+        string status = "Cart";
+        string p1Name = "DIAMICRON MR 30 MG";
+        double p1Price = 14;
+
+        string p2Name = "MONTENE 5 MG Tab";
+        double p2Price = 9;
+
+        string p3Name = "ZIMAX 500 MG Tab";
+        double p3Price = 40;
+
+        string p4Name = "PRONOR 5 MG Tab";
+        double p4Price = 10.07;
         //Esc btn event
         protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
         {
@@ -215,6 +246,145 @@ namespace PMS
                 Form previousForm = Home.stack.Pop();
                 this.Hide();
                 previousForm.Show();
+            }
+        }
+
+        private void AddToCart1_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!sessionManager.IsLoggedIn)
+                {
+                    MessageBox.Show("Please Login or Sign Up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string P1ID = FormatProductID(5);
+                    string query = "INSERT INTO ProductTable VALUES (@pId, @pName, @price, @pStatus, @username)";
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "@pId", P1ID },
+                        { "@pName", p1Name},
+                        {"@price",p1Price },
+                        {"@pStatus", status },
+                        { "@username", currentUsername }
+                    };
+                    con.setData(query, parameters);
+                    MessageBox.Show("Successfully Added to Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AddToCart2_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!sessionManager.IsLoggedIn)
+                {
+                    MessageBox.Show("Please Login or Sign Up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string p2ID = FormatProductID(6);
+                    string query = "INSERT INTO ProductTable VALUES (@pId, @pName, @price, @pStatus, @username)";
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "@pId", p2ID },
+                        { "@pName", p2Name},
+                        {"@price",p2Price },
+                        {"@pStatus", status },
+                        { "@username", currentUsername }
+                    };
+                    con.setData(query, parameters);
+                    MessageBox.Show("Successfully Added to Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AddToCart3_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!sessionManager.IsLoggedIn)
+                {
+                    MessageBox.Show("Please Login or Sign Up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string p3ID = FormatProductID(7);
+                    string query = "INSERT INTO ProductTable VALUES (@pId, @pName, @price, @pStatus, @username)";
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "@pId", p3ID },
+                        { "@pName", p3Name},
+                        {"@price",p3Price },
+                        {"@pStatus", status },
+                        { "@username", currentUsername }
+                    };
+                    con.setData(query, parameters);
+                    MessageBox.Show("Successfully Added to Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if (!sessionManager.IsLoggedIn)
+                {
+                    MessageBox.Show("Please Login or Sign Up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    string p4ID = FormatProductID(8);
+                    string query = "INSERT INTO ProductTable VALUES (@pId, @pName, @price, @pStatus, @username)";
+                    var parameters = new Dictionary<string, object>
+                    {
+                        { "@pId", p4ID },
+                        { "@pName", p4Name},
+                        {"@price",p4Price },
+                        {"@pStatus", status },
+                        { "@username", currentUsername }
+                    };
+                    con.setData(query, parameters);
+                    MessageBox.Show("Successfully Added to Cart", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"An error occurred: {ex.Message}", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            if (sessionManager.IsLoggedIn)
+            {
+                Cart cart = new Cart();
+                Home.stack.Push(this);
+                this.Hide();
+                cart.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
     }

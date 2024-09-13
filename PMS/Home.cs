@@ -18,9 +18,11 @@ namespace PMS
     public partial class Home : Form
     {
         public static Stack<Form> stack = new Stack<Form>();
+        Functions con;
         public Home()
         {
             InitializeComponent();
+            con = new Functions();
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Dpi;
         }
 
@@ -72,7 +74,6 @@ namespace PMS
                     Home.stack.Push(this);
                     this.Hide();
                     adminDashboard.ShowDialog();
-                    //;
                     return; // Return early if admin login is successful
                 }
                 adminReader.Close(); // Close reader before reusing connection
@@ -100,6 +101,7 @@ namespace PMS
                     MessageBox.Show($"Welcome {firstname} {lastname}", "Welcome", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
                     sessionManager.IsLoggedIn = true;
+                    sessionManager.Username = txtUsername.Text;
 
                     userDashboard userDashboard = new userDashboard(firstname, lastname, email, contactno, dateofbirth, gender, address);
                     Home.stack.Push(this);
@@ -115,6 +117,8 @@ namespace PMS
 
         }
         
+
+
         private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
         {
             signUp su = new signUp();
@@ -304,6 +308,29 @@ namespace PMS
             Home.stack.Push(this);
             this.Hide();
             babycare.ShowDialog();
+        }
+
+        private void button5_Click(object sender, EventArgs e)
+        {
+            otcMedicine otcMedicine = new otcMedicine();
+            Home.stack.Push(this);
+            this.Hide();
+            otcMedicine.ShowDialog();
+        }
+
+        private void cartBtn_Click(object sender, EventArgs e)
+        {
+            if (sessionManager.IsLoggedIn)
+            {
+                Cart cart = new Cart();
+                Home.stack.Push(this);
+                this.Hide();
+                cart.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Please login or Sign up", "Failure", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
     }
 }
