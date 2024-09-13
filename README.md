@@ -1,4 +1,4 @@
-# Pharmacy Application Management System
+# Pharmacy Management System
 
 Welcome to the Pharmacy Management System project! This application is designed to efficiently manage a pharmacy, including handling products, employees, departments, salaries, and user orders. Built with C# (.NET) and integrated with a Microsoft SQL Server database, it ensures seamless data storage and retrieval.
 
@@ -18,7 +18,7 @@ Welcome to the Pharmacy Management System project! This application is designed 
 9. [Feedback](#feedback)
 10. [License](#license)
 11. [Acknowledgements](#acknowledgements)
-12. [Contacts](#contacts)
+12. [Contact](#contact)
 
 ## Authors
 
@@ -31,17 +31,18 @@ Before starting, ensure you have the following installed:
 - **.NET Framework:** Available via Visual Studio or [Microsoft's official site](https://dotnet.microsoft.com/en-us/download/visual-studio-sdks)
 - **SQL Server Management Studio (SSMS):** [Download the latest version](https://learn.microsoft.com/en-us/sql/ssms/download-sql-server-management-studio-ssms?view=sql-server-ver16)
 
-  ## Get Started
+## Get Started
 
-i. **Clone the Repository:**
-   Obtain your own copy of the project with:
+### Clone the Repository
+
+Obtain your own copy of the project with:
     
 ```bash
-    git clone https://github.com/sszobaer/PharmacyManagementSystem.git
-    cd PharmacyManagementSystem
+git clone https://github.com/sszobaer/PharmacyManagementSystem.git
+cd PharmacyManagementSystem
 ```
 
-ii. **Database Configuration:**
+### Database Configuration
 
 **Database Setup Instructions:**
 
@@ -94,10 +95,12 @@ ii. **Database Configuration:**
 
 Make sure the connection string is set up properly to ensure smooth communication between your application and the database.
 
-iii. **Library Dependencies:**
-   - Ensure you have the [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) developer tools installed.
+### Library Dependencies
+
+- Ensure you have the [SQL Server](https://www.microsoft.com/en-us/sql-server/sql-server-downloads) developer tools installed.
 
 ## Features
+
 Coming Soon
 
 ## Technology Used
@@ -114,9 +117,11 @@ Coming Soon
 | Orange  | ![#ff4522](https://via.placeholder.com/10/ff4522?text=+) #ff4522   |
 
 ## Roadmap
+
 Coming Soon
 
 ## Lessons Learned
+
 Coming Soon
 
 ## Feedback
@@ -136,8 +141,6 @@ Special thanks to:
 
 Your guidance has been instrumental in the development of this project.
 
-## Contacts
+## Contact
 
 Feel free to reach out to me at [ahmedsszobaer@gmail.com](mailto:ahmedsszobaer@gmail.com) or connect with me on [LinkedIn](https://www.linkedin.com/in/s-s-zobaer-ahmed-209bab296/).
-
----
