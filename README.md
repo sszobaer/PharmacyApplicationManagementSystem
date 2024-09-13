@@ -106,8 +106,13 @@ Make sure the connection string is set up properly to ensure smooth communicatio
 
 ## UI / UX ScreenShots
 ### Home Page
-here's the home page UI
-![Home Page](assests/img/home.png)
+here's the home page and the login UI
+![Home Page](assets/img/home.png)
+
+### Sign Up Page
+here's the sign up page UI
+![Sign up](assets/img/signup.png)
+
 
 
 ## Features
