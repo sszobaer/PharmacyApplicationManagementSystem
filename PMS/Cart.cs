@@ -14,7 +14,8 @@ using System.Text.RegularExpressions;
 namespace PMS
 {
     public partial class Cart : Form
-    { 
+    {
+        //FUnctions from Functions class where I define the database
         Functions con;
         int selectedPID = 0;
         public Cart()
