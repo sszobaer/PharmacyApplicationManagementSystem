@@ -137,6 +137,10 @@ here's the Products UI
 here's the Location UI
 ![Location](assets/img/location.png)
 
+### About
+here's the About UI
+![About](assets/img/about.png)
+
 ### Contacts
 here's the contacts UI
 ![Contacts](assets/img/contacts.png)
