@@ -176,7 +176,7 @@ here's the Manage Employees UI
 
 ### Manage Salary
 here's the Manage Salary UI
-![Manage Salary](assets/img/managesalary.png)
+![Manage Salary](assets/img/salary.png)
 
 ### Request Order
 here's the Request Order UI
