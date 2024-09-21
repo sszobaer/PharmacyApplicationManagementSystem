@@ -338,3 +338,4 @@ For more information, reach out to:
 - **YouTube Channel:** [Code Craft Zobaer](https://www.youtube.com/@CodeCraftZobaer)
 
 ## Project Report
+![Project Report](assets/pdf/Pharmacy Management System.pdf)
