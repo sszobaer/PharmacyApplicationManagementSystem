@@ -33,7 +33,7 @@ Welcome to the Pharmacy Management System project! This application is designed 
 ## Authors
 
 - [S. S. Zobaer Ahmed](https://www.github.com/sszobaer)
-- [Khyrul Alam] (https://www.github.com/khyrulsiam)
+- [Khyrul Alam](https://www.github.com/khyrulsiam)
 
 ## Prerequisites
 
