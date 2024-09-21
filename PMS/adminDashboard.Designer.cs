@@ -42,10 +42,11 @@
             this.panel5 = new System.Windows.Forms.Panel();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.button1 = new System.Windows.Forms.Button();
+            this.manageProductBtn = new System.Windows.Forms.Button();
+            this.manageDeptBtn = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.manageEmpBtn = new System.Windows.Forms.Button();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -248,14 +249,15 @@
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.button9);
             this.panel5.Controls.Add(this.button8);
-            this.panel5.Controls.Add(this.button1);
+            this.panel5.Controls.Add(this.manageProductBtn);
+            this.panel5.Controls.Add(this.manageDeptBtn);
             this.panel5.Controls.Add(this.button5);
             this.panel5.Controls.Add(this.button7);
-            this.panel5.Controls.Add(this.button3);
+            this.panel5.Controls.Add(this.manageEmpBtn);
             this.panel5.Location = new System.Drawing.Point(18, 472);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(406, 393);
+            this.panel5.Size = new System.Drawing.Size(406, 454);
             this.panel5.TabIndex = 23;
             // 
             // button9
@@ -275,12 +277,12 @@
             // 
             // button8
             // 
-            this.button8.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.button8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button8.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button8.ForeColor = System.Drawing.Color.Black;
-            this.button8.Location = new System.Drawing.Point(4, 329);
+            this.button8.Location = new System.Drawing.Point(4, 390);
             this.button8.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(394, 55);
@@ -289,30 +291,46 @@
             this.button8.UseVisualStyleBackColor = false;
             this.button8.Click += new System.EventHandler(this.button8_Click);
             // 
-            // button1
+            // manageProductBtn
             // 
-            this.button1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.ForeColor = System.Drawing.Color.Black;
-            this.button1.Location = new System.Drawing.Point(4, 134);
-            this.button1.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(394, 55);
-            this.button1.TabIndex = 16;
-            this.button1.Text = "MANAGE DEPARTMENT";
-            this.button1.UseVisualStyleBackColor = false;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.manageProductBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.manageProductBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.manageProductBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageProductBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageProductBtn.ForeColor = System.Drawing.Color.Black;
+            this.manageProductBtn.Location = new System.Drawing.Point(3, 262);
+            this.manageProductBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.manageProductBtn.Name = "manageProductBtn";
+            this.manageProductBtn.Size = new System.Drawing.Size(394, 55);
+            this.manageProductBtn.TabIndex = 16;
+            this.manageProductBtn.Text = "MANAGE PRODUCT\r\n";
+            this.manageProductBtn.UseVisualStyleBackColor = false;
+            this.manageProductBtn.Click += new System.EventHandler(this.manageProductBtn_Click);
+            // 
+            // manageDeptBtn
+            // 
+            this.manageDeptBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.manageDeptBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.manageDeptBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageDeptBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageDeptBtn.ForeColor = System.Drawing.Color.Black;
+            this.manageDeptBtn.Location = new System.Drawing.Point(4, 134);
+            this.manageDeptBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.manageDeptBtn.Name = "manageDeptBtn";
+            this.manageDeptBtn.Size = new System.Drawing.Size(394, 55);
+            this.manageDeptBtn.TabIndex = 16;
+            this.manageDeptBtn.Text = "MANAGE DEPARTMENT";
+            this.manageDeptBtn.UseVisualStyleBackColor = false;
+            this.manageDeptBtn.Click += new System.EventHandler(this.button1_Click);
             // 
             // button5
             // 
-            this.button5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.button5.BackColor = System.Drawing.Color.Transparent;
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.Color.Black;
-            this.button5.Location = new System.Drawing.Point(3, 265);
+            this.button5.Location = new System.Drawing.Point(5, 328);
             this.button5.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(394, 55);
@@ -337,21 +355,21 @@
             this.button7.UseVisualStyleBackColor = false;
             this.button7.Click += new System.EventHandler(this.button7_Click);
             // 
-            // button3
+            // manageEmpBtn
             // 
-            this.button3.BackColor = System.Drawing.SystemColors.ButtonHighlight;
-            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button3.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.ForeColor = System.Drawing.Color.Black;
-            this.button3.Location = new System.Drawing.Point(4, 71);
-            this.button3.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(394, 55);
-            this.button3.TabIndex = 16;
-            this.button3.Text = "MANAGE EMPLOYEE";
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.manageEmpBtn.BackColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.manageEmpBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.manageEmpBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.manageEmpBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.manageEmpBtn.ForeColor = System.Drawing.Color.Black;
+            this.manageEmpBtn.Location = new System.Drawing.Point(4, 71);
+            this.manageEmpBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.manageEmpBtn.Name = "manageEmpBtn";
+            this.manageEmpBtn.Size = new System.Drawing.Size(394, 55);
+            this.manageEmpBtn.TabIndex = 16;
+            this.manageEmpBtn.Text = "MANAGE EMPLOYEE";
+            this.manageEmpBtn.UseVisualStyleBackColor = false;
+            this.manageEmpBtn.Click += new System.EventHandler(this.button3_Click);
             // 
             // panel4
             // 
@@ -1012,9 +1030,9 @@
         private System.Windows.Forms.PictureBox pictureBox5;
         private System.Windows.Forms.Label label26;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button manageDeptBtn;
         private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button manageEmpBtn;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -1067,5 +1085,6 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button manageProductBtn;
     }
 }

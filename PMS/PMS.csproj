@@ -163,6 +163,12 @@
     <Compile Include="location.Designer.cs">
       <DependentUpon>location.cs</DependentUpon>
     </Compile>
+    <Compile Include="manageProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="manageProduct.Designer.cs">
+      <DependentUpon>manageProduct.cs</DependentUpon>
+    </Compile>
     <Compile Include="Montene.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -174,6 +180,12 @@
     </Compile>
     <Compile Include="NeocareToiletries.Designer.cs">
       <DependentUpon>NeocareToiletries.cs</DependentUpon>
+    </Compile>
+    <Compile Include="order.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="order.Designer.cs">
+      <DependentUpon>order.cs</DependentUpon>
     </Compile>
     <Compile Include="offer.cs">
       <SubType>Form</SubType>
@@ -355,11 +367,17 @@
     <EmbeddedResource Include="location.resx">
       <DependentUpon>location.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="manageProduct.resx">
+      <DependentUpon>manageProduct.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Montene.resx">
       <DependentUpon>Montene.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="NeocareToiletries.resx">
       <DependentUpon>NeocareToiletries.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="order.resx">
+      <DependentUpon>order.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="offer.resx">
       <DependentUpon>offer.cs</DependentUpon>

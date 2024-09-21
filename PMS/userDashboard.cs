@@ -363,5 +363,13 @@ namespace PMS
             this.Hide();
             about.ShowDialog();
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            order or = new order();
+            Home.stack.Push(this);
+            this.Hide();
+            or.ShowDialog();
+        }
     }
 }

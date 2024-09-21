@@ -106,7 +106,7 @@ namespace PMS
                 string jDate = jDateDtp.Value.ToString("yyyy-MM-dd");
                 int Salary = Convert.ToInt32(txtSal.Text);
 
-                string Query = "UPDATE EmployeeTable SET eDate =mpName = @Name, empGender = @Gender, empDept = @Dept, empDob = @Dob, empJ @jDate, empSal = @Salary WHERE empID = @ID";
+                string Query = "UPDATE EmployeeTable SET empName = @Name, empGender = @Gender, empDept = @Dept, empDob = @Dob, empJDate = @jDate, empSal = @Salary WHERE empID = @ID";
                 Dictionary<string, object> parameters = new Dictionary<string, object>
                 {
                     { "@Name", Name },

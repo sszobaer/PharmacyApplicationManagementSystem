@@ -169,5 +169,13 @@ namespace PMS
             this.Hide();
             about.ShowDialog();
         }
+
+        private void manageProductBtn_Click(object sender, EventArgs e)
+        {
+            manageProduct manageProduct = new manageProduct();
+            Home.stack.Push(this);
+            this.Hide();
+            manageProduct.ShowDialog();
+        }
     }
 }
