@@ -7,7 +7,7 @@ Welcome to the Pharmacy Management System project! This application is designed 
 ## Table of Contents
 
 1. [Authors](#authors)
-2. [Collaboration](#collaborartion)
+2. [Collaboration](#collaboration)
 3. [Prerequisites](#prerequisites)
 4. [Get Started](#get-started)
    - [Clone the Repository](#clone-the-repository)
