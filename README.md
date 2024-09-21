@@ -17,6 +17,7 @@ Welcome to the Pharmacy Management System project! This application is designed 
    - [Software Architecture Diagram](#software-architecture-diagram)
    - [Database Schema Diagram](#database-schema-diagram)
    - [Application's Screenshots](#applications-screenshots)
+   - [Project Report](#project-report)
 6. [Features](#features)
    - [User Features](#user-features)
    - [Admin Features](#admin-features)
@@ -186,7 +187,10 @@ here's the Manage Product UI
 here's the Request Order UI
 ![Request Order](assets/img/requestorder.png)
 
+## Project Reports
+- [Project Report](assets/pdf/Pharmacy Management System.pdf)
 
+  
 ## Features
 
 ### User Features
@@ -337,5 +341,4 @@ For more information, reach out to:
 - **Linkedin:** [S. S. Zobaer Ahmed](https://www.linkedin.com/in/s-s-zobaer-ahmed-209bab296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - **YouTube Channel:** [Code Craft Zobaer](https://www.youtube.com/@CodeCraftZobaer)
 
-## Project Report
-![Project Report](assets/pdf/Pharmacy Management System.pdf)
+
