@@ -163,7 +163,7 @@ here's the Payment UI
 
 ### Admin Dashboard
 here's the Admin Dashboard UI
-![Admin Dashboard](assets/img/admindashboard.png)
+![Admin Dashboard](assets/img/adminDashboard.png)
 
 ### Manage Department
 here's the Manage Department UI
