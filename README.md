@@ -167,11 +167,11 @@ here's the Admin Dashboard UI
 
 ### Manage Department
 here's the Manage Department UI
-![Manage Department](assets/img/managedepartment.png)
+![Manage Department](assets/img/department.png)
 
 ### Manage Employees
 here's the Manage Employees UI
-![Manage Employees](assets/img/manageemployee.png)
+![Manage Employees](assets/img/employee.png)
 
 
 ### Manage Salary
