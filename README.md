@@ -178,10 +178,13 @@ here's the Manage Employees UI
 here's the Manage Salary UI
 ![Manage Salary](assets/img/salary.png)
 
+### Manage Product
+here's the Manage Product UI
+![Manage Product](assets/img/product.png)
+
 ### Request Order
 here's the Request Order UI
-![Home Page](assets/img/requestorder.png)
-
+![Request Order](assets/img/requestorder.png)
 
 
 ## Features
