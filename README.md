@@ -188,7 +188,7 @@ here's the Request Order UI
 ![Request Order](assets/img/requestorder.png)
 
 ## Project Reports
-- [Project Report](assets/pdf/Pharmacy Management System.pdf)
+<a href="assets/pdf/Pharmacy%20Management%20System.pdf" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Click here to view the Report</a>
 
   
 ## Features
