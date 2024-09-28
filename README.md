@@ -7,36 +7,34 @@ Welcome to the Pharmacy Management System project! This application is designed 
 ## Table of Contents
 
 1. [Authors](#authors)
-2. [Collaboration](#collaboration)
-3. [Prerequisites](#prerequisites)
-4. [Get Started](#get-started)
+2. [Prerequisites](#prerequisites)
+3. [Get Started](#get-started)
    - [Clone the Repository](#clone-the-repository)
    - [Database Configuration](#database-configuration)
    - [Library Dependencies](#library-dependencies)
-5. [Architecture/Technology Sections](#architecturetechnology-sections)
+4. [Architecture/Technology Sections](#architecturetechnology-sections)
    - [Software Architecture Diagram](#software-architecture-diagram)
    - [Database Schema Diagram](#database-schema-diagram)
    - [Application's Screenshots](#applications-screenshots)
-6. [Features](#features)
+   - [Project Report](#project-report)
+5. [Features](#features)
    - [User Features](#user-features)
    - [Admin Features](#admin-features)
-7. [Technology Used](#technology-used)
-8. [Color Reference](#color-reference)
-9. [Roadmap](#roadmap)
-10. [Lessons Learned](#lessons-learned)
-11. [FAQ](#faq)
-12. [Feedback](#feedback)
-13. [License](#license)
-14. [Acknowledgements](#acknowledgements)
-15. [Contact](#contact)
+6. [Technology Used](#technology-used)
+7. [Color Reference](#color-reference)
+8. [Roadmap](#roadmap)
+9. [Lessons Learned](#lessons-learned)
+10. [FAQ](#faq)
+11. [Feedback](#feedback)
+12. [License](#license)
+13. [Acknowledgements](#acknowledgements)
+14. [Contact](#contact)
 
 ---
 ## Authors
 
 - [S. S. Zobaer Ahmed](https://www.github.com/sszobaer)
 
-## Collaboration
-- [Khyrul Alam](https://www.github.com/khyrulsiam)
 
 ## Prerequisites
 
@@ -163,27 +161,33 @@ here's the Payment UI
 
 ### Admin Dashboard
 here's the Admin Dashboard UI
-![Admin Dashboard](assets/img/admindashboard.png)
+![Admin Dashboard](assets/img/adminDashboard.png)
 
 ### Manage Department
 here's the Manage Department UI
-![Manage Department](assets/img/managedepartment.png)
+![Manage Department](assets/img/department.png)
 
 ### Manage Employees
 here's the Manage Employees UI
-![Manage Employees](assets/img/manageemployee.png)
+![Manage Employees](assets/img/employee.png)
 
 
 ### Manage Salary
 here's the Manage Salary UI
-![Manage Salary](assets/img/managesalary.png)
+![Manage Salary](assets/img/salary.png)
+
+### Manage Product
+here's the Manage Product UI
+![Manage Product](assets/img/product.png)
 
 ### Request Order
 here's the Request Order UI
-![Home Page](assets/img/requestorder.png)
+![Request Order](assets/img/requestorder.png)
 
+## Project Reports
+<a href="assets/Report/Pharmacy Application Management System.pdf" style="padding: 10px 20px; background-color: #007bff; color: white; text-decoration: none; border-radius: 5px;">Click here to view the Report</a>
 
-
+  
 ## Features
 
 ### User Features
@@ -333,3 +337,5 @@ For more information, reach out to:
 - **GitHub:** [S. S. Zobaer Ahmed](https://www.github.com/sszobaer)
 - **Linkedin:** [S. S. Zobaer Ahmed](https://www.linkedin.com/in/s-s-zobaer-ahmed-209bab296?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app)
 - **YouTube Channel:** [Code Craft Zobaer](https://www.youtube.com/@CodeCraftZobaer)
+
+
