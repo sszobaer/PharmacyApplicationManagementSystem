@@ -64,6 +64,7 @@
             this.button13 = new System.Windows.Forms.Button();
             this.button14 = new System.Windows.Forms.Button();
             this.button15 = new System.Windows.Forms.Button();
+            this.productBtn = new System.Windows.Forms.Button();
             this.panel3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             this.panel5.SuspendLayout();
@@ -225,13 +226,14 @@
             this.panel5.BackColor = System.Drawing.SystemColors.ButtonHighlight;
             this.panel5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
             this.panel5.Controls.Add(this.button9);
+            this.panel5.Controls.Add(this.productBtn);
             this.panel5.Controls.Add(this.button1);
             this.panel5.Controls.Add(this.button7);
             this.panel5.Controls.Add(this.button3);
             this.panel5.Location = new System.Drawing.Point(12, 623);
             this.panel5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(406, 260);
+            this.panel5.Size = new System.Drawing.Size(406, 325);
             this.panel5.TabIndex = 30;
             // 
             // button9
@@ -577,6 +579,22 @@
             this.button15.UseVisualStyleBackColor = false;
             this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
+            // productBtn
+            // 
+            this.productBtn.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.productBtn.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.productBtn.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.productBtn.Font = new System.Drawing.Font("Montserrat ExtraBold", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.productBtn.ForeColor = System.Drawing.Color.Black;
+            this.productBtn.Location = new System.Drawing.Point(6, 263);
+            this.productBtn.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.productBtn.Name = "productBtn";
+            this.productBtn.Size = new System.Drawing.Size(394, 55);
+            this.productBtn.TabIndex = 16;
+            this.productBtn.Text = "MANAGE PRODUCT\r\n";
+            this.productBtn.UseVisualStyleBackColor = false;
+            this.productBtn.Click += new System.EventHandler(this.productBtn_Click);
+            // 
             // Department
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -646,5 +664,6 @@
         private System.Windows.Forms.Button button13;
         private System.Windows.Forms.Button button14;
         private System.Windows.Forms.Button button15;
+        private System.Windows.Forms.Button productBtn;
     }
 }

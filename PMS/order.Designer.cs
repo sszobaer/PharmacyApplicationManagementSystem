@@ -220,8 +220,9 @@
             this.label26.Size = new System.Drawing.Size(92, 64);
             this.label26.TabIndex = 34;
             this.label26.Text = "🔙";
+            this.label26.Click += new System.EventHandler(this.label26_Click);
             // 
-            // Oder
+            // order
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -230,7 +231,7 @@
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.orderTable);
             this.Controls.Add(this.panel3);
-            this.Name = "Oder";
+            this.Name = "order";
             this.Text = "Oder";
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();

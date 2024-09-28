@@ -68,5 +68,15 @@ namespace PMS
             };
             orderTable.DataSource = con.GetData(Query, parameters);
         }
+
+        private void label26_Click(object sender, EventArgs e)
+        {
+            if (Home.stack.Count > 0)
+            {
+                Form previousForm = Home.stack.Pop();
+                this.Hide();
+                previousForm.Show();
+            }
+        }
     }
 }
